@@ -299,7 +299,7 @@ aa {
 				<div class="panel-heading">
 					<small class="text-muted"> ${task.companyName}</small>
 					<c:forEach var="taskes" items="${tasksen}">
-						<c:if test="${taskes.id == task.industryid}">
+						<c:if test="${taskes.id == task.industryId}">
 							<p class="headline3">
 								<strong><a
 									href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html">${taskes.industryName}
@@ -313,13 +313,13 @@ aa {
 						<li class="panel-footer-icon-wrapper"><i
 							class="icon icon-dot-circled"></i> <a
 							href="/en/employer/groupe-agri-revolution.html" target="_blank"
-							class="js-company-name"> ${task.companyId} </a></li>
+							class="js-company-name"> ${task.id} </a></li>
 
 						<li class="panel-footer-icon-wrapper"><i
 							class="icon icon-location"></i>${task.location}</li>
 
 						<li class="panel-footer-icon-wrapper"><i
-							class="icon icon-bookmark"></i>${task.companyId}</li>
+							class="icon icon-bookmark"></i>${task.id}</li>
 						<li class="pull-right"><a
 							href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html"
 							class="btn btn-info pull-right icon-eye"><span

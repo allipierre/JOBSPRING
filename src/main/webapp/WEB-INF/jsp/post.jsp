@@ -368,7 +368,7 @@ color: rgb(255, 255, 255) !important;
   
   <div class="row">
   <div class="one columns">
-      <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry" name="industryid"  value="${company.industryid}">
+      <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry" name="industryId"  value="${company.industryId}">
     </div>
     
     <div class="one columns">

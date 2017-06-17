@@ -115,7 +115,7 @@ aa {
 					<div id="moreNavPopover" class="popover">
 						<ul class="popover-list">
 							<li class="popover-item"><a class="popover-link"
-								href="createcompagny">Create profile</a></li>
+								href="company">Create profile</a></li>
 							<li class="popover-item"><a class="popover-link" href="post">Post
 									a Job</a></li>
 							<li class="popover-item"><a class="popover-link"
