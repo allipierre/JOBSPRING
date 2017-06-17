@@ -22,7 +22,7 @@ import io.blackground.jobfinder.services.IndustryService;
  *
  */
 @Controller
-public class CtreateContriesController {
+public class CreateCountriesController {
 
 	@Autowired
 	private CountriesService countriesService;

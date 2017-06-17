@@ -42,13 +42,18 @@ public class MainController {
 	@Autowired
 	private CompanyService companyservice;
 	
+	@Autowired
+	private CountriesService countriesservice;
 	
+	@Autowired
+	private CompanySizeService companySizesservice;
 	
 	@Autowired
 	private IndustryService industryService;
 	
 	
-	 
+	 @Autowired
+	    private UserServiceImpl userService;
 
 //	@GetMapping("/")
 //	public String hello() {
@@ -61,8 +66,6 @@ public class MainController {
 		request.setAttribute("tasksen", industryService.findAll());
 		return "allejob";
 	}
-	
-	
 	
 	@GetMapping("/createcountries")
 	public String createCountry(HttpServletRequest request) {

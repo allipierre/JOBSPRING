@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 import io.blackground.jobfinder.Repository.IndustryRepository;
 import io.blackground.jobfinder.models.Industry;
 
-
 /**
  * @author yotti
  *
@@ -24,9 +23,6 @@ public class IndustryService {
 
 	private final IndustryRepository industryRepository;
 
-	/**
-	 * @param taskRepository
-	 */
 	public IndustryService(IndustryRepository industryRepository) {
 		super();
 		this.industryRepository = industryRepository;
@@ -51,10 +47,6 @@ public class IndustryService {
 		industryRepository.delete(id);
 	}
 
-	public Industry findCountry(int id) {
-		return industryRepository.findOne(id);
-	}
-	
 	public Industry findById(int id) {
 		return industryRepository.findById(id);
 	}
