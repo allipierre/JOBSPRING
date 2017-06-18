@@ -310,7 +310,7 @@
 
         <div class="row">
             <div class="six columns">
-            <form:select path="industries" items="${industries}" />
+            <form:select path="industries" items="${industry.industryName}" />
             
                 <label for="websiteInput">Website</label>
                 <input class="u-full-width" type="text" placeholder="Website" id="websiteInput" name="website"
