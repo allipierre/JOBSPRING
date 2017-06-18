@@ -347,11 +347,7 @@ color: rgb(255, 255, 255) !important;
   <div class="row">
     <div class="six columns">
       <label for="cityInput">City</label>
-     <select class="u-full-width" id="cityInput">
-        <c:forEach var="city" items="${city}">
-        <option value="${city.id}">${city.name}</option>
-         </c:forEach>
-      </select>
+      <input class="u-full-width" type="text" placeholder="City" id="cityInput" name="title"  value="${job.city}">
     </div>
     <div class="six columns">
       <label for="countryInput">Country</label>
