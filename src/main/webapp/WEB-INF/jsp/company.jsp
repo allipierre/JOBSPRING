@@ -323,7 +323,7 @@
                     </option>
                  </c:if>
                   <c:forEach var="industry" items="${industries}">
-                 <c:if test = "${company.id == industry.id}">
+                 <c:if test = "${company.id == 14}">
                 <option value="${industry.id}" selected="selected">${industry.industryName}</option>
                 </c:if>
                 </c:forEach>
