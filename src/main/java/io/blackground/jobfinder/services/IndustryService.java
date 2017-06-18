@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import io.blackground.jobfinder.Repository.IndustryRepository;
 import io.blackground.jobfinder.models.Industry;
 
+
 /**
  * @author yotti
  *

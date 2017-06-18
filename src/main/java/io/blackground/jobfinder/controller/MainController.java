@@ -27,7 +27,6 @@ import io.blackground.jobfinder.services.UserServiceImpl;
 
 
 
-
 /**
  * @author yotti
  *
