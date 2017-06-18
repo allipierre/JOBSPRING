@@ -370,6 +370,7 @@ color: rgb(255, 255, 255) !important;
   
   <input class="cancel button-primary" type="submit" value="CANCEL">
   <input class="button-primary" type="submit" value="SAVE">
+  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
 
