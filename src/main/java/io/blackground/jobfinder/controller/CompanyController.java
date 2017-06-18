@@ -81,11 +81,12 @@ public class CompanyController {
         if (oldCompany != null) {
             company.setId(oldCompany.getId());
         }
+        companyservice.save(company);
+        company.setIndustry(industryService.findById(company.getIndustryId()));
         request.setAttribute("countries", countriesService.findAll());
         request.setAttribute("companySize", companySizeService.findAll());
         request.setAttribute("company", company);
         request.setAttribute("industries", industryService.findAll());
-        companyservice.save(company);
         return "company";
     }
 
