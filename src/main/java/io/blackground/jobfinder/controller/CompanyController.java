@@ -64,7 +64,7 @@ public class CompanyController {
         }
         userCompany.setCountries(countriesService.findCountry(userCompany.getCountryId()));
         userCompany.setIndustry(industryService.findById(userCompany.getIndustryId()));
-        userCompany.setCompanySize(companySizeService.findCountry(userCompany.getNumbere()));
+        userCompany.setCompanySize(companySizeService.findCountry(userCompany.getSizeId()));
         request.setAttribute("countries", countriesService.findAll());
         request.setAttribute("companySize", companySizeService.findAll());
         request.setAttribute("company", userCompany);
@@ -86,7 +86,7 @@ public class CompanyController {
         companyservice.save(company);
         company.setIndustry(industryService.findById(company.getIndustryId()));
         company.setCountries(countriesService.findCountry(company.getCountryId()));
-        company.setCompanySize(companySizeService.findCountry(company.getNumbere()));
+        company.setCompanySize(companySizeService.findCountry(company.getSizeId()));
         request.setAttribute("countries", countriesService.findAll());
         request.setAttribute("companySize", companySizeService.findAll());
         request.setAttribute("company", company);

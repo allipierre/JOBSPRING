@@ -304,17 +304,17 @@
             </div>
             <div class="six columns">
                 <label for="sizeInput">Size</label>
-                <select class="u-full-width" id="sizeInput" name="companySize">
+                <select class="u-full-width" id="sizeInput" name="sizeId">
                     <option value="" disabled="disabled" selected="selected">Select the Company Size (No. of
                         employees)
                     </option>
                     <c:forEach var="companySize" items="${companySize}">
                         <c:choose>
-                            <c:when test="${company.companySize == companySize}">
-                                <option value="${companySize}" selected="selected">${companySize.value}</option>
+                            <c:when test="${company.companySize.id == companySize.id}">
+                                <option value="${company.companySize.id}" selected="selected">${companySize.value}</option>
                             </c:when>
-                            <c:when test="${company.companySize != companySize}">
-                                <option value="${companySize}">${companySize.value}</option>
+                            <c:when test="${company.companySize.id == companySize.id}">
+                                <option value="${companySize.id}">${companySize.value}</option>
                             </c:when>
                         </c:choose>
                     </c:forEach>

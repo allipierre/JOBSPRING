@@ -49,13 +49,13 @@ public class Company {
 	private long industryId;
 	private long countryId;
 	private long numbere;
+	private long sizeId;
 
 	private transient Industry industry;
 	private transient Countries countries;
 
-	@ManyToOne
-	@JoinColumn(name = "company_size")
-	private CompanySize companySize;
+	
+	private transient CompanySize companySize;
 
 	@OneToOne
 	private User user;

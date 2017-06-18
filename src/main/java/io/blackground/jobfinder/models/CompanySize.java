@@ -39,7 +39,4 @@ public class CompanySize {
 
 	private String value;
 
-	@OneToMany(mappedBy = "companySize")
-	private Set<Company> companies;
-
 }
