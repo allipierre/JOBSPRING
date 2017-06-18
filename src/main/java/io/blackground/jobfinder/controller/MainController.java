@@ -100,7 +100,7 @@ public class MainController {
 		Company userCompany = companyservice.findCompany(user);
 		
 		job.setCompany(userCompany);
-		
+		job.setId(userCompany.getId());
 		jobService.save(job);
 		
 		job.setCompany(companyservice.findById(job.getCompanyid()));
