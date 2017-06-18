@@ -16,6 +16,8 @@
 
 
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
 
 
   <link rel="stylesheet" href="/static/css/normalize.css">
@@ -350,11 +352,7 @@ color: rgb(255, 255, 255) !important;
   <div class="row">
     <div class="six columns">
       <label for="dateInput">Start date</label>
-     <select class="u-full-width" id="dateInput">
-        <c:forEach var="startdate" items="${startdate}">
-        <option value="${startdate.id}">${city.published}</option>
-         </c:forEach>
-      </select>
+      <input class="u-full-width" type="text" placeholder="Date" id="datepicker" name="startdate"  value="">
     </div>
     <div class="six columns">
       <label for="countryInput">Country</label>
@@ -422,4 +420,11 @@ $( "#sizeInput" ).change(function() {  $( "#companySize").val($(this).val()); })
 </script>
  <script type="text/javascript"  src="/static/js/file.js"></script>
  <script type="text/javascript"  src="/static/js/typed.js"></script>
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
  </html>
