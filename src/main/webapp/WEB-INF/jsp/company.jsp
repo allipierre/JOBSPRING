@@ -310,18 +310,17 @@
 
         <div class="row">
             <div class="six columns">
-            <form:select path="country" items="${countryList}" />
-            
                 <label for="websiteInput">Website</label>
                 <input class="u-full-width" type="text" placeholder="Website" id="websiteInput" name="website"
                        value="${company.website}">
             </div>
             <div class="six columns">
                 <label for="countryInput">Industry</label>
-                <select class="u-full-width" id="industryInput" name="industry">
+                <select class="u-full-width" id="industryInput">
                  
                  <c:if test = "${company.id != industry.id}">
-                <option value="" disabled="disabled" selected="selected">Select the Industry</option>
+                <option value="" disabled="disabled" selected="selected">Select the Industry
+                    </option>
                  </c:if>
                   <c:forEach var="industry" items="${industries}">
                  <c:if test = "${company.industryId == industry.id}">
