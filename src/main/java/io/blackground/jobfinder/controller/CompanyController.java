@@ -70,7 +70,7 @@ public class CompanyController {
         return "createcompany";
     }
 
-    @PostMapping("/company")
+    @PostMapping("/companys")
     public String saveTask(@ModelAttribute Company company, BindingResult bindingResult, HttpServletRequest request) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         
