@@ -13,6 +13,6 @@ import io.blackground.jobfinder.models.Countries;
  * @author yotti
  *
  */
-public interface CountriesRepository extends CrudRepository<Countries, Integer> {
+public interface CountriesRepository extends CrudRepository<Countries, Long> {
 
 }

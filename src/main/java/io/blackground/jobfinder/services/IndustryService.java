@@ -47,7 +47,7 @@ public class IndustryService {
 		industryRepository.delete(id);
 	}
 
-	public Industry findById(int id) {
+	public Industry findById(long id) {
 		return industryRepository.findById(id);
 	}
 

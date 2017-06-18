@@ -42,12 +42,13 @@ public class CountriesService {
 		countriesRepository.save(country);
 	}
 
-	public void delete(int id) {
+	public void delete(long id) {
 		countriesRepository.delete(id);
 	}
 
-	public Countries findCountry(int id) {
-		return countriesRepository.findOne(id);
+	public Countries findCountry(long id) {
+		return countriesRepository.findOne((id));
 	}
+
 
 }
