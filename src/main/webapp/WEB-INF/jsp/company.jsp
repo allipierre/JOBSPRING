@@ -316,7 +316,7 @@
             </div>
             <div class="six columns">
                 <label for="countryInput">Industry</label>
-                <select class="u-full-width" id="industryInput" name="industryName">
+                <select class="u-full-width" id="industryInput" name="industry">
                  
                  <c:if test = "${company.id != industry.id}">
                 <option value="" disabled="disabled" selected="selected">Select the Industry</option>
