@@ -310,8 +310,8 @@ color: rgb(255, 255, 255) !important;
       <label for="categoryInput">Job category</label>
      <select class="u-full-width" id="categoryinput">
       <option value="" disabled="disabled" selected="selected">Please specify job category for this vacancy</option>
-        <c:forEach var="category" items="${category}">
-        <option value="${category.id}">${category.name}</option>
+        <c:forEach var="industry" items="${industry}">
+        <option value="${industry.id}">${industry.name}</option>
          </c:forEach>
       </select>
     </div>

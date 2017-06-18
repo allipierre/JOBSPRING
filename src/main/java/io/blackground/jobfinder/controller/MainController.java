@@ -79,7 +79,7 @@ public class MainController {
 	@GetMapping("/post")
 	public String postJob(HttpServletRequest request) {
 		request.setAttribute("salary", salaryService.findAll());
-		//request.setAttribute("tasksen", industryService.findAll());
+		request.setAttribute("industry", industryService.findAll());
 		return "post";
 	}
 	
