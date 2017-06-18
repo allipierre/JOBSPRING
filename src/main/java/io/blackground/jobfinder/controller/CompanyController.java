@@ -67,7 +67,7 @@ public class CompanyController {
         request.setAttribute("companySize", companySizeService.findAll());
         request.setAttribute("company", userCompany);
         request.setAttribute("industries", industryService.findAll());
-        return "createcompany";
+        return "company";
     }
 
     @PostMapping("/company")
@@ -82,7 +82,7 @@ public class CompanyController {
             company.setId(oldCompany.getId());
         }
         companyservice.save(company);
-        return "createcompany";
+        return "company";
     }
 
 }
