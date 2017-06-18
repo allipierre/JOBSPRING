@@ -313,7 +313,7 @@
                             <c:when test="${company.companySize.id == companySize.id}">
                                 <option value="${company.companySize.id}" selected="selected">${companySize.value}</option>
                             </c:when>
-                            <c:when test="${company.companySize.id == companySize.id}">
+                            <c:when test="${company.companySize.id != companySize.id}">
                                 <option value="${companySize.id}">${companySize.value}</option>
                             </c:when>
                         </c:choose>
