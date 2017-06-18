@@ -295,7 +295,7 @@ color: rgb(255, 255, 255) !important;
       <select class="u-full-width" id="countryInput">
       <option value="" disabled="disabled" selected="selected">Please select monthly salary</option>
       <c:forEach var="salary" items="${salary}" >
-        <option id="csalaryID" value="${salary.id}">${salary.value}</option>
+        <option id="csalaryID" value="${salary.id}">${salary.saname}</option>
         </c:forEach>
       </select>
     </div>

@@ -23,6 +23,7 @@ import io.blackground.jobfinder.services.CompanySizeService;
 import io.blackground.jobfinder.services.CountriesService;
 import io.blackground.jobfinder.services.IndustryService;
 import io.blackground.jobfinder.services.JobService;
+import io.blackground.jobfinder.services.SalaryService;
 import io.blackground.jobfinder.services.UserServiceImpl;
 
 
@@ -50,6 +51,9 @@ public class MainController {
 	@Autowired
 	private IndustryService industryService;
 	
+	@Autowired
+	private SalaryService salaryService;
+	
 	
 	 @Autowired
 	    private UserServiceImpl userService;
@@ -74,7 +78,7 @@ public class MainController {
 	
 	@GetMapping("/post")
 	public String postJob(HttpServletRequest request) {
-		//request.setAttribute("taskse", companyservice.findAll());
+		request.setAttribute("salary", salaryService.findAll());
 		//request.setAttribute("tasksen", industryService.findAll());
 		return "post";
 	}
