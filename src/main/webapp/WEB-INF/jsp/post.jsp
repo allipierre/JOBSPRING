@@ -301,7 +301,7 @@ color: rgb(255, 255, 255) !important;
      
 <div class="container">
 
-<form method="POST" action="save-company">
+<form method="POST" action="create-job">
   <div class="row">
     <div class="six columns">
       <label for="compnaneInput">Job title</label>
