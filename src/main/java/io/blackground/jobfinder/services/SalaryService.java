@@ -20,9 +20,9 @@ public class SalaryService {
 
 	private final SalaryRepository salaryRepository;
 
-	public SalaryService(SalaryRepository countriesRepository) {
+	public SalaryService(SalaryRepository salaryRepository) {
 		super();
-		this.salaryRepository = countriesRepository;
+		this.salaryRepository = salaryRepository;
 	}
 
 	public List<Salary> findAll() {

@@ -34,5 +34,5 @@ public class Salary {
 	@GeneratedValue
 	private long id;
 
-	private String salary;
+	private String saname;
 }

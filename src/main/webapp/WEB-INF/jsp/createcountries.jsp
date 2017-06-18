@@ -324,7 +324,7 @@ color: rgb(255, 255, 255) !important;
   <div class="row">
     <div class="six columns">
       <label for="countryInput">Salary</label>
-      <input class="u-full-width" type="text" placeholder="Salary" id="salaryInput" name="salary" value="${Salary.salary}">
+      <input class="u-full-width" type="text" placeholder="Salary" id="salaryInput" name="saname" value="${Salary.saname}">
     </div>
   </div>
    <input class="button-primary" type="submit" value="SAVE Salary"> 
