@@ -318,7 +318,7 @@
                 <label for="countryInput">Industry</label>
                 <select class="u-full-width" id="industryInput">
                  
-                 <c:if test = "${company.id == null}">
+                 <c:if test = "${company.id != industry.id}">
                 <option value="" disabled="disabled" selected="selected">Select the Induytry)
                     </option>
                  </c:if>
