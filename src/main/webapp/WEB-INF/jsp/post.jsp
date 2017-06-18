@@ -333,7 +333,7 @@ aa {
 			<div class="row">
 				<div class="six columns">
 					<label for="categoryInput">Job category</label> <select
-						class="u-full-width" id="categoryinput" name="companyid">
+						class="u-full-width" id="categoryinput" name=category>
 						<option value="" disabled="disabled" selected="selected">Please
 							specify job category for this vacancy</option>
 						<c:forEach var="industry" items="${industry}">

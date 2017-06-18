@@ -33,7 +33,7 @@ public class Job {
 
 	private String description;
 	private int minimumExperienceYears;
-	private String category;
+	private long category;
 
 	private String minimumDegree;
 	private int slots;
