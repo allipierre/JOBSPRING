@@ -319,36 +319,33 @@ aa {
 			</div>
 
 			<div class="row">
-            <div class="six columns">
-                <label for="websiteInput">Website</label>
-                <input class="u-full-width" type="text" placeholder="Website" id="websiteInput" name="website"
-                       value="${company.website}">
-            </div>
-            <div class="six columns">
-                <label for="countryInput">Industry</label>
-                <select class="u-full-width" id="industryInput" name="industryId">
-                <c:if test = "${company.industryId != industry.id}">
-                <option disabled="disabled" selected="selected">Select the Company Industry</option>
-                </c:if>    
-                <c:if test="${company.industryId == industry.id}">
-                <option value="${company.industry.id}" selected="selected">${industry.industryName}</option>
-                </c:if>
-                    
-                    <c:forEach var="industry" items="${industries}">
-                        <c:choose>
-                            <c:when test="${industry.id == company.industry.id}">
-                                <option value="${company.industry.id}"
-                                        selected="selected">${industry.industryName}</option>
-                                <!-- skip -->
-                            </c:when>
-                            <c:when test="${industry.id != company.industry.id}">
-                                <option value="${industry.id}">${industry.industryName}</option>
-                            </c:when>
-                        </c:choose>
-                    </c:forEach>
-                </select>
-            </div>
-        </div>
+				<div class="six columns">
+					<label for="websiteInput">Website</label> <input
+						class="u-full-width" type="text" placeholder="Website"
+						id="websiteInput" name="website" value="${company.website}">
+				</div>
+				<div class="six columns">
+					<label for="countryInput">Industry</label> <select
+						class="u-full-width" id="industryInput" name="industryId">
+
+						<option disabled="disabled" selected="selected">Select
+							the Company Industry</option>
+
+
+						<c:forEach var="industry" items="${industries}">
+							<c:choose>
+								<c:when test="${industry.id == company.industry.id}">
+									<option value="${company.industry.id}" selected="selected">${industry.industryName}</option>
+									<!-- skip -->
+								</c:when>
+								<c:when test="${industry.id != company.industry.id}">
+									<option value="${industry.id}">${industry.industryName}</option>
+								</c:when>
+							</c:choose>
+						</c:forEach>
+					</select>
+				</div>
+			</div>
 
 
 			<label for="about">About Us</label>
