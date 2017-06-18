@@ -53,9 +53,7 @@ public class CompanyController {
     @GetMapping("/company")
     public String createCompany(HttpServletRequest request) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication == null || authentication.getName().isEmpty()) {
-            return "403_forbidden";
-        }
+        
 
         User user = userService.findByUsername(authentication.getName());
         Company userCompany = companyService.findCompany(user);
@@ -75,9 +73,7 @@ public class CompanyController {
     @PostMapping("/company")
     public String saveTask(@ModelAttribute Company company, BindingResult bindingResult, HttpServletRequest request) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication == null || authentication.getName().isEmpty()) {
-            return "403_forbidden";
-        }
+        
         // get the old company instance and set the new company id with the old one's id
         User user = userService.findByUsername(authentication.getName());
         Company oldCompany = companyService.findCompany(user);
