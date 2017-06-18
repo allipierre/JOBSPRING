@@ -83,7 +83,7 @@ public class CompanyController {
         }
         request.setAttribute("countries", countriesService.findAll());
         request.setAttribute("companySize", companySizeService.findAll());
-        request.setAttribute("company", oldCompany);
+        request.setAttribute("company", company);
         request.setAttribute("industries", industryService.findAll());
         companyservice.save(company);
         return "company";
