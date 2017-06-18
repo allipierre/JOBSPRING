@@ -28,6 +28,20 @@
 
 
     <style>
+    
+    .ui-widget-header {
+    border: 1px solid rgb(221, 221, 221);
+    background: rgb(34, 125, 188) !important;
+    color: rgb(255, 255, 255) !important;
+    font-weight: bold;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: 1px solid rgb(197, 197, 197) !important;
+    background: rgb(49, 163, 221) !important;
+    font-weight: normal;
+    color: rgb(255, 255, 255) !important;
+}
         #usernameInput {
             background: rgb(47, 171, 77) !important;
             color: rgb(255, 255, 255) !important;
