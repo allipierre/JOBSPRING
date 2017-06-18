@@ -336,8 +336,8 @@ color: rgb(255, 255, 255) !important;
       <label for="contratInput">Contract Type</label>
       <select class="u-full-width" id="contratInput">
       <option value="" disabled="disabled" selected="selected">Please select the contract type</option>
-        <c:forEach var="contrat" items="${contrat}">
-        <option value="${contrat.id}">${contrat.name}</option>
+        <c:forEach var="contract" items="${contract}">
+        <option value="${contract.id}">${contract.coname}</option>
          </c:forEach>
       </select>
     </div>

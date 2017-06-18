@@ -20,6 +20,7 @@ import io.blackground.jobfinder.models.Industry;
 import io.blackground.jobfinder.models.User;
 import io.blackground.jobfinder.services.CompanyService;
 import io.blackground.jobfinder.services.CompanySizeService;
+import io.blackground.jobfinder.services.ContractService;
 import io.blackground.jobfinder.services.CountriesService;
 import io.blackground.jobfinder.services.IndustryService;
 import io.blackground.jobfinder.services.JobService;
@@ -54,6 +55,9 @@ public class MainController {
 	@Autowired
 	private SalaryService salaryService;
 	
+	@Autowired
+	private ContractService contractService;
+	
 	
 	 @Autowired
 	    private UserServiceImpl userService;
@@ -81,6 +85,7 @@ public class MainController {
 		request.setAttribute("salary", salaryService.findAll());
 		request.setAttribute("industry", industryService.findAll());
 		request.setAttribute("country", countriesservice.findAll());
+		request.setAttribute("contract", contractService.findAll());
 		return "post";
 	}
 	

@@ -334,6 +334,22 @@ color: rgb(255, 255, 255) !important;
 
 
 
+<div class="container">
+
+<form method="POST" action="save-contract">
+  <div class="row">
+    <div class="six columns">
+      <label for="countryInput">Contract</label>
+      <input class="u-full-width" type="text" placeholder="Contract" id="contractInput" name="coname" value="${Contract.coname}">
+    </div>
+  </div>
+   <input class="button-primary" type="submit" value="SAVE Contract"> 
+   <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+</form> 
+</div>
+
+
+
   
 
 </body>

@@ -11,10 +11,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import io.blackground.jobfinder.models.CompanySize;
+import io.blackground.jobfinder.models.Contract;
 import io.blackground.jobfinder.models.Countries;
 import io.blackground.jobfinder.models.Industry;
 import io.blackground.jobfinder.models.Salary;
 import io.blackground.jobfinder.services.CompanySizeService;
+import io.blackground.jobfinder.services.ContractService;
 import io.blackground.jobfinder.services.CountriesService;
 import io.blackground.jobfinder.services.IndustryService;
 import io.blackground.jobfinder.services.SalaryService;
@@ -37,6 +39,9 @@ public class CreateCountriesController {
 	
 	@Autowired
 	private SalaryService salaryService;
+	
+	@Autowired
+	private ContractService contractService;
 
 	@PostMapping("/save-countries")
 	public String newCountry(@ModelAttribute Countries country, HttpServletRequest request) {
@@ -60,9 +65,17 @@ public class CreateCountriesController {
 	}
 	
 	@PostMapping("/save-salary")
-	public String newISalary(@ModelAttribute Salary salary, HttpServletRequest request) {
+	public String newSalary(@ModelAttribute Salary salary, HttpServletRequest request) {
 		salaryService.save(salary);
 		return "createcountries";
 	}
+	
+	@PostMapping("/save-contract")
+	public String newContract(@ModelAttribute Contract contract, HttpServletRequest request) {
+		contractService.save(contract);
+		return "createcountries";
+	}
+	
+	
 
 }
