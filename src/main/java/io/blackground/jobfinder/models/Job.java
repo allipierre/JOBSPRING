@@ -46,7 +46,8 @@ public class Job {
 
 	private transient Company company;
 	
-	
+	@OneToOne
+	private User user;
 	
 
 	
