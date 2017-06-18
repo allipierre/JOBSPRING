@@ -319,7 +319,7 @@
                 <select class="u-full-width" id="industryInput">
                  
                  <c:if test = "${company.id != industry.id}">
-                <option value="" disabled="disabled" selected="selected">${industry.industryName}</option>
+                <option value="" disabled="disabled" selected="selected">Select the Industry</option>
                  </c:if>
                   <c:forEach var="industry" items="${industries}">
                  <c:if test = "${company.industryId == industry.id}">
