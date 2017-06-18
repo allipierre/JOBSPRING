@@ -100,6 +100,7 @@ public class MainController {
 		Company userCompany = companyservice.findCompany(user);
 		job.setCompany(userCompany);
 		jobService.save(job);
+		job.setId(userCompany.getId());
 
 		request.setAttribute("salary", salaryService.findAll());
 		request.setAttribute("industry", industryService.findAll());
