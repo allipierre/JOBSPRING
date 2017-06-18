@@ -14,6 +14,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 import io.blackground.jobfinder.models.Company;
+import io.blackground.jobfinder.models.Industry;
 
 /**
  * @author yotti
@@ -36,6 +37,7 @@ public interface CompanyRepository extends CrudRepository<Company, Integer> {
 	@Query(value = "SELECT c.company_id, c.company_name, c.website, c.city, c.location, c.industryid, c.numbere" +
             " FROM company as c INNER JOIN user as u ON u.id=:userId", nativeQuery = true)
 	Company findCompanyByUser(@Param("userId") long userId);
+	Company findById(long id);
 	
 	
 

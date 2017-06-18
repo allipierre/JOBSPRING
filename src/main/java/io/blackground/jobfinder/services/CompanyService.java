@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 
 import io.blackground.jobfinder.Repository.CompanyRepository;
 import io.blackground.jobfinder.models.Company;
+import io.blackground.jobfinder.models.Industry;
 import io.blackground.jobfinder.models.User;
 import io.blackground.jobfinder.utils.HibernateUtil;
 
@@ -70,6 +71,10 @@ public class CompanyService {
 		session.getTransaction().commit();
 
 		return company;
+	}
+	
+	public Company findById(long id) {
+		return companyRepository.findById(id);
 	}
 
 }

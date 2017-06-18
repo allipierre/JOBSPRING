@@ -12,6 +12,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import io.blackground.jobfinder.Repository.JobRepository;
+import io.blackground.jobfinder.models.Industry;
 import io.blackground.jobfinder.models.Job;
 
 /**
@@ -54,12 +55,14 @@ public class JobService {
 		jobRepository.save(task);
 	}
 
-	public void delete(int id) {
+	public void delete(long id) {
 		jobRepository.delete(id);
 	}
 
-	public Job findJob(int id) {
+	public Job findJobById(long id) {
 		return jobRepository.findOne(id);
 	}
+	
+	
 
 }

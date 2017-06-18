@@ -12,6 +12,6 @@ import io.blackground.jobfinder.models.Job;
  * @author yotti
  *
  */
-public interface JobRepository extends CrudRepository<Job, Integer> {
+public interface JobRepository extends CrudRepository<Job, Long> {
 
 }

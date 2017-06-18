@@ -99,9 +99,10 @@ public class MainController {
 		User user = userService.findByUsername(authentication.getName());
 		Company userCompany = companyservice.findCompany(user);
 		job.setCompany(userCompany);
-		jobService.save(job);
 		job.setId(userCompany.getId());
-
+		jobService.save(job);
+		
+		job.setCompany(companyservice.findById(job.getCompanyid()));
 		request.setAttribute("salary", salaryService.findAll());
 		request.setAttribute("industry", industryService.findAll());
 		request.setAttribute("contract", contractService.findAll());
