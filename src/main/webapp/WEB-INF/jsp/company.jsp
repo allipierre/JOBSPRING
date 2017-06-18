@@ -310,8 +310,9 @@
 
         <div class="row">
             <div class="six columns">
+             <c:forEach var="industry" items="${industries}">
             <form:select path="industries" items="${industry.industryName}" />
-            
+             </c:forEach>
                 <label for="websiteInput">Website</label>
                 <input class="u-full-width" type="text" placeholder="Website" id="websiteInput" name="website"
                        value="${company.website}">
