@@ -63,12 +63,12 @@ public class CompanyController {
 
 		Map referenceData = new HashMap();
 
-		Map<String,String> country = new LinkedHashMap<String,String>();
-		country.put("US", "United Stated");
-		country.put("CHINA", "China");
-		country.put("SG", "Singapore");
-		country.put("MY", "Malaysia");
-		referenceData.put("countryList", country);
+		Map<String,String> countrye = new LinkedHashMap<String,String>();
+		countrye.put("US", "United Stated");
+		countrye.put("CHINA", "China");
+		countrye.put("SG", "Singapore");
+		countrye.put("MY", "Malaysia");
+		referenceData.put("countryList", countrye);
 
         
 
