@@ -80,6 +80,7 @@ public class MainController {
 	public String postJob(HttpServletRequest request) {
 		request.setAttribute("salary", salaryService.findAll());
 		request.setAttribute("industry", industryService.findAll());
+		request.setAttribute("country", countriesservice.findAll());
 		return "post";
 	}
 	

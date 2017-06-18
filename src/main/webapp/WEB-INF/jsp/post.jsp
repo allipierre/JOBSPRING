@@ -339,6 +339,7 @@ color: rgb(255, 255, 255) !important;
     <div class="six columns">
       <label for="countryInput">Country</label>
       <select class="u-full-width" id="countryInput">
+      <option value="" disabled="disabled" selected="selected">Please select the Country</option>
         <c:forEach var="country" items="${country}">
         <option value="${country.id}">${country.name}</option>
          </c:forEach>
