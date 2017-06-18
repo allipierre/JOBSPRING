@@ -365,14 +365,6 @@ color: rgb(255, 255, 255) !important;
       <label for="dateInput">Start date</label>
       <input class="u-full-width" type="text" placeholder="Date" id="datepicker" name="startdate"  value="">
     </div>
-    <div class="six columns">
-      <label for="countryInput">Country</label>
-      <select class="u-full-width" id="countryInput">
-        <c:forEach var="country" items="${country}">
-        <option value="${country.id}">${country.name}</option>
-         </c:forEach>
-      </select>
-    </div>
   </div>
   
   
