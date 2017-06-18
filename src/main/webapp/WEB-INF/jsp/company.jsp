@@ -331,7 +331,7 @@
         </div>
         <label for="about">About Us</label>
         <textarea class="u-full-width" placeholder="About Us" id="about" name="about"
-                  value="${company.about}"></textarea>
+                  value="${company.about}">${company.about}</textarea>
         <div class="row">
             <div class="one columns">
                 <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry"
