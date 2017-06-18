@@ -44,10 +44,10 @@ public class Job {
 	private String country;
 	private Date published;
 
-	private transient Company company;
+	//private transient Company company;
 	
 	@OneToOne
-	private User user;
+	private Company company;
 	
 
 	
