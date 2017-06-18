@@ -25,8 +25,9 @@ import java.util.Date;
 @Setter
 @Entity
 public class Job {
-
-	private long id;
+	 @Id
+	    @GeneratedValue
+		private long id;
 
 	private String position;
 
