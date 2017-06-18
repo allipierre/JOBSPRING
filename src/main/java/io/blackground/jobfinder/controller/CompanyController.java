@@ -83,6 +83,7 @@ public class CompanyController {
         }
         companyservice.save(company);
         company.setIndustry(industryService.findById(company.getIndustryId()));
+        company.setCountries(countriesService.findCountry((int) company.getCountries().getId()));
         request.setAttribute("countries", countriesService.findAll());
         request.setAttribute("companySize", companySizeService.findAll());
         request.setAttribute("company", company);

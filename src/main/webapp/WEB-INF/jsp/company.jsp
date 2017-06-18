@@ -289,16 +289,22 @@ aa {
 						value="${company.companyName}">
 				</div>
 				<div class="six columns">
-					<label for="countryInput">Country</label> <select
-						class="u-full-width" id="countryInput" name="countries">
-						<option value="" disabled="disabled" selected="selected">Select
-							the Country</option>
-						<c:forEach var="country" items="${countries}">
-							<option id="countryID" value="${country.id}">${country.name}</option>
-						</c:forEach>
-					</select>
-				</div>
-			</div>
+                <label for="countryInput">Country</label>
+                <select class="u-full-width" id="countryInput" name="countries">
+                    <option value="" disabled="disabled" selected="selected">Select the Country</option>
+                    <c:forEach var="country" items="${countries}">
+                        <c:choose>
+                            <c:when test="${country.id == company.countries.id}">
+                                <option id="countryID" value="${country}" selected="selected">${country.name}</option>
+                            </c:when>
+                            <c:when test="${country.id != company.countries.id}">
+                                <option id="countryID" value="${country}">${country.name}</option>
+                            </c:when>
+                        </c:choose>
+                    </c:forEach>
+                </select>
+            </div>
+        </div>
 
 			<div class="row">
 				<div class="six columns">
