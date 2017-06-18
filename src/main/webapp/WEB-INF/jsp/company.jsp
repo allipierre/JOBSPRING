@@ -317,15 +317,15 @@
             <div class="six columns">
                 <label for="countryInput">Industry</label>
                 <select class="u-full-width" id="industryInput">
-                 
+                  <c:forEach var="industry" items="${industries}">
                  <c:if test = "${company.id == null}">
                 <option value="" disabled="disabled" selected="selected">Select the Induytry)
                     </option>
                  </c:if>
-                 <c:if test = "${company.id != null}">
-                <option value="${company.industryId}">${company.industryId}</option>
+                 <c:if test = "${company.id != null and company.id == industry.id}">
+                <option value="${industry.id}">${industry.industryName}</option>
                 </c:if>
-                    <c:forEach var="industry" items="${industries}">
+                   
                         
                             
                                 <option value="${industry.id}">${industry.industryName}</option>
