@@ -3,7 +3,10 @@
  */
 package io.blackground.jobfinder.controller;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -53,6 +56,20 @@ public class CompanyController {
     @GetMapping("/company")
     public String createCompany(HttpServletRequest request) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        
+        
+        
+        
+
+		Map referenceData = new HashMap();
+
+		Map<String,String> country = new LinkedHashMap<String,String>();
+		country.put("US", "United Stated");
+		country.put("CHINA", "China");
+		country.put("SG", "Singapore");
+		country.put("MY", "Malaysia");
+		referenceData.put("countryList", country);
+
         
 
         User user = userService.findByUsername(authentication.getName());
