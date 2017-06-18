@@ -46,7 +46,7 @@ public class MainController {
 	private CountriesService countriesservice;
 	
 	@Autowired
-	private CompanySizeService companySizesservice
+	private CompanySizeService companySizesservice;
 	
 	@Autowired
 	private IndustryService industryService;
