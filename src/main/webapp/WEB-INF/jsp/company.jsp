@@ -279,7 +279,7 @@
             </div>
             <div class="six columns">
                 <label for="countryInput">Country</label>
-                <select class="u-full-width" id="countryInput">
+                <select class="u-full-width" id="countryInput" name="countries">
                     <option value="" disabled="disabled" selected="selected">Select the Country</option>
                     <c:forEach var="country" items="${countries}">
                         <option id="countryID" value="${country.id}">${country.name}</option>
@@ -316,7 +316,7 @@
             </div>
             <div class="six columns">
                 <label for="countryInput">Industry</label>
-                <select class="u-full-width" id="industryInput">
+                <select class="u-full-width" id="industryInput" name="industryId">
                  
                  <c:if test = "${company.id != industry.id}">
                 <option value="" disabled="disabled" selected="selected">Select the Industry
