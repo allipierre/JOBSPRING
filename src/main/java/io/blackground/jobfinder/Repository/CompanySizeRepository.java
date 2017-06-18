@@ -13,6 +13,6 @@ import io.blackground.jobfinder.models.CompanySize;
  * @author yotti
  *
  */
-public interface CompanySizeRepository extends CrudRepository<CompanySize, Integer> {
+public interface CompanySizeRepository extends CrudRepository<CompanySize, Long> {
 
 }

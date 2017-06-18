@@ -48,7 +48,7 @@ public class Company {
 	@Column(name = "industry_id")
 	private long industryId;
 	private long countryId;
-	private int numbere;
+	private long numbere;
 
 	private transient Industry industry;
 	private transient Countries countries;

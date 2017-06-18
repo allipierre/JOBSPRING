@@ -47,11 +47,11 @@ public class CompanySizeService {
 		compagySizeRepository.save(companySize);
 	}
 
-	public void delete(int id) {
+	public void delete(Long id) {
 		compagySizeRepository.delete(id);
 	}
 
-	public CompanySize findCountry(int id) {
+	public CompanySize findCountry(Long id) {
 		return compagySizeRepository.findOne(id);
 	}
 
