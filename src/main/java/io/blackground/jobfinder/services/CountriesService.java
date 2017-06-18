@@ -10,7 +10,6 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import io.blackground.jobfinder.Repository.CountriesRepository;
 import io.blackground.jobfinder.models.Countries;
-
 /**
  * @author yotti
  *
@@ -21,9 +20,6 @@ public class CountriesService {
 
 	private final CountriesRepository countriesRepository;
 
-	/**
-	 * @param taskRepository
-	 */
 	public CountriesService(CountriesRepository countriesRepository) {
 		super();
 		this.countriesRepository = countriesRepository;
@@ -49,6 +45,5 @@ public class CountriesService {
 	public Countries findCountry(long id) {
 		return countriesRepository.findOne((id));
 	}
-
 
 }

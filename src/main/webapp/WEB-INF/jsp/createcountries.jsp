@@ -317,6 +317,23 @@ color: rgb(255, 255, 255) !important;
 
 
 
+
+<div class="container">
+
+<form method="POST" action="save-salary">
+  <div class="row">
+    <div class="six columns">
+      <label for="countryInput">Salary</label>
+      <input class="u-full-width" type="text" placeholder="Salary" id="salaryInput" name="salary" value="${Salary.salary}">
+    </div>
+  </div>
+   <input class="button-primary" type="submit" value="SAVE Salary"> 
+   <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+</form> 
+</div>
+
+
+
   
 
 </body>
