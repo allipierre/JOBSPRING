@@ -327,7 +327,13 @@ aa {
             <div class="six columns">
                 <label for="countryInput">Industry</label>
                 <select class="u-full-width" id="industryInput" name="industryId">
-                    <option disabled="disabled" selected="selected">Select the Company Industry</option>
+                <c:if test = "${company.industryId != industry.id}">
+                <option disabled="disabled" selected="selected">Select the Company Industry</option>
+                </c:if>    
+                <c:if test="${company.industryId == industry.id}">
+                <option value="${company.industry.id}" selected="selected">${industry.industryName}</option>
+                </c:if>
+                    
                     <c:forEach var="industry" items="${industries}">
                         <c:choose>
                             <c:when test="${industry.id == company.industry.id}">
