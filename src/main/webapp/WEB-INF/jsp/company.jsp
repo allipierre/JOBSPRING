@@ -329,9 +329,9 @@
                 </c:forEach>
                     <c:forEach var="industry" items="${industries}">
                         
-                            
+                            <c:if test = "${company.industryId != industry.id}">
                                 <option value="${industry.id}">${industry.industryName}</option>
-                            
+                            </c:if>
                        
                     </c:forEach>
                 </select>
