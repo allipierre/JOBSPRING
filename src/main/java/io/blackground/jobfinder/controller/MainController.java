@@ -98,6 +98,7 @@ public class MainController {
 
 		User user = userService.findByUsername(authentication.getName());
 		Company userCompany = companyservice.findCompany(user);
+		System.out.println(" The Man "+userCompany);
 		job.setCompany(userCompany);
 		job.setId(userCompany.getId());
 		jobService.save(job);
