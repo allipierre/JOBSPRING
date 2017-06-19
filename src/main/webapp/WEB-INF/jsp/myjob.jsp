@@ -106,12 +106,29 @@ text-align: center !important;
     color: rgb(255, 255, 255) !important;
     background-color: rgb(92, 184, 92) !important;
     border-color: rgb(92, 184, 92) !important;
+    margin-left: 0px !important;
+    margin-right: 13px !important;
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+}
+
+
+.button.button-primary.show, button.button-primary.show, input[type="submit"].button-primary.show, input[type="reset"].button-primary.show, input[type="button"].button-primary.show {
+    
+    margin-left: 0px !important;
+    margin-right: 13px !important;
+    padding-left: 9px !important;
+    padding-right: 9px !important;
 }
 
 .button.button-primary.deletee, button.button-primary.deletee, input[type="submit"].button-primary.deletee, input[type="reset"].button-primary.deletee, input[type="button"].button-primary.deletee {
    color: rgb(255, 255, 255) !important;
     background-color: rgb(217, 83, 79) !important;
     border-color: rgb(217, 83, 79) !important;
+        margin-left: 0px !important;
+    margin-right: 13px !important;
+    padding-left: 9px !important;
+    padding-right: 9px !important;
 }
 
 .show{
