@@ -318,9 +318,9 @@ text-align: center !important;
 						<th>Date Created</th>
 						<th>Contract</th>
 						<th>Experience</th>
-						<th></th>
-						<th></th>
-						<th></th>
+						<th>action</th>
+						<th>action</th>
+						<th>action</th>
 					</tr>
 				</thead>
 				<tbody>
