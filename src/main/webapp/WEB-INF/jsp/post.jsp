@@ -351,7 +351,7 @@ aa {
 				</div>
 				<div class="six columns">
 					<label for="contratInput">Contract Type</label> <select
-						class="u-full-width" id="contratInput">
+						class="u-full-width" id="contratInput"  name=contrat>
 						<option value="" disabled="disabled" selected="selected">Please
 							select the contract type</option>
 						<c:forEach var="contract" items="${contract}">

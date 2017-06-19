@@ -38,9 +38,8 @@ public class Job {
 	private String minimumDegree;
 	private int slots;
 	private String title;
-	private String contrat;
+	private long contrat;
 	private String city;
-	private String country;
 	private Date published;
 
 	//private transient Company company;
