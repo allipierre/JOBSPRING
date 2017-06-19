@@ -271,13 +271,7 @@ text-align: center !important;
     border-color: rgb(217, 83, 79) !important;
 }
 
-.button.button-primary, button.button-primary, input[type="submit"].button-primary,
-	input[type="reset"].button-primary, input[type="button"].button-primary
-	{
-	color: rgb(255, 255, 255);
-	background-color: rgb(49, 163, 221) !important;
-	border-color: rgb(49, 163, 221) !important;
-}
+
 
 #lb1, #lb2 {
 	color: rgb(255, 255, 255) !important;
