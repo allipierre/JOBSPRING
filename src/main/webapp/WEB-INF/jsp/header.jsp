@@ -91,8 +91,7 @@ aa {
 	<nav class="navbar">
 		<div class="container">
 			<div class="four columns twoc">
-				<a href="/"><img
-					src="/static/images/blackground_jobs-01.png"
+				<a href="/"><img src="/static/images/blackground_jobs-01.png"
 					class="u-max-full-width"></a>
 			</div>
 			<ul class="navbar-list" id="pana">
@@ -126,14 +125,15 @@ aa {
 					data-popover="#moreNavPopovere">${pageContext.request.userPrincipal.name}</a>
 					<div id="moreNavPopovere" class="popover">
 						<ul class="popover-list">
+
+
+							<li class="popover-item"><a class="popover-link"
+								href="myjob">My Job</a></li>
 							<li class="popover-item"><a class="popover-link"
 								onclick="document.forms['logoutForm'].submit()">Logout</a></li>
-								
-								<li class="popover-item"><a class="popover-link"
-								href="myjob">My Job</a></li>
 						</ul>
 					</div></li>
-					<c:if test="${pageContext.request.userPrincipal.name != null}">
+				<c:if test="${pageContext.request.userPrincipal.name != null}">
 					<form id="logoutForm" method="POST" action="${contextPath}/logout">
 						<input type="hidden" name="${_csrf.parameterName}"
 							value="${_csrf.token}" />

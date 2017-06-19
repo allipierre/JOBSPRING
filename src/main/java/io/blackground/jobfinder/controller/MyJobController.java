@@ -40,34 +40,12 @@ public class MyJobController {
 	private JobService jobservice;
 
 	@Autowired
-	private CompanyService companyservice;
-
-	@Autowired
-	private ExperienceService experienceservice;
-
-	@Autowired
-	private IndustryService industryService;
-
-	@Autowired
-	private SalaryService salaryService;
-
-	@Autowired
-	private ContractService contractService;
-
-	@Autowired
-	private UserServiceImpl userService;
-
-	@Autowired
 	private JobService jobService;
 
 	@GetMapping("/myjob")
 	public String postJob(HttpServletRequest request) {
-		
+		request.setAttribute("jobs", jobService.findAll());
 		return "myjob";
 	}
-
-	
-
-	
 
 }

@@ -303,7 +303,53 @@ aa {
 	</div>
 
 	
+<div class="container text-center" id="tasksDIV">
+				<h3>My Tasks</h3>
+				<hr>
+				<div class="table-responsive">
+					<table id="users" class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Category</th>
+								<th>Title</th>
+								<th>Date Created</th>
+								<th>Finished</th>
+								<th>Contract</th>
+								<th>Experience</th>
+								<th></th>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<c:forEach var="jobs" items="${jobs}">
+								<tr>
+									<td>${jobs.id}</td>
+									<td>${jobs.category}</td>
+									<td>${jobs.title}</td>
+									<td>${jobs.contrat}</td>
+									<td>${jobs.minimumExperienceYears}</td>
+									<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
+											value="${jobs.published}" /></td>
+									<td>${jobs.finished}</td>
+									<td><a href="delete-task?id=${jobs.id}"> <span
+											class="glyphicon glyphicon-trash"></span>
+									</a></td>
+									<td><a href="update-task?id=${jobs.id}"> <span
+											class="glyphicon glyphicon-edit"></span>
+									</a></td>
+									<td><a href="show-task?id=${jobs.id}"> <span
+											class="glyphicon glyphicon-eye-open"></span>
+									</a></td>
+								</tr>
 
+							</c:forEach>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
 
 
 
