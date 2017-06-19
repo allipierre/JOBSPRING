@@ -308,8 +308,8 @@ text-align: center !important;
 	<div class="container text-center" id="tasksDIV">
 		
 		<hr>
-		<div class="table-responsive">
-			<table id="users" class="table table-striped table-bordered, u-full-width">
+		
+			<table id="users" class="u-full-width">
 				<thead>
 					<tr class="headertable">
 						<th>Id</th>
@@ -342,7 +342,7 @@ text-align: center !important;
 				</tbody>
 			</table>
 
-		</div>
+		
 	</div>
 
 
