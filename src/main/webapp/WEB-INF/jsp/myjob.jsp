@@ -191,9 +191,9 @@ th, td {
 									value="${jobs.published}" /></td>
 									<td>${jobs.contrat}</td>
 							<td>${jobs.minimumExperienceYears}</td>
-							<td><a class="button button-primary show" href="#">show</a></td>
-							<td><a class="button button-primary edit" href="#">edit</a></td>
-							<td><a class="button button-primary deletee" href="#">delete</a></td>
+							<td><a class="button button-primary show" href="#"><i class="fa fa-eye" aria-hidden="true"></i> show</a></td>
+							<td><a class="button button-primary edit" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> edit</a></td>
+							<td><a class="button button-primary deletee" href="#"><i class="fa fa-remove" aria-hidden="true"></i> delete</a></td>
 						</tr>
 
 					</c:forEach>
