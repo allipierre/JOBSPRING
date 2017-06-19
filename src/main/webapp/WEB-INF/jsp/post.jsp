@@ -370,6 +370,17 @@ aa {
 						class="u-full-width" type="text" placeholder="Date"
 						id="datepicker" name="published" value="${job.published}">
 				</div>
+				
+				<div class="six columns">
+					<label for="contratInput">Experience</label> <select
+						class="u-full-width" id="experienceInput"  name=minimumExperienceYears>
+						<option value="" disabled="disabled" selected="selected">
+						Select the years of experience in this skill</option>
+						<c:forEach var="experience" items="${experience}">
+							<option value="${experience.id}">${experience.exname}</option>
+						</c:forEach>
+					</select>
+				</div>
 			</div>
 
 

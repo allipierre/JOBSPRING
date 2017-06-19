@@ -349,6 +349,21 @@ color: rgb(255, 255, 255) !important;
 </div>
 
 
+<div class="container">
+
+<form method="POST" action="save-experience">
+  <div class="row">
+    <div class="six columns">
+      <label for="countryInput">Experience</label>
+      <input class="u-full-width" type="text" placeholder="Experience" id="experienceInput" name="exname" value="${Experience.exname}">
+    </div>
+  </div>
+   <input class="button-primary" type="submit" value="SAVE Experience"> 
+   <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+</form> 
+</div>
+
+
 
   
 
