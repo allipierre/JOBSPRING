@@ -368,7 +368,7 @@ aa {
 				<div class="six columns">
 					<label for="dateInput">Start date</label> <input
 						class="u-full-width" type="text" placeholder="Date"
-						id="datepicker" name="startdate" value="">
+						id="datepicker" name="published" value="${job.published}">
 				</div>
 			</div>
 
