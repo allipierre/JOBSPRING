@@ -189,7 +189,13 @@ th, td {
 							<td>${jobs.title}</td>
 							<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
 									value="${jobs.published}" /></td>
-									<td>${jobs.contrat}</td>
+									<c:forEach var="contract" items="${contract}">
+									<c:choose>
+									<c:when test="${contract.id==jobs.contrat}">
+									<td>${contract.coname}</td>
+									</c:when>
+									</c:choose>
+									</c:forEach>
 							<td>${jobs.minimumExperienceYears}</td>
 							<td><a class="button button-primary show" href="#"><i class="fa fa-eye" aria-hidden="true"></i> show</a></td>
 							<td><a class="button button-primary edit" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> edit</a></td>
