@@ -42,130 +42,8 @@
 
 
 
-.cancel:hover {
-	color: rgb(0, 0, 0) !important;
-}
-
-.panel, .panel-heading {
-	-webkit-border-radius: 0 !important;
-	-moz-border-radius: 0 !important;
-	border-radius: 0 !important;
-	-moz-background-clip: padding;
-	-webkit-background-clip: padding-box;
-	background-clip: padding-box;
-	-webkit-box-shadow: none !important;
-	box-shadow: none !important;
-}
-
-.panel-light-content {
-	border-color: rgb(224, 225, 229);
-}
-
-.hidden-sm {
-	display: block !important;
-}
-
-.panel-light-content>.panel-heading {
-	color: rgb(102, 102, 102);
-	background-color: rgb(255, 255, 255);
-	border-color: rgb(224, 225, 229);
-}
-
-.panel-heading {
-	padding: 10px 15px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0);
-}
-
-.text-muted {
-	color: rgb(153, 153, 153);
-}
-
-.small, .small {
-	font-size: 85%;
-}
-
-#job-search-content .panel-heading .headline3 {
-	margin: 0 0 10px 0;
-}
-
-
-
 a {
 	color: rgb(34, 125, 188);
-}
-
-#job-search-content .panel-heading .headline3 small {
-	color: rgb(166, 176, 178);
-}
-
-small, .small {
-	font-size: 85%;
-}
-
-#job-search-content .panel-footer {
-	padding: 10px 10px;
-	border-top: 0;
-}
-
-.panel-light-content .panel-footer {
-	background-color: rgb(255, 255, 255);
-}
-
-.panel-footer {
-	padding: 10px 15px;
-	background-color: rgb(245, 245, 245);
-}
-
-.clearfix:before, .clearfix:after {
-	content: " ";
-	display: table;
-}
-
-.list-inline {
-	margin: 0;
-}
-
-.list-inline {
-	padding-left: 0;
-	list-style: none;
-}
-
-#job-search-content .panel-footer .panel-footer-icon-wrapper {
-	font-size: 12px;
-}
-
-#job-search-content .panel-footer li {
-	padding-top: 6px;
-	color: rgb(166, 176, 178);
-}
-
-.list-inline>li {
-	display: inline-block;
-	padding-left: 5px;
-	padding-right: 5px;
-}
-
-.icon {
-	font-family: 'intjobs';
-	display: inline-block;
-	min-width: 1em;
-	text-align: center;
-	cursor: inherit;
-	font-weight: 400;
-}
-
-job-search-content .panel-footer li:last-child {
-	padding-top: 0;
-	padding-right: 0;
-}
-
-#job-search-content .panel-footer li {
-	padding-top: 6px;
-	color: rgb(166, 176, 178);
-}
-
-#job-search-content .panel-footer .btn {
-	min-width: 130px;
 }
 
 
@@ -230,7 +108,7 @@ text-align: center !important;
     border-color: rgb(92, 184, 92) !important;
 }
 
-.button.button-primary.delete, button.button-primary.delete, input[type="submit"].button-primary.delete, input[type="reset"].button-primary.delete, input[type="button"].button-primary.delete {
+.button.button-primary.deletee, button.button-primary.deletee, input[type="submit"].button-primary.deletee, input[type="reset"].button-primary.deletee, input[type="button"].button-primary.deletee {
    color: rgb(255, 255, 255) !important;
     background-color: rgb(217, 83, 79) !important;
     border-color: rgb(217, 83, 79) !important;
@@ -245,19 +123,7 @@ text-align: center !important;
 
 
 
-#lb1, #lb2 {
-	color: rgb(255, 255, 255) !important;
-}
 
-
-
-
-
-#sub1 {
-	color: rgb(255, 255, 255) !important;
-	background-color: red !important;
-	border-color: red !important;
-}
 
 th, td {
     border: 1px solid rgb(225, 225, 225) !important;
@@ -310,7 +176,7 @@ th, td {
 							<td>${jobs.minimumExperienceYears}</td>
 							<td><a class="button button-primary show" href="#">show</a></td>
 							<td><a class="button button-primary edit" href="#">edit</a></td>
-							<td><a class="button button-primary delete" href="#">delete</a></td>
+							<td><a class="button button-primary deletee" href="#">delete</a></td>
 						</tr>
 
 					</c:forEach>
