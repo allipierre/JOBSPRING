@@ -128,6 +128,9 @@ aa {
 						<ul class="popover-list">
 							<li class="popover-item"><a class="popover-link"
 								onclick="document.forms['logoutForm'].submit()">Logout</a></li>
+								
+								<li class="popover-item"><a class="popover-link"
+								href="myjob">My Job</a></li>
 						</ul>
 					</div></li>
 					<c:if test="${pageContext.request.userPrincipal.name != null}">
