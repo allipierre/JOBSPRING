@@ -35,38 +35,32 @@
 
 
 <style>
-
 .pull-right {
 	float: right;
 }
-
-
 
 a {
 	color: rgb(34, 125, 188);
 }
 
-
-
-
-
-thead{
-background: rgb(49, 163, 221) !important;
+thead {
+	background: rgb(49, 163, 221) !important;
 }
 
 body {
-    background: rgb(255, 255, 255) !important;
+	background: rgb(255, 255, 255) !important;
 }
 
 .header {
 	margin-top: 14rem !important;
 }
 
-.headertable{
-color: rgb(255, 255, 255) !important;
+.headertable {
+	color: rgb(255, 255, 255) !important;
 }
-th{
-text-align: center !important;
+
+th {
+	text-align: center !important;
 }
 
 .ner {
@@ -100,50 +94,45 @@ text-align: center !important;
 	}
 }
 
-
-
-.button.button-primary.edit, button.button-primary.edit, input[type="submit"].button-primary.edit, input[type="reset"].button-primary.edit, input[type="button"].button-primary.edit {
-    color: rgb(255, 255, 255) !important;
-    background-color: rgb(92, 184, 92) !important;
-    border-color: rgb(92, 184, 92) !important;
-    margin-left: 0px !important;
-    margin-right: 13px !important;
-    padding-left: 9px !important;
-    padding-right: 9px !important;
+.button.button-primary.edit, button.button-primary.edit, input[type="submit"].button-primary.edit,
+	input[type="reset"].button-primary.edit, input[type="button"].button-primary.edit
+	{
+	color: rgb(255, 255, 255) !important;
+	background-color: rgb(92, 184, 92) !important;
+	border-color: rgb(92, 184, 92) !important;
+	margin-left: 0px !important;
+	margin-right: 13px !important;
+	padding-left: 9px !important;
+	padding-right: 9px !important;
 }
 
-
-.button.button-primary.show, button.button-primary.show, input[type="submit"].button-primary.show, input[type="reset"].button-primary.show, input[type="button"].button-primary.show {
-    
-    margin-left: 0px !important;
-    margin-right: 13px !important;
-    padding-left: 9px !important;
-    padding-right: 9px !important;
+.button.button-primary.show, button.button-primary.show, input[type="submit"].button-primary.show,
+	input[type="reset"].button-primary.show, input[type="button"].button-primary.show
+	{
+	margin-left: 0px !important;
+	margin-right: 13px !important;
+	padding-left: 9px !important;
+	padding-right: 9px !important;
 }
 
-.button.button-primary.deletee, button.button-primary.deletee, input[type="submit"].button-primary.deletee, input[type="reset"].button-primary.deletee, input[type="button"].button-primary.deletee {
-   color: rgb(255, 255, 255) !important;
-    background-color: rgb(217, 83, 79) !important;
-    border-color: rgb(217, 83, 79) !important;
-        margin-left: 0px !important;
-    margin-right: 13px !important;
-    padding-left: 9px !important;
-    padding-right: 9px !important;
+.button.button-primary.deletee, button.button-primary.deletee, input[type="submit"].button-primary.deletee,
+	input[type="reset"].button-primary.deletee, input[type="button"].button-primary.deletee
+	{
+	color: rgb(255, 255, 255) !important;
+	background-color: rgb(217, 83, 79) !important;
+	border-color: rgb(217, 83, 79) !important;
+	margin-left: 0px !important;
+	margin-right: 13px !important;
+	padding-left: 9px !important;
+	padding-right: 9px !important;
 }
 
-.show{
-    color: rgb(255, 255, 255) !important;
+.show {
+	color: rgb(255, 255, 255) !important;
 }
-
-
-
-
-
-
-
 
 th, td {
-    border: 1px solid rgb(225, 225, 225) !important;
+	border: 1px solid rgb(225, 225, 225) !important;
 }
 </style>
 
@@ -164,49 +153,58 @@ th, td {
 
 
 	<div class="container text-center" id="tasksDIV">
-		
+
 		<hr>
-		
-			<table id="users" class="u-full-width">
-				<thead>
-					<tr class="headertable">
-						<th>Id</th>
-						<th>Category</th>
-						<th>Title</th>
-						<th>Date Created</th>
-						<th>Contract</th>
-						<th>Experience</th>
-						<th></th>
-						<th></th>
-						<th></th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach var="jobs" items="${jobs}">
-						<tr>
-							<td>${jobs.id}</td>
-							<td>${jobs.category}</td>
-							<td>${jobs.title}</td>
-							<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
-									value="${jobs.published}" /></td>
-									<c:forEach var="contract" items="${contract}">
-									<c:choose>
-									<c:when test="${contract.id==jobs.contrat}">
+
+		<table id="users" class="u-full-width">
+			<thead>
+				<tr class="headertable">
+					<th>Id</th>
+					<th>Category</th>
+					<th>Title</th>
+					<th>Date Created</th>
+					<th>Contract</th>
+					<th>Experience</th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="jobs" items="${jobs}">
+					<tr>
+						<td>${jobs.id}</td>
+						<td>${jobs.category}</td>
+						<td>${jobs.title}</td>
+						<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
+								value="${jobs.published}" /></td>
+						<c:forEach var="contract" items="${contract}">
+							<c:choose>
+								<c:when test="${contract.id==jobs.contrat}">
 									<td>${contract.coname}</td>
-									</c:when>
-									</c:choose>
-									</c:forEach>
-							<td>${jobs.minimumExperienceYears}</td>
-							<td><a class="button button-primary show" href="#"><i class="fa fa-eye" aria-hidden="true"></i> show</a></td>
-							<td><a class="button button-primary edit" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> edit</a></td>
-							<td><a class="button button-primary deletee" href="#"><i class="fa fa-trash" aria-hidden="true"></i> delete</a></td>
-						</tr>
+								</c:when>
+							</c:choose>
+						</c:forEach>
+						<c:forEach var="experience" items="${experience}">
+							<c:choose>
+								<c:when test="${experience.id==jobs.minimumExperienceYears}">
+									<td>${experience.exname}</td>
+								</c:when>
+							</c:choose>
+						</c:forEach>
+						<td><a class="button button-primary show" href="#"><i
+								class="fa fa-eye" aria-hidden="true"></i> show</a></td>
+						<td><a class="button button-primary edit" href="#"><i
+								class="fa fa-pencil-square-o" aria-hidden="true"></i> edit</a></td>
+						<td><a class="button button-primary deletee" href="#"><i
+								class="fa fa-trash" aria-hidden="true"></i> delete</a></td>
+					</tr>
 
-					</c:forEach>
-				</tbody>
-			</table>
+				</c:forEach>
+			</tbody>
+		</table>
 
-		
+
 	</div>
 
 
