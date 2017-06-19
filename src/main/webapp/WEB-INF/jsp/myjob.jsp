@@ -35,21 +35,12 @@
 
 
 <style>
-#companyIndustry, #companyLocation, #companySize {
-	display: none;
-}
 
 .pull-right {
 	float: right;
 }
 
-.button.button-primary, button.button-primary, input[type="submit"].cancel.button-primary,
-	input[type="reset"].button-primary, input[type="button"].button-primary
-	{
-	background-color: rgb(255, 255, 255) !important;
-	border-color: rgb(167, 167, 167) !important;
-	color: rgb(0, 0, 0) !important;
-}
+
 
 .cancel:hover {
 	color: rgb(0, 0, 0) !important;
@@ -97,13 +88,7 @@
 	margin: 0 0 10px 0;
 }
 
-body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4,
-	body h5, body .h5, body .headline1, body .headline2, body .headline3,
-	body .headline4, body .headline5, body .headline6 {
-	color: rgb(44, 44, 44);
-	font-family: 'open_sansregular', Helvetica, Arial, sans-serif,
-		"Zawgyi-One", "noto_sans_sinhalaregular";
-}
+
 
 a {
 	color: rgb(34, 125, 188);
@@ -183,31 +168,14 @@ job-search-content .panel-footer li:last-child {
 	min-width: 130px;
 }
 
-.btn:active, .btn:focus, .btn:hover, .btn:visited {
-	outline: none !important;
-}
 
-.wrap .btn {
-	font-weight: 600;
-}
 
-.wrap .btn {
-	font-weight: 600;
-}
 
-.btn-submit, .btn-info, .save {
-	background-color: rgb(5, 114, 206) !important;
-	color: rgb(255, 255, 255) !important;
-	border: 0;
-	padding: 8px 12px;
-	border-width: .1rem;
-	border-color: rgb(4, 100, 181);
-}
 
 thead{
 background: rgb(49, 163, 221) !important;
 }
-/*    */
+
 html {
     background: rgb(255, 255, 255) !important;
 }
@@ -277,21 +245,9 @@ text-align: center !important;
 	color: rgb(255, 255, 255) !important;
 }
 
-.ui-widget-header {
-	border: 1px solid rgb(221, 221, 221);
-	background: rgb(34, 125, 188) !important;
-	color: rgb(255, 255, 255) !important;
-	font-weight: bold;
-}
 
-.ui-state-default, .ui-widget-content .ui-state-default,
-	.ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover,
-	html .ui-button.ui-state-disabled:active {
-	border: 1px solid rgb(197, 197, 197) !important;
-	background: rgb(49, 163, 221) !important;
-	font-weight: normal;
-	color: rgb(255, 255, 255) !important;
-}
+
+
 
 #sub1 {
 	color: rgb(255, 255, 255) !important;
@@ -372,30 +328,9 @@ th, td {
 
 
 
-<script>
-$(function(){
-$("#header").load("header.html");
-});
-document.addEventListener("DOMContentLoaded", function(){
-	Typed.new(".price", {
-		strings: ["GHC 500", "<strong>GHC 299</strong>"],
-		typeSpeed: 1,
-		loop: true
-	});
-});
 
-$( "#industryInput" ).change(function() {  $( "#companyIndustry").val($(this).val()); });
-$( "#countryInput" ).change(function() {  $( "#companyLocation").val($(this).val()); });
-$( "#sizeInput" ).change(function() {  $( "#companySize").val($(this).val()); });
-
-</script>
 <script type="text/javascript" src="/static/js/file.js"></script>
 <script type="text/javascript" src="/static/js/typed.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-  </script>
 </html>
