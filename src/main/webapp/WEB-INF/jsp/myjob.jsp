@@ -209,7 +209,7 @@ background: rgb(49, 163, 221) !important;
 }
 /*    */
 html {
-	background: rgba(182, 184, 187, 0.22) !important;
+    background: rgb(255, 255, 255) !important;
 }
 
 .header {
@@ -287,6 +287,10 @@ text-align: center !important;
 	background-color: red !important;
 	border-color: red !important;
 }
+
+th, td {
+    border: 1px solid rgb(225, 225, 225) !important;
+}
 </style>
 
 
@@ -318,9 +322,9 @@ text-align: center !important;
 						<th>Date Created</th>
 						<th>Contract</th>
 						<th>Experience</th>
-						<th>action</th>
-						<th>action</th>
-						<th>action</th>
+						<th></th>
+						<th></th>
+						<th></th>
 					</tr>
 				</thead>
 				<tbody>
