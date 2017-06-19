@@ -204,10 +204,9 @@ job-search-content .panel-footer li:last-child {
 	border-color: rgb(4, 100, 181);
 }
 
-.fa-eye {
-	padding-top: 2px;
+thead{
+background: rgb(49, 163, 221) !important;
 }
-
 /*    */
 html {
 	background: rgba(182, 184, 187, 0.22) !important;
@@ -217,8 +216,11 @@ html {
 	margin-top: 14rem !important;
 }
 
-aa {
-	
+tr{
+color: rgb(255, 255, 255) !important;
+}
+th{
+text-align: center !important;
 }
 
 .ner {
@@ -304,7 +306,7 @@ aa {
 
 
 	<div class="container text-center" id="tasksDIV">
-		<h3>My Tasks</h3>
+		
 		<hr>
 		<div class="table-responsive">
 			<table id="users" class="table table-striped table-bordered, u-full-width">
