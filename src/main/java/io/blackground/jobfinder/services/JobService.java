@@ -73,7 +73,7 @@ public class JobService {
 		Company userCompany = companyService.findCompany(user);
 		List<Job> jobs = new ArrayList<>();
 		for (Job job : jobRepository.findAll()) {
-			if(job.getCompany().getId()==userCompany.getIndustryId()){
+			if(job.getCompany().getId()==userCompany.getId()){
 				jobs.add(job);
 			}
 			
