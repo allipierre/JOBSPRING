@@ -216,7 +216,7 @@ html {
 	margin-top: 14rem !important;
 }
 
-.headertable tr{
+.headertable{
 color: rgb(255, 255, 255) !important;
 }
 th{
