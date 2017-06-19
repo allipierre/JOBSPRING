@@ -254,6 +254,23 @@ text-align: center !important;
 	}
 }
 
+.edit{
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(92, 184, 92) !important;
+    border-color: rgb(92, 184, 92) !important;
+}
+
+.show{
+    color: rgb(255, 255, 255) !important;
+}
+
+
+.delete{
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(217, 83, 79) !important;
+    border-color: rgb(217, 83, 79) !important;
+}
+
 .button.button-primary, button.button-primary, input[type="submit"].button-primary,
 	input[type="reset"].button-primary, input[type="button"].button-primary
 	{
@@ -337,9 +354,9 @@ th, td {
 									value="${jobs.published}" /></td>
 									<td>${jobs.contrat}</td>
 							<td>${jobs.minimumExperienceYears}</td>
-							<td><a class="button button-primary" href="#">show</a></td>
-							<td><a class="button button-primary" href="#">edit</a></td>
-							<td><a class="button button-primary" href="#">delete</a></td>
+							<td><a class="button button-primary show" href="#">show</a></td>
+							<td><a class="button button-primary edit" href="#">edit</a></td>
+							<td><a class="button button-primary delete" href="#">delete</a></td>
 						</tr>
 
 					</c:forEach>
