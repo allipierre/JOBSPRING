@@ -216,7 +216,7 @@ html {
 	margin-top: 14rem !important;
 }
 
-tr{
+.headertable tr{
 color: rgb(255, 255, 255) !important;
 }
 th{
@@ -311,7 +311,7 @@ text-align: center !important;
 		<div class="table-responsive">
 			<table id="users" class="table table-striped table-bordered, u-full-width">
 				<thead>
-					<tr>
+					<tr class="headertable">
 						<th>Id</th>
 						<th>Category</th>
 						<th>Title</th>
