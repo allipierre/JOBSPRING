@@ -230,16 +230,18 @@ text-align: center !important;
     border-color: rgb(92, 184, 92) !important;
 }
 
+.button.button-primary.delete, button.button-primary.delete, input[type="submit"].button-primary.delete, input[type="reset"].button-primary.delete, input[type="button"].button-primary.delete {
+   color: rgb(255, 255, 255) !important;
+    background-color: rgb(217, 83, 79) !important;
+    border-color: rgb(217, 83, 79) !important;
+}
+
 .show{
     color: rgb(255, 255, 255) !important;
 }
 
 
-.delete{
-    color: rgb(255, 255, 255) !important;
-    background-color: rgb(217, 83, 79) !important;
-    border-color: rgb(217, 83, 79) !important;
-}
+
 
 
 
