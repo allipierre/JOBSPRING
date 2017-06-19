@@ -103,7 +103,7 @@ public class MainController {
 		job.setId(userCompany.getId());
 		jobService.save(job);
 		
-		job.setCompany(companyservice.findById(job.getCompanyid()));
+		//job.setCompany(companyservice.findById(job.getCompanyId()));
 		request.setAttribute("salary", salaryService.findAll());
 		request.setAttribute("industry", industryService.findAll());
 		request.setAttribute("contract", contractService.findAll());

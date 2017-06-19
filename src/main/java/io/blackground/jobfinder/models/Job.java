@@ -37,7 +37,6 @@ public class Job {
 
 	private String minimumDegree;
 	private int slots;
-	private int companyid;
 	private String title;
 	private String contrat;
 	private String city;
@@ -46,7 +45,7 @@ public class Job {
 
 	//private transient Company company;
 	
-	@OneToOne
+	@ManyToOne
 	private Company company;
 	
 
