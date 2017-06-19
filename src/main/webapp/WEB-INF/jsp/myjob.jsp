@@ -307,7 +307,7 @@ aa {
 		<h3>My Tasks</h3>
 		<hr>
 		<div class="table-responsive">
-			<table id="users" class="table table-striped table-bordered">
+			<table id="users" class="table table-striped table-bordered, u-full-width">
 				<thead>
 					<tr>
 						<th>Id</th>

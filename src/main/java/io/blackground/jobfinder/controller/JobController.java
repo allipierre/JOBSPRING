@@ -85,7 +85,7 @@ public class JobController {
 		request.setAttribute("salary", salaryService.findAll());
 		request.setAttribute("industry", industryService.findAll());
 		request.setAttribute("contract", contractService.findAll());
-		return "post";
+		return "redirect:/myjob";
 	}
 
 	
