@@ -333,9 +333,9 @@ text-align: center !important;
 									value="${jobs.published}" /></td>
 									<td>${jobs.contrat}</td>
 							<td>${jobs.minimumExperienceYears}</td>
-							<td><a class="button button-primary" href="#">Anchor button</a></td>
-							<td><a class="button button-primary" href="#">Anchor button</a></td>
-							<td><a class="button button-primary" href="#">Anchor button</a></td>
+							<td><a class="button button-primary" href="#">show</a></td>
+							<td><a class="button button-primary" href="#">edit</a></td>
+							<td><a class="button button-primary" href="#">delete</a></td>
 						</tr>
 
 					</c:forEach>
