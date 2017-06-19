@@ -333,13 +333,13 @@ text-align: center !important;
 									value="${jobs.published}" /></td>
 									<td>${jobs.contrat}</td>
 							<td>${jobs.minimumExperienceYears}</td>
-							<td><a href="delete-task?id=${jobs.id}"> <span
+							<td><a href="myjob"> <span
 									class="glyphicon glyphicon-trash"></span>
 							</a></td>
-							<td><a href="update-task?id=${jobs.id}"> <span
+							<td><a href="myjob"> <span
 									class="glyphicon glyphicon-edit"></span>
 							</a></td>
-							<td><a href="show-task?id=${jobs.id}"> <span
+							<td><a href="myjob"> <span
 									class="glyphicon glyphicon-eye-open"></span>
 							</a></td>
 						</tr>
