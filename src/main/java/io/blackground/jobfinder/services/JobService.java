@@ -8,12 +8,20 @@ import java.util.ArrayList;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import io.blackground.jobfinder.Repository.JobRepository;
+import io.blackground.jobfinder.models.Company;
 import io.blackground.jobfinder.models.Industry;
 import io.blackground.jobfinder.models.Job;
+import io.blackground.jobfinder.models.User;
 
 /**
  * @author yotti
@@ -24,6 +32,10 @@ import io.blackground.jobfinder.models.Job;
 public class JobService {
 
 	private final JobRepository jobRepository;
+	@Autowired
+	private UserServiceImpl userService;
+	@Autowired
+	private CompanyService companyService;
 
 	/**
 	 * @param taskRepository
@@ -42,15 +54,6 @@ public class JobService {
 
 	}
 
-	public List<Job> findAll(Pageable p) {
-		List<Job> tasks = new ArrayList<>();
-		for (Job task : jobRepository.findAll()) {
-			tasks.add(task);
-		}
-		return tasks;
-
-	}
-
 	public void save(Job task) {
 		jobRepository.save(task);
 	}
@@ -62,9 +65,22 @@ public class JobService {
 	public Job findJobById(long id) {
 		return jobRepository.findOne(id);
 	}
-	
-	
-	
+
+	public List<Job> findJobByCompany() {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+		User user = userService.findByUsername(authentication.getName());
+		Company userCompany = companyService.findCompany(user);
+		List<Job> jobs = new ArrayList<>();
+		for (Job job : jobRepository.findAll()) {
+			if(job.getCompany().getId()==userCompany.getIndustryId()){
+				jobs.add(job);
+			}
+			
+		}
+		return jobs;
+
+	}
 	
 
 }

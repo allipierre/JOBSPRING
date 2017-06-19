@@ -41,12 +41,9 @@ public class MyJobController {
 	@GetMapping("/myjob")
 	public String postJob(HttpServletRequest request) {
 
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		
 
-		User user = userService.findByUsername(authentication.getName());
-		Company userCompany = companyService.findCompany(user);
-
-		request.setAttribute("jobs", jobService.findJobById(userCompany.getId()));
+		request.setAttribute("jobs", jobService.findJobByCompany());
 		request.setAttribute("contract", contractservice.findAll());
 		request.setAttribute("experience", experienceservice.findAll());
 		return "myjob";
