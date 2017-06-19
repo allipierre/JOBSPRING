@@ -39,7 +39,6 @@ public class Job {
 	private int slots;
 	private String title;
 	private long contrat;
-	private String city;
 	private Date published;
 
 	//private transient Company company;
