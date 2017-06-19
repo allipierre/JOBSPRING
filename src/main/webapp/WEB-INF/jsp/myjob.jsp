@@ -176,7 +176,7 @@ thead{
 background: rgb(49, 163, 221) !important;
 }
 
-html {
+body {
     background: rgb(255, 255, 255) !important;
 }
 
@@ -222,7 +222,9 @@ text-align: center !important;
 	}
 }
 
-.edit{
+
+
+.button.button-primary.edit, button.button-primary.edit, input[type="submit"].button-primary.edit, input[type="reset"].button-primary.edit, input[type="button"].button-primary.edit {
     color: rgb(255, 255, 255) !important;
     background-color: rgb(92, 184, 92) !important;
     border-color: rgb(92, 184, 92) !important;
