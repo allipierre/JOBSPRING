@@ -329,7 +329,7 @@ aa {
 						</c:forEach>
 
 						<li class="panel-footer-icon-wrapper"><i
-							class="icon icon-location"></i>${task.location}</li>
+							class="icon icon-location"></i>${task.city}</li>
 
 						<li class="panel-footer-icon-wrapper"><i
 							class="icon icon-bookmark"></i>${task.id}</li>
