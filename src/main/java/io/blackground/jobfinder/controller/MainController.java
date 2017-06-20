@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import io.blackground.jobfinder.services.CompanyService;
 import io.blackground.jobfinder.services.ContractService;
@@ -44,8 +45,8 @@ public class MainController {
 	// }
 
 	@GetMapping("/allejob/{id}")
-	public String alleJob(HttpServletRequest request) {
-		request.setAttribute("taskse", jobservice.findAll());
+	public String alleJob(HttpServletRequest request,@RequestParam int id) {
+		request.setAttribute("taskse", jobservice.findJobById(id));
 		request.setAttribute("tasksen", industryService.findAll());
 		request.setAttribute("contract", contractservice.findAll());
 		request.setAttribute("company", companyservice.findAll());
