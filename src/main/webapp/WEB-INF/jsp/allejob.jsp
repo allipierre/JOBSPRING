@@ -335,12 +335,10 @@ aa {
 
 
 
-								<li class="panel-footer-icon-wrapper"><i
-									class="icon icon-location"></i>${company.city}</li>
+								<li class="panel-footer-icon-wrapper"><i class="fa fa-map-marker" aria-hidden="true"></i>${company.city}</li>
 								<c:forEach var="tasksen" items="${tasksen}">
 									<c:if test="${tasksen.id == task.category}">
-										<li class="panel-footer-icon-wrapper"><i
-											class="icon icon-bookmark"></i>${tasksen.industryName}</li>
+										<li class="panel-footer-icon-wrapper"><i class="fa fa-bookmark-o" aria-hidden="true"></i>${tasksen.industryName}</li>
 									</c:if>
 								</c:forEach>
 								<li class="pull-right"><a
