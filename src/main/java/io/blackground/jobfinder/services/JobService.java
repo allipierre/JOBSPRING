@@ -55,6 +55,18 @@ public class JobService {
 		return jobs;
 
 	}
+	
+	public List<Job> findAllJobsByTitle(String title) {
+		List<Job> jobs = new ArrayList<>();
+		for (Job job : jobRepository.findAll()) {
+			if(job.getTitle().equals(title)){
+				jobs.add(job);
+			}
+			
+		}
+		return jobs;
+
+	}
 
 	public void save(Job task) {
 		jobRepository.save(task);
