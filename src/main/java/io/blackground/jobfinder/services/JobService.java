@@ -100,6 +100,10 @@ public class JobService {
         return jobRepository.findJobsByTitle(title);
     }
 	
+	public List<Job> findJobsLikeTitle(String title) {
+        return jobRepository.findJobsLikeTitle(title);
+    }
+	
 	
 	
 
