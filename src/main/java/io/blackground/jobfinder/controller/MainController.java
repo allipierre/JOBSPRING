@@ -54,7 +54,7 @@ public class MainController {
 		if(title.isEmpty()){
 			queryjob=jobservice.findAll();
 		}else{
-			queryjob=jobservice.findJobsLikeTitle(title);
+			queryjob=jobservice.findByJobsLikeTitle(title);
 		}
 		
 		request.setAttribute("taskse", queryjob);
