@@ -104,6 +104,9 @@ small, .small {
 .panel-light-content .panel-footer {
 	background-color: rgb(255, 255, 255);
 }
+.fa-dot-circle-o{
+color:red;
+}
 
 .panel-footer {
 	padding: 10px 15px;
@@ -326,8 +329,7 @@ aa {
 						<c:if test="${company.id == task.company.id}">
 							<ul class="list-inline">
 
-								<li class="panel-footer-icon-wrapper"><i
-									class="icon icon-dot-circled"></i> <a
+								<li class="panel-footer-icon-wrapper"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> <a
 									href="/en/employer/groupe-agri-revolution.html" target="_blank"
 									class="js-company-name">${company.companyName}</a></li>
 
