@@ -3,12 +3,14 @@
  */
 package io.blackground.jobfinder.Repository;
 
-import org.springframework.data.jpa.repository.Query;
+
+import java.util.ArrayList;
+
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.query.Param;
+
 
 import io.blackground.jobfinder.models.Job;
-import io.blackground.jobfinder.models.User;
+
 
 
 /**
@@ -16,6 +18,6 @@ import io.blackground.jobfinder.models.User;
  *
  */
 public interface JobRepository extends CrudRepository<Job, Long> {
-	Job findJobsByTitle(String title);
+	ArrayList<Job> findJobsByTitle(String title);
 	//Job findByLocation(String location);
 }

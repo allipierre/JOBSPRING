@@ -96,7 +96,7 @@ public class JobService {
 
 	}
 	
-	public Job findJobsByTitle(String title) {
+	public ArrayList<Job> findJobsByTitle(String title) {
         return jobRepository.findJobsByTitle(title);
     }
 	
