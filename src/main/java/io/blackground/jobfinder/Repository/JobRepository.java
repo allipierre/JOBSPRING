@@ -16,5 +16,5 @@ import io.blackground.jobfinder.models.User;
  *
  */
 public interface JobRepository extends CrudRepository<Job, Long> {
-	Job findByUsername(String title);
+	Job findByTitle(String title);
 }

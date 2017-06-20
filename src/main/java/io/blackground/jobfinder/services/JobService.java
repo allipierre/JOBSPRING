@@ -84,8 +84,8 @@ public class JobService {
 
 	}
 	
-	public Job findByUsername(String title) {
-        return jobRepository.findByUsername(title);
+	public Job findByTitle(String title) {
+        return jobRepository.findByTitle(title);
     }
 	
 	
