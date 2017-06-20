@@ -324,7 +324,7 @@ aa {
 						<li class="panel-footer-icon-wrapper"><i
 							class="icon icon-dot-circled"></i> <a
 							href="/en/employer/groupe-agri-revolution.html" target="_blank"
-							class="js-company-name"> ${company.name} </a></li>
+							class="js-company-name"> ${company.companyName} </a></li>
 							</c:if>
 						</c:forEach>
 
