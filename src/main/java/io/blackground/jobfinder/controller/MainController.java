@@ -44,7 +44,7 @@ public class MainController {
 	// return "index";
 	// }
 
-	@GetMapping("/allejob/{id}")
+	@GetMapping("/allejob")
 	public String alleJob(HttpServletRequest request,@RequestParam int id) {
 		request.setAttribute("taskse", jobservice.findJobById(id));
 		request.setAttribute("tasksen", industryService.findAll());
