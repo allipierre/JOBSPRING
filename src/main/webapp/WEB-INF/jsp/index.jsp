@@ -103,7 +103,7 @@ color: rgb(255, 255, 255) !important;
         </section>
       </div>
 <div class="container utx">
-<form>
+<form action="/allejob" method="get">
   <div class="row">
     <div class="five columns">
       <label id="lb1" for="whatInput">Was</label>
@@ -116,6 +116,7 @@ color: rgb(255, 255, 255) !important;
     <div class="one column">
     <label for="exampleEmailInput"></label>
   <a class=" sub1 button button-primary" href="allejob" id="sub1"><span class=" fa fa fa-eye"></span> Suchen</a>
+  <input class="button-primary" type="submit" value="Suchen">
   </div>
   </div>
   
