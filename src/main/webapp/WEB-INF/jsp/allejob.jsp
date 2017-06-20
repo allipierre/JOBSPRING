@@ -333,7 +333,7 @@ aa {
 							class="icon icon-location"></i>${company.city}</li>
 
 						<li class="panel-footer-icon-wrapper"><i
-							class="icon icon-bookmark"></i>${task.id}</li>
+							class="icon icon-bookmark"></i>${task.category}</li>
 						<li class="pull-right"><a
 							href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html"
 							class="btn btn-info pull-right icon-eye"><span
