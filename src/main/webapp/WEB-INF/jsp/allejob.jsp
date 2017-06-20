@@ -248,6 +248,11 @@ aa {
 	background-color: red !important;
 	border-color: red !important;
 }
+
+.headline3 a {
+   
+    text-decoration: none !important;
+}
 </style>
 
 
