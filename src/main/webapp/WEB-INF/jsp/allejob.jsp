@@ -329,13 +329,13 @@ aa {
 								<li class="panel-footer-icon-wrapper"><i
 									class="icon icon-dot-circled"></i> <a
 									href="/en/employer/groupe-agri-revolution.html" target="_blank"
-									class="js-company-name"> ${company.companyName} </a></li>
+									class="js-company-name">${company.companyName}</a></li>
 
 
 
 								<li class="panel-footer-icon-wrapper"><i
 									class="icon icon-location"></i>${company.city}</li>
-								<c:forEach var="company" items="${company}">
+								<c:forEach var="tasksen" items="${tasksen}">
 									<c:if test="${tasksen.id == task.id}">
 										<li class="panel-footer-icon-wrapper"><i
 											class="icon icon-bookmark"></i>${tasksen.industryName}</li>
