@@ -297,23 +297,36 @@ aa {
 			<div class="panel panel-light-content hidden-xs hidden-sm "
 				data-automation="jobseeker-jobs">
 				<div class="panel-heading">
-					<small class="text-muted"> ${task.companyName}</small>
-					<c:forEach var="taskes" items="${tasksen}">
-						<c:if test="${taskes.id == task.industryId}">
-							<p class="headline3">
-								<strong><a
-									href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html">${taskes.industryName}
-								</a></strong> <small>(Full time)</small>
-							</p>
-						</c:if>
-					</c:forEach>
+					<small class="text-muted"> ${task.published}</small>
+
+
+					<p class="headline3">
+
+						<strong><a
+							href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html">${task.title}
+
+						</a></strong>
+						<c:forEach var="contract" items="${contract}">
+							<c:if test="${contract.id == task.contrat}">
+								<small>(${contract.coname})</small>
+							</c:if>
+						</c:forEach>
+					</p>
+
+
+
+
 				</div>
 				<div class="panel-footer clearfix">
 					<ul class="list-inline">
+					<c:forEach var="company" items="${company}">
+							<c:if test="${company.id == task.company.id}">
 						<li class="panel-footer-icon-wrapper"><i
 							class="icon icon-dot-circled"></i> <a
 							href="/en/employer/groupe-agri-revolution.html" target="_blank"
-							class="js-company-name"> ${task.id} </a></li>
+							class="js-company-name"> ${company.name} </a></li>
+							</c:if>
+						</c:forEach>
 
 						<li class="panel-footer-icon-wrapper"><i
 							class="icon icon-location"></i>${task.location}</li>
