@@ -115,7 +115,7 @@ color: rgb(255, 255, 255) !important;
     </div>
     <div class="one column">
     <label for="exampleEmailInput"></label>
-  <a class=" sub1 button button-primary" href="allejob?id=1" id="sub1"><span class=" fa fa fa-eye"></span> Suchen</a>
+  <a class=" sub1 button button-primary" href="allejob?id=26" id="sub1"><span class=" fa fa fa-eye"></span> Suchen</a>
   </div>
   </div>
   
