@@ -111,7 +111,7 @@ color: rgb(255, 255, 255) !important;
     </div>
     <div class="five columns">
       <label id="lb2" for="whereInput">Wo</label>
-      <input class="u-full-width" type="text" placeholder="(Ort oder 5-stellige PLZ)" id="whereInput" name="location">
+      
     </div>
     <div class="one column">
     <label for="exampleEmailInput"></label>
