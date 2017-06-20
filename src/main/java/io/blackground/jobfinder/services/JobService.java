@@ -100,9 +100,9 @@ public class JobService {
         return jobRepository.findJobsByTitle(title);
     }
 	
-	public List<Job> findByJobsLikeTitle(String title) {
-        return jobRepository.findByJobsLikeTitle(title);
-    }
+//	public List<Job> findByJobsLikeTitle(String title) {
+//        return jobRepository.findByJobsLikeTitle(title);
+//    }
 	
 	
 	
