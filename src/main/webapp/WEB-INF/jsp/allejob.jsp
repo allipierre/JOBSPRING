@@ -250,8 +250,7 @@ aa {
 }
 
 .headline3 a {
-   
-    text-decoration: none !important;
+	text-decoration: none !important;
 }
 </style>
 
@@ -323,31 +322,34 @@ aa {
 
 				</div>
 				<div class="panel-footer clearfix">
-				<c:forEach var="company" items="${company}">
-							<c:if test="${company.id == task.company.id}">
-					<ul class="list-inline">
-					
-						<li class="panel-footer-icon-wrapper"><i
-							class="icon icon-dot-circled"></i> <a
-							href="/en/employer/groupe-agri-revolution.html" target="_blank"
-							class="js-company-name"> ${company.companyName} </a></li>
-							
-						
+					<c:forEach var="company" items="${company}">
+						<c:if test="${company.id == task.company.id}">
+							<ul class="list-inline">
 
-						<li class="panel-footer-icon-wrapper"><i
-							class="icon icon-location"></i>${company.city}</li>
+								<li class="panel-footer-icon-wrapper"><i
+									class="icon icon-dot-circled"></i> <a
+									href="/en/employer/groupe-agri-revolution.html" target="_blank"
+									class="js-company-name"> ${company.companyName} </a></li>
 
-						<li class="panel-footer-icon-wrapper"><i
-							class="icon icon-bookmark"></i>${task.category}</li>
-						<li class="pull-right"><a
-							href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html"
-							class="btn btn-info pull-right icon-eye"><span
-								class=" fa fa fa-eye"></span> View Job</a></li>
-								
-					</ul>
-					</c:if>
+
+
+								<li class="panel-footer-icon-wrapper"><i
+									class="icon icon-location"></i>${company.city}</li>
+								<c:forEach var="company" items="${company}">
+									<c:if test="${tasksen.id == task.id}">
+										<li class="panel-footer-icon-wrapper"><i
+											class="icon icon-bookmark"></i>${tasksen.industryName}</li>
+									</c:if>
+								</c:forEach>
+								<li class="pull-right"><a
+									href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html"
+									class="btn btn-info pull-right icon-eye"><span
+										class=" fa fa fa-eye"></span> View Job</a></li>
+
+							</ul>
+						</c:if>
 					</c:forEach>
-								
+
 				</div>
 			</div>
 		</c:forEach>
