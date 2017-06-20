@@ -336,7 +336,7 @@ aa {
 								<li class="panel-footer-icon-wrapper"><i
 									class="icon icon-location"></i>${company.city}</li>
 								<c:forEach var="tasksen" items="${tasksen}">
-									<c:if test="${tasksen.id == task.id}">
+									<c:if test="${tasksen.id == task.category}">
 										<li class="panel-footer-icon-wrapper"><i
 											class="icon icon-bookmark"></i>${tasksen.industryName}</li>
 									</c:if>
