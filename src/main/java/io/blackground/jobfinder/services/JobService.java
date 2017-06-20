@@ -96,8 +96,8 @@ public class JobService {
 
 	}
 	
-	public Job findByTitle(String title) {
-        return jobRepository.findByTitle(title);
+	public Job findJobsByTitle(String title) {
+        return jobRepository.findJobsByTitle(title);
     }
 	
 	
