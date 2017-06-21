@@ -100,8 +100,8 @@ public class JobService {
         return jobRepository.findJobsByTitle(title);
     }
 	
-	public List<Job> findByTitleLike(String title) {
-        return jobRepository.findByTitleLike(title);
+	public List<Job> findByTitleContaining(String title) {
+        return jobRepository.findByTitleContaining(title);
     }
 	
 	
