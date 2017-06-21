@@ -28,17 +28,14 @@ import io.blackground.jobfinder.services.JobService;
 @Controller
 public class MainController {
 
-	
 	@Autowired
 	private JobService jobservice;
 
 	@Autowired
 	private CompanyService companyservice;
-	
+
 	@Autowired
 	private ContractService contractservice;
-	
-	
 
 	@Autowired
 	private IndustryService industryService;
@@ -49,14 +46,18 @@ public class MainController {
 	// }
 
 	@GetMapping("/allejob")
-	public String alleJob(HttpServletRequest request,@RequestParam ("title") String title) {
-		List<Job> queryjob=new ArrayList<Job>();
-		if(title.isEmpty()){
-			queryjob=jobservice.findAll();
-		}else{
-			queryjob=jobservice.findByTitleContaining(title);
+	public String alleJob(HttpServletRequest request, @RequestParam("title") String title,
+			@RequestParam("location") String location) {
+		List<Job> queryjob = new ArrayList<Job>();
+		if (!title.isEmpty() && location.isEmpty()) {
+
+			queryjob = jobservice.findByTitleContaining(title);
+		} else if (!location.isEmpty() && title.isEmpty()) {
+			queryjob = jobservice.findAllJobsByCity(location);
+		} else {
+			queryjob = jobservice.findAll();
 		}
-		
+
 		request.setAttribute("taskse", queryjob);
 		request.setAttribute("tasksen", industryService.findAll());
 		request.setAttribute("contract", contractservice.findAll());

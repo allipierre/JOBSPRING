@@ -67,6 +67,19 @@ public class JobService {
 		return jobs;
 
 	}
+	
+	
+	public List<Job> findAllJobsByCity(String city) {
+		List<Job> jobs = new ArrayList<>();
+		for (Job job : jobRepository.findAll()) {
+			if(job.getCompany().getCity().equals(city)){
+				jobs.add(job);
+			}
+			
+		}
+		return jobs;
+
+	}
 
 	public void save(Job task) {
 		jobRepository.save(task);
