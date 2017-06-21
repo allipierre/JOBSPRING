@@ -69,9 +69,9 @@ public class JobService {
 	}
 	
 	
-	public List<Job> findByCityContaining(String city) {
+	public List<Job> findAllJobsByCity(String city) {
 		List<Job> jobs = new ArrayList<>();
-		for (Job job : jobRepository.findByCityContaining(city)) {
+		for (Job job : jobRepository.findAll()) {
 			if(job.getCompany().getCity().equals(city)){
 				jobs.add(job);
 			}
