@@ -118,8 +118,8 @@ public class JobService {
     }
 	
 	
-	public List<Job> findJobsByCompanyWithcity(String city) {
-        return jobRepository.findJobsByCompanyWithcity(city);
+	public List<Job> findJobsByCompanyBycity(String city) {
+        return jobRepository.findJobsByCompanyBycity(city);
     }
 	
 	
