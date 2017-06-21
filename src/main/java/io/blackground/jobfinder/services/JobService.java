@@ -119,7 +119,7 @@ public class JobService {
 	
 	
 	public List<Job> findJobsByCompanyWithCitybyName(String city) {
-        return jobRepository.findByTitleContaining(city);
+        return jobRepository.findJobsByCompanyWithCitybyName(city);
     }
 	
 	
