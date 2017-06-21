@@ -72,7 +72,7 @@ public class JobService {
 	public List<Job> findAllJobsByCity(String city) {
 		List<Job> jobs = new ArrayList<>();
 		for (Job job : jobRepository.findAll()) {
-			if(job.getCompany().getCity().toUpperCase().equals(city.toUpperCase())){
+			if(job.getCompany().getCity().toUpperCase().contains(city.toUpperCase())){
 				jobs.add(job);
 			}
 			
