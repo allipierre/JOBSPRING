@@ -53,7 +53,7 @@ public class MainController {
 
 			queryjob = jobservice.findByTitleContaining(title);
 		} else if (!location.isEmpty() && title.isEmpty()) {
-			queryjob = jobservice.findAllJobsByCityContaining(location);
+			queryjob = jobservice.findByCityContaining(location);
 		} else {
 			queryjob = jobservice.findAll();
 		}
