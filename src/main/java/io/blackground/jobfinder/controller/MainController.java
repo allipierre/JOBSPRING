@@ -49,7 +49,7 @@ public class MainController {
 	public String alleJob(HttpServletRequest request, @RequestParam("title") String title,
 			@RequestParam("location") String location) {
 		List<Job> queryjob = new ArrayList<Job>();
-		if (!title.isEmpty() && location.isEmpty()) {
+		if (!title.isEmpt() && location.isEmpty()) {
 
 			queryjob = jobservice.findByTitleContaining(title);
 		} else if (!location.isEmpty() && title.isEmpty()) {
