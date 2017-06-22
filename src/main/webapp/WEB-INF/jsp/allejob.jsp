@@ -273,23 +273,22 @@ aa {
 	</div>
 
 	<div class="container utx">
-		<form>
+		<form action="/allejob" method="get">
 			<div class="row">
 				<div class="five columns">
 					<label id="lb1" for="exampleEmailInput">Was</label> <input
 						class="u-full-width" type="email"
 						placeholder="(Jobtitel, Firmenname oder ID)"
-						id="exampleEmailInput">
+						id="exampleEmailInput" name="title">
 				</div>
 				<div class="five columns">
 					<label id="lb2" for="exampleEmailInput">Wo</label> <input
 						class="u-full-width" type="email"
-						placeholder="(Ort oder 5-stellige PLZ)" id="exampleEmailInput">
+						placeholder="(Ort oder 5-stellige PLZ)" id="exampleEmailInput" name="location">
 				</div>
 				<div class="one column">
-					<label for="exampleEmailInput"></label> <a
-						class=" sub1 button button-primary" href="#" id="sub1"><span
-						class=" fa fa fa-eye"></span> Suchen</a>
+					<label for="exampleEmailInput"></label>
+					<button class="sub1 button-primary" type="submit" id="sub1"><span class=" fa fa fa-eye"></span> Suchen</button>
 				</div>
 			</div>
 
