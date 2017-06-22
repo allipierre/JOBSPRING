@@ -78,7 +78,7 @@ footer {
 					<div class="row">
 						<div class="six columns">
 							<label class="lab" for="exampleEmailInput">Email</label> <span>${message}</span>
-							<input class="u-full-width" type="text"  name="username"
+							<input class="u-full-width" type="email"  name="username"
 								placeholder="test@mailbox.com" id="exampleEmailInput" autofocus="true">
 						</div>
 					</div>

@@ -277,13 +277,13 @@ aa {
 			<div class="row">
 				<div class="five columns">
 					<label id="lb1" for="exampleEmailInput">Was</label> <input
-						class="u-full-width" type="email"
+						class="u-full-width" type="text"
 						placeholder="(Jobtitel, Firmenname oder ID)"
 						id="exampleEmailInput" name="title">
 				</div>
 				<div class="five columns">
 					<label id="lb2" for="exampleEmailInput">Wo</label> <input
-						class="u-full-width" type="email"
+						class="u-full-width" type="text"
 						placeholder="(Ort oder 5-stellige PLZ)" id="exampleEmailInput" name="location">
 				</div>
 				<div class="one column">
