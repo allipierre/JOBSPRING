@@ -226,7 +226,9 @@ th, td {
 
 
 <script>
-$( "#IDDEL" ).on( "click", function(){
+$( "#IDDEL" ).on( "click", function(e){
+	e.preventDefault();
+    e.stopPropagation();
 	first_lov=$(this).closest('tr').find('.sorting_1').text();
 	$(this).addClass("remove");
 	var ids=parseInt(first_lov);
