@@ -10,6 +10,9 @@
 <title>All-Jobs</title>
 <meta name="description" content="Website to help People">
 <meta name="author" content="Alli Pierre Yotti">
+<meta name="_csrf" content="${_csrf.token}"/>
+	<!-- default header name is X-CSRF-TOKEN -->
+	<meta name="_csrf_header" content="${_csrf.headerName}"/>
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -204,7 +207,7 @@ th, td {
 				</c:forEach>
 			</tbody>
 		</table>
-<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
 
 	</div>
 
