@@ -226,7 +226,7 @@ th, td {
 
 
 <script>
-$( "#IDDEL" ).on( "click", function(e){
+$( ".deletee" ).on( "click", function(e){
 	e.preventDefault();
     e.stopPropagation();
 	first_lov=$(this).closest('tr').find('.sorting_1').text();
