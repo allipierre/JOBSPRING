@@ -28,6 +28,8 @@
 <link rel="stylesheet" href="/static/css/normalize.css">
 <link rel="stylesheet" href="/static/css/skeleton.css">
 <link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/alertify.core.css">
+<link rel="stylesheet" href="/static/css/alertify.default.css">
 <link
 	href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
 	rel="stylesheet">
@@ -229,17 +231,28 @@ $( "#IDDEL" ).on( "click", function(){
 	$(this).closest('tr').css('display','none');
 	var ids=parseInt(first_lov);
 	console.log(ids)
-	     $.ajax({
-	         url: 'https://jobfind-master.herokuapp.com/meinejobs/'+ids,
-	         type: 'DELETE',
-	         Contenttype:'application/json',
-	         dataType: "json"
-	     });
+	processDeleteRecord(ids);
 	  });
 
 
+
+function processDeleteRecord(ids) {
+	alertify.confirm("Do you want to really delete your Product ?", function (e) {
+
+		if (e) {
+			$.ajax({
+		         url: 'https://jobfind-master.herokuapp.com/meinejobs/'+ids,
+		         type: 'DELETE',
+		         Contenttype:'application/json',
+		         dataType: "json"
+		     });
+			alertify.success("Your Product is succefully delete");
+		}
+	});
+}
 </script>
 <script type="text/javascript" src="/static/js/file.js"></script>
+<script type="text/javascript" src="/static/js/alertify.js"></script>
 <script type="text/javascript" src="/static/js/typed.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
