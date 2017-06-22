@@ -20,7 +20,7 @@ import io.blackground.jobfinder.models.Job;
  */
 public interface JobRepository extends CrudRepository<Job, Long> {
 	List<Job> findJobsByTitle(String title);
-	List<Job> findByTitleContaining(String title);
+	List<Job> findByTitleContainingIgnoreCase(String title);
 	//List<Job> findJobsWithCompanyBycity(String city);
 	
 	//Job findByLocation(String location);

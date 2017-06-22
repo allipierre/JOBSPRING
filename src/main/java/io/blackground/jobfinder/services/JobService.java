@@ -113,8 +113,8 @@ public class JobService {
         return jobRepository.findJobsByTitle(title);
     }
 	
-	public List<Job> findByTitleContaining(String title) {
-        return jobRepository.findByTitleContaining(title);
+	public List<Job> findByTitleContainingIgnoreCase(String title) {
+        return jobRepository.findByTitleContainingIgnoreCase(title);
     }
 	
 	

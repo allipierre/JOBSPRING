@@ -51,7 +51,7 @@ public class MainController {
 		List<Job> queryjob = new ArrayList<Job>();
 		if (!title.isEmpty() && location.isEmpty()) {
 
-			queryjob = jobservice.findByTitleContaining(title);
+			queryjob = jobservice.findByTitleContainingIgnoreCase(title);
 		} else if (!location.isEmpty() && title.isEmpty()) {
 			queryjob = jobservice.findAllJobsByCity(location);
 		} else if(!location.isEmpty() && !title.isEmpty()) {
