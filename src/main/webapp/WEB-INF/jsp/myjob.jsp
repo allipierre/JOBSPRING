@@ -228,7 +228,7 @@ th, td {
 <script>
 $( "#IDDEL" ).on( "click", function(){
 	first_lov=$(this).closest('tr').find('.sorting_1').text();
-	$(this).closest('tr').css('display','none');
+	
 	var ids=parseInt(first_lov);
 	console.log(ids)
 	processDeleteRecord(ids);
@@ -237,16 +237,17 @@ $( "#IDDEL" ).on( "click", function(){
 
 
 function processDeleteRecord(ids) {
-	alertify.confirm("Do you want to really delete your Product ?", function (e) {
+	alertify.confirm("Do you want to really delete your Job ?", function (e) {
 
 		if (e) {
+			$(this).closest('tr').css('display','none');
 			$.ajax({
 		         url: 'https://jobfind-master.herokuapp.com/meinejobs/'+ids,
 		         type: 'DELETE',
 		         Contenttype:'application/json',
 		         dataType: "json"
 		     });
-			alertify.success("Your Product is succefully delete");
+			alertify.success("Your Job is succefully delete");
 		}
 	});
 }
