@@ -196,7 +196,7 @@ th, td {
 								class="fa fa-eye" aria-hidden="true"></i> show</a></td>
 						<td><a class="button button-primary edit" href="#"><i
 								class="fa fa-pencil-square-o" aria-hidden="true"></i> edit</a></td>
-						<td><a class="button button-primary deletee" id="IDDEL" href="#"><i
+						<td><a class="button button-primary deletee" id="IDDEL"><i
 								class="fa fa-trash" aria-hidden="true"></i> delete</a></td>
 					</tr>
 
