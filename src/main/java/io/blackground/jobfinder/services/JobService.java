@@ -55,27 +55,39 @@ public class JobService {
 		return jobs;
 
 	}
-	
+
 	public List<Job> findAllJobsByTitle(String title) {
 		List<Job> jobs = new ArrayList<>();
 		for (Job job : jobRepository.findAll()) {
-			if(job.getTitle().equals(title)){
+			if (job.getTitle().equals(title)) {
 				jobs.add(job);
 			}
-			
+
 		}
 		return jobs;
 
 	}
-	
-	
+
 	public List<Job> findAllJobsByCity(String city) {
 		List<Job> jobs = new ArrayList<>();
 		for (Job job : jobRepository.findAll()) {
-			if(job.getCompany().getCity().toUpperCase().contains(city.toUpperCase())){
+			if (job.getCompany().getCity().toUpperCase().contains(city.toUpperCase())) {
 				jobs.add(job);
 			}
-			
+
+		}
+		return jobs;
+
+	}
+
+	public List<Job> findAllJobsByCityandTitle(String city, String title) {
+		List<Job> jobs = new ArrayList<>();
+		for (Job job : jobRepository.findAll()) {
+			if (job.getCompany().getCity().toUpperCase().contains(city.toUpperCase())
+					&& job.getTitle().toUpperCase().contains(title.toUpperCase())) {
+				jobs.add(job);
+			}
+
 		}
 		return jobs;
 
@@ -100,29 +112,25 @@ public class JobService {
 		Company userCompany = companyService.findCompany(user);
 		List<Job> jobs = new ArrayList<>();
 		for (Job job : jobRepository.findAll()) {
-			if(job.getCompany().getId()==userCompany.getId()){
+			if (job.getCompany().getId() == userCompany.getId()) {
 				jobs.add(job);
 			}
-			
+
 		}
 		return jobs;
 
 	}
-	
+
 	public List<Job> findJobsByTitle(String title) {
-        return jobRepository.findJobsByTitle(title);
-    }
-	
+		return jobRepository.findJobsByTitle(title);
+	}
+
 	public List<Job> findByTitleContainingIgnoreCase(String title) {
-        return jobRepository.findByTitleContainingIgnoreCase(title);
-    }
-	
-	
-//	public List<Job> findJobsWithCompanyBycity(String city) {
-//        return jobRepository.findJobsWithCompanyBycity(city);
-//    }
-	
-	
-	
+		return jobRepository.findByTitleContainingIgnoreCase(title);
+	}
+
+	// public List<Job> findJobsWithCompanyBycity(String city) {
+	// return jobRepository.findJobsWithCompanyBycity(city);
+	// }
 
 }
