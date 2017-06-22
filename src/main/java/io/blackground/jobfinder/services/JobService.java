@@ -125,8 +125,8 @@ public class JobService {
 		return jobRepository.findJobsByTitle(title);
 	}
 
-	public List<Job> findJobsByCompanyCityContainingIgnoreCaseOrTitleContainingIgnoreCase(String title) {
-		return jobRepository.findJobsByCompanyCityContainingIgnoreCaseOrTitleContainingIgnoreCase(title);
+	public List<Job> findByTitleContainingIgnoreCase(String title) {
+		return jobRepository.findByTitleContainingIgnoreCase(title);
 	}
 
 	public List<Job> findJobsByCompanyCityContainingIgnoreCase(String city) {
