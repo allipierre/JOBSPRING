@@ -255,7 +255,7 @@ th, td {
 								alertify
 										.success("Your Job is succefully delete");
 							} else {
-								$("deletee").removeClass("remove");
+								$(".deletee").removeClass("remove");
 							}
 						});
 	}
