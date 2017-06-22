@@ -10,9 +10,9 @@
 <title>All-Jobs</title>
 <meta name="description" content="Website to help People">
 <meta name="author" content="Alli Pierre Yotti">
-<meta name="_csrf" content="${_csrf.token}"/>
-	<!-- default header name is X-CSRF-TOKEN -->
-	<meta name="_csrf_header" content="${_csrf.headerName}"/>
+<meta name="_csrf" content="${_csrf.token}" />
+<!-- default header name is X-CSRF-TOKEN -->
+<meta name="_csrf_header" content="${_csrf.headerName}" />
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -202,8 +202,7 @@ th, td {
 						<td><a class="button button-primary edit" href="#"><i
 								class="fa fa-pencil-square-o" aria-hidden="true"></i> edit</a></td>
 						<td><a class="button button-primary deletee" id="IDDEL"><i
-								class="fa fa-trash" aria-hidden="true"></i> delete</a>
-								</td>
+								class="fa fa-trash" aria-hidden="true"></i> delete</a></td>
 					</tr>
 
 				</c:forEach>
@@ -226,33 +225,40 @@ th, td {
 
 
 <script>
-$( ".deletee" ).on( "click", function(e){
-	e.preventDefault();
-    e.stopPropagation();
-	first_lov=$(this).closest('tr').find('.sorting_1').text();
-	$(this).addClass("remove");
-	var ids=parseInt(first_lov);
-	console.log(ids)
-	processDeleteRecord(ids);
-	  });
-
-
-
-function processDeleteRecord(ids) {
-	alertify.confirm("Do you want to really delete your Job ?", function (e) {
-
-		if (e) {
-			$(".remove").closest('tr').css('display','none');
-			$.ajax({
-		         url: 'https://jobfind-master.herokuapp.com/meinejobs/'+ids,
-		         type: 'DELETE',
-		         Contenttype:'application/json',
-		         dataType: "json"
-		     });
-			alertify.success("Your Job is succefully delete");
-		}
+	$(".deletee").on("click", function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		first_lov = $(this).closest('tr').find('.sorting_1').text();
+		$(this).addClass("remove");
+		var ids = parseInt(first_lov);
+		console.log(ids)
+		processDeleteRecord(ids);
 	});
-}
+
+	function processDeleteRecord(ids) {
+		alertify
+				.confirm(
+						"Do you want to really delete your Job ?",
+						function(e) {
+
+							if (e) {
+								$(".remove").closest('tr').css('display',
+										'none');
+								$
+										.ajax({
+											url : 'https://jobfind-master.herokuapp.com/meinejobs/'
+													+ ids,
+											type : 'DELETE',
+											Contenttype : 'application/json',
+											dataType : "json"
+										});
+								alertify
+										.success("Your Job is succefully delete");
+							} else {
+								$("deletee").removeClass("remove");
+							}
+						});
+	}
 </script>
 <script type="text/javascript" src="/static/js/file.js"></script>
 <script type="text/javascript" src="/static/js/alertify.js"></script>
