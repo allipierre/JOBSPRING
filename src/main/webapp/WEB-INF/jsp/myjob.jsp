@@ -173,7 +173,7 @@ th, td {
 			<tbody>
 				<c:forEach var="jobs" items="${jobs}">
 					<tr>
-						<td>${jobs.id}</td>
+						<td class="sorting_1">${jobs.id}</td>
 						<td>${jobs.category}</td>
 						<td>${jobs.title}</td>
 						<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
@@ -196,7 +196,7 @@ th, td {
 								class="fa fa-eye" aria-hidden="true"></i> show</a></td>
 						<td><a class="button button-primary edit" href="#"><i
 								class="fa fa-pencil-square-o" aria-hidden="true"></i> edit</a></td>
-						<td><a class="button button-primary deletee" href="#"><i
+						<td><a class="button button-primary deletee" id="IDDEL" href="#"><i
 								class="fa fa-trash" aria-hidden="true"></i> delete</a></td>
 					</tr>
 
@@ -219,7 +219,22 @@ th, td {
 
 
 
+<script>
+$( "#IDDEL" ).on( "click", function(){
+	first_lov=$(this).closest('tr').find('.sorting_1').text();
+	$(this).closest('tr').css('display','none');
+	var ids=parseInt(first_lov);
+	console.log(ids)
+	     $.ajax({
+	         url: 'https://jobfind-master.herokuapp.com/meinejobs/'+ids,
+	         type: 'DELETE',
+	         Contenttype:'application/json',
+	         dataType: "json"
+	     });
+	  });
 
+
+</script>
 <script type="text/javascript" src="/static/js/file.js"></script>
 <script type="text/javascript" src="/static/js/typed.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
