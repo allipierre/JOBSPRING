@@ -6,23 +6,28 @@ package io.blackground.jobfinder.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import io.blackground.jobfinder.models.Job;
+import io.blackground.jobfinder.services.JobService;
 
 /**
  * @author yotti
  *
  */
+
 @org.springframework.web.bind.annotation.RestController
 @RequestMapping("/contacts")
 public class RestController {
+	@Autowired
+	private JobService jobservice;
 	@RequestMapping(method=RequestMethod.GET)
 	  public List<Job> getAll() {
-	    return new ArrayList<Job>();
+	    return jobservice.findAll();
 	  }
 	  
 	  @RequestMapping(method=RequestMethod.POST)
