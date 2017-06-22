@@ -21,7 +21,7 @@ import io.blackground.jobfinder.services.JobService;
  */
 
 @org.springframework.web.bind.annotation.RestController
-@RequestMapping("/contacts")
+@RequestMapping("/meinejobs")
 public class RestController {
 	@Autowired
 	private JobService jobservice;
@@ -36,8 +36,8 @@ public class RestController {
 	  }
 	  
 	  @RequestMapping(method=RequestMethod.DELETE, value="{id}")
-	  public void delete(@PathVariable String id) {
-
+	  public void delete(@PathVariable Long id) {
+		  jobservice.delete(id);
 	  }
 	  
 	  @RequestMapping(method=RequestMethod.PUT, value="{id}")
