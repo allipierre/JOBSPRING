@@ -92,7 +92,7 @@ public class MainController {
 		int page = 1;
         int recordsPerPage = 7;
         if(request.getParameter("page") != null)
-            page = Integer.parseInt(request.getParameter("page"))
+            page = Integer.parseInt(request.getParameter("page"));
         Long noOfRecords = paginatedJobService.getNoOfRecords();
         int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 
