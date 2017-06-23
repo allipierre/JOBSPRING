@@ -20,6 +20,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import io.blackground.jobfinder.Repository.JobRepository;
+import io.blackground.jobfinder.Repository.PaginatedJobRepository;
 import io.blackground.jobfinder.models.Company;
 import io.blackground.jobfinder.models.Industry;
 import io.blackground.jobfinder.models.Job;
@@ -38,6 +39,8 @@ public class JobService {
 	private UserServiceImpl userService;
 	@Autowired
 	private CompanyService companyService;
+	
+	private  PaginatedJobRepository paginatedJobRepository;
 
 	/**
 	 * @param taskRepository
