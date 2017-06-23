@@ -78,7 +78,7 @@ public class MainController {
 		request.setAttribute("tasksen", industryService.findAll());
 		request.setAttribute("contract", contractservice.findAll());
 		request.setAttribute("company", companyservice.findAll());
-		return "allejob";
+		return "allejob"
 	}
 
 	@GetMapping("/createcountries")
