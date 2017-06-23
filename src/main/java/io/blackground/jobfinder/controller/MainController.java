@@ -90,10 +90,10 @@ public class MainController {
 	@GetMapping("/pageablejob")
 	public String list(HttpServletRequest request, Pageable pageable) {
 		int page = 1;
-        int recordsPerPage = 5;
+        int recordsPerPage = 7;
         if(request.getParameter("page") != null)
             page = Integer.parseInt(request.getParameter("page"));
-        Long noOfRecords = paginatedJobService.getNoOfRecords();
+        int noOfRecords = paginatedJobService.getNoOfRecords(pageable);
         int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 
 		request.setAttribute("contract", contractservice.findAll());
