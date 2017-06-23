@@ -10,12 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -88,11 +87,11 @@ public class MainController {
 	}
 
 	@GetMapping("/pageablejob")
-	public String list(HttpServletRequest request, @PathVariable("pageno") int pageno) {
+	public String list(HttpServletRequest request, @PageableDefault(value=7, page=0) Pageable pageable) {
 		
 		request.setAttribute("contract", contractservice.findAll());
 		request.setAttribute("experience", experienceservice.findAll());
-		request.setAttribute("jobs", paginatedJobService.findJobByCompany(new PageRequest(pageno,7)));
+		request.setAttribute("jobs", paginatedJobService.findJobByCompany(pageable));
 		return "pageablejob";
 
 	}
