@@ -351,8 +351,8 @@
         </div>
         <label for="about">About Us</label>
         <textarea class="u-full-width" placeholder="About Us" id="about" name ="about"  value ="${company.about}">${company.about}</textarea>
-          <label for="icon">Icon</label>
-         <input type="file" name="file" accept="image/*" onchange="uploadFile">
+          <label for="icon">Upload Logo</label>
+         <input type="file" name="file" accept="image/*" onchange="doUpload(event)">
         <div class="row">
             <div class="one columns">
                 <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry"
@@ -406,6 +406,63 @@
         $("#companySize").val($(this).val());
     });
     $("#usernameInput").prop("disabled", true);
+
+
+    var doUpload = function(event){
+
+        var input = event.target;
+        var reader = new FileReader();
+
+
+        reader.onload = function(){
+          var arrayBuffer = reader.result;
+          var arrayBufferView = new Uint8Array( arrayBuffer );
+          var blob = new Blob( [ arrayBufferView ], { type: input.files[0].type } );
+          var urlCreator = window.URL || window.webkitURL;
+          var imageUrl = urlCreator.createObjectURL( blob );   
+
+          $.ajax({  
+            url: "https://api-content.dropbox.com/1/files_put/auto/YourDirectory/" + input.files[0].name,  
+            headers: {  
+              'Authorization':'Bearer ' +YourToken,  
+              'Content-Length':input.files[0].size  
+            },  
+            crossDomain: true,  
+            crossOrigin: true,  
+            type: 'PUT',  
+            contentType: input.files[0].type,  
+            data: arrayBuffer,  
+            dataType: 'json',  
+            processData: false,
+            xhr: function()
+            {
+              var xhr = new window.XMLHttpRequest();
+             //Upload progress, litsens to the upload progress 
+             //and get the upload status
+             xhr.upload.addEventListener("progress", function(evt){
+              if (evt.lengthComputable) {
+                var percentComplete = parseInt( parseFloat(evt.loaded / evt.total) * 100);
+                //Do something with upload progress
+                $('#uploadProgress').html(percentComplete);
+                $('#uploadProgressBar').css('width',percentComplete+'%');
+               }
+              }, false);
+             },
+           beforeSend: function(){
+             // Things you do before sending the file 
+             // like showing the loader GIF
+           },
+           success : function(result) {
+             // Display the results from dropbox after upload 
+             // Other stuff on complete
+            },
+
+          }); 
+         }
+       reader.readAsArrayBuffer(input.files[0]);
+      }
+
+    
 </script>
 <script type="text/javascript" src="/static/js/file.js"></script>
 <script type="text/javascript" src="/static/js/typed.js"></script>
