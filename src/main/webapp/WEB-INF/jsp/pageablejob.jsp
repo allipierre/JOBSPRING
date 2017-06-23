@@ -144,6 +144,16 @@ th {
 .plate{
 display:none !important;
 }
+.alertify {
+    background: rgb(255, 255, 255);
+    
+    border: 10px solid rgb(34, 125, 188) !important;
+    border-radius: 8px;
+    box-shadow: 0 3px 3px rgba(0,0,0,.3);
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
 
 .button.button-primary.deletee, button.button-primary.deletee, input[type="submit"].button-primary.deletee,
 	input[type="reset"].button-primary.deletee, input[type="button"].button-primary.deletee
