@@ -253,6 +253,9 @@
   font-weight: 700;
   font-size: 10pt;
 }
+.custom-file-input:focus{
+  outline:none !important
+}
 .custom-file-input:hover::before {
   border-color: black;
 }
