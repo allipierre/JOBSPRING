@@ -141,6 +141,10 @@ th {
 	padding-right: 9px !important;
 }
 
+.plate{
+display:none !important;
+}
+
 .button.button-primary.deletee, button.button-primary.deletee, input[type="submit"].button-primary.deletee,
 	input[type="reset"].button-primary.deletee, input[type="button"].button-primary.deletee
 	{
@@ -231,7 +235,7 @@ th, td {
 		</table>
 
 	</div>
-	<div class="container">
+	<div class="container plate">
 
 
 		<%--For displaying Page numbers. 
