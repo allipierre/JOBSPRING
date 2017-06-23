@@ -51,11 +51,6 @@ public class RestController {
 		return null;
 	}
 
-	@RequestMapping(value = "/restpageablejobs", method = RequestMethod.GET)
-	Page<Job> list(Pageable pageable) {
-		Page<Job> jobs = paginatedJobService.listAllByPage(pageable);
-		return jobs;
-
-	}
+	
 
 }
