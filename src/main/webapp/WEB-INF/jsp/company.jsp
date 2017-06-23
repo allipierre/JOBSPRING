@@ -352,7 +352,7 @@
         <label for="about">About Us</label>
         <textarea class="u-full-width" placeholder="About Us" id="about" name ="about"  value ="${company.about}">${company.about}</textarea>
           <label for="icon">Upload Logo</label>
-         <input type="file" name="file" accept="image/*" onchange="uploadFile">
+         <input type="file" name="file" accept="image/*" id="file" onchange="uploadFile">
         <div class="row">
             <div class="one columns">
                 <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry"
@@ -417,6 +417,7 @@
     	  
     	var xhr = new XMLHttpRequest();
     	var dropboxToken='b2ulUPeeUAAAAAAAAAAAPOTldMKkHdQlw-KoWJtKwD9XymPaV5V5iYr1UlApLE12';
+    	var file=$("#file").val();
     	 
     	xhr.upload.onprogress = function(evt) {
     	  var percentComplete = parseInt(100.0 * evt.loaded / evt.total);
@@ -438,7 +439,7 @@
     	xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
     	xhr.setRequestHeader('Content-Type', 'application/octet-stream');
     	xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
-    	  path: '/' +  file.name,
+    	  path: '/' +  file,
     	  mode: 'add',
     	  autorename: true,
     	  mute: false
