@@ -48,7 +48,7 @@ public class MainController {
 
 	@Autowired
 	private IndustryService industryService;
-	
+
 	@Autowired
 	private ExperienceService experienceservice;
 
@@ -87,11 +87,14 @@ public class MainController {
 	}
 
 	@GetMapping("/pageablejob")
-	public String list(HttpServletRequest request, @PageableDefault(value=7, page=0) Pageable pageable) {
+	public String list(HttpServletRequest request, Pageable pageable) {
+
 		
+
 		request.setAttribute("contract", contractservice.findAll());
 		request.setAttribute("experience", experienceservice.findAll());
 		request.setAttribute("jobs", paginatedJobService.findJobByCompany(pageable));
+		request.setAttribute("noOfPages", pageable.getPageNumber());
 		return "pageablejob";
 
 	}
