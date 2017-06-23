@@ -78,17 +78,27 @@ th {
 	margin-bottom: 4em;
 }
 
-.dez{
-background: rgb(30, 174, 219) !important;
-    border: 1px solid rgb(30, 174, 219) !important;
-    border-radius: 2px !important;
-    text-align: center !important;
-    margin-left: 2px;
-    padding: 0.5em 1em;
-    min-width: 1.5em !important;
-}
+.pagination {
+	display: inline-block;
 }
 
+.pagination a {
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+.pagination a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.pagination a:hover:not (.active ) {
+	background-color: #ddd;
+}
+
+}
 .navbar-list {
 	float: right !important;
 }
@@ -248,6 +258,27 @@ th, td {
 				</c:if>
 			</tr>
 		</table>
+	</div>
+
+<div class="container">
+	<div class="pagination">
+		<c:if test="${currentPage != 1}">
+			<a href="pageablejob?page=${currentPage - 1}">Previous</a>
+		</c:if>
+		<c:forEach begin="1" end="${noOfPages}" var="i">
+			<c:choose>
+				<c:when test="${currentPage eq i}">
+					<a>${i}</a>
+				</c:when>
+				<c:otherwise>
+					<a href="pageablejob?page=${i}">${i}</a>
+				</c:otherwise>
+			</c:choose>
+		</c:forEach>
+		<c:if test="${currentPage lt noOfPages}">
+			<a href="pageablejob?page=${currentPage + 1}">Next</a>
+		</c:if>
+	</div>
 	</div>
 
 
