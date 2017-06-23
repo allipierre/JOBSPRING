@@ -81,7 +81,7 @@ public class MainController {
 		return "createcountries";
 	}
 
-	@RequestMapping(value = "/pageablejobs", method = RequestMethod.GET)
+	@GetMapping("/pageablejobs")
 	Page<Job> list(Pageable pageable) {
 		Page<Job> jobs = paginatedJobService.listAllByPage(pageable);
 		return jobs;
