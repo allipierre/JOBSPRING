@@ -220,7 +220,7 @@ th, td {
     The when condition does not display a link for the current page--%>
     <table border="1" cellpadding="5" cellspacing="5">
         <tr>
-            <c:forEach begin"1" end="${noOfPages}" var="i">
+            <c:forEach begin="1" end="${noOfPages}" var="i">
                 <c:choose>
                     <c:when test="${currentPage eq i}">
                         <td>${i}</td>
