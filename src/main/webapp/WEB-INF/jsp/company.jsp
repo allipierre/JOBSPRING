@@ -233,9 +233,7 @@
             padding-top: 23px;
         }
         
-        .custom-file-input {
-  color: transparent;
-}
+        
 .custom-file-input::-webkit-file-upload-button {
   visibility: hidden;
 }
