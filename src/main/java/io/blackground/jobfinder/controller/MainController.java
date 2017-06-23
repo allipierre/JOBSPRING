@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import io.blackground.jobfinder.models.Job;
 import io.blackground.jobfinder.services.CompanyService;
 import io.blackground.jobfinder.services.ContractService;
+import io.blackground.jobfinder.services.ExperienceService;
 import io.blackground.jobfinder.services.IndustryService;
 import io.blackground.jobfinder.services.JobService;
 import io.blackground.jobfinder.services.PaginatedJobService;
@@ -46,6 +47,9 @@ public class MainController {
 
 	@Autowired
 	private IndustryService industryService;
+	
+	@Autowired
+	private ExperienceService experienceservice;
 
 	// @GetMapping("/")
 	// public String hello() {
@@ -81,10 +85,12 @@ public class MainController {
 		return "createcountries";
 	}
 
-	@GetMapping("/pageablejobs")
-	Page<Job> list(Pageable pageable) {
-		Page<Job> jobs = paginatedJobService.listAllByPage(pageable);
-		return jobs;
+	@GetMapping("/pageablejob")
+	public String list(HttpServletRequest request, Pageable pageable) {
+		request.setAttribute("contract", contractservice.findAll());
+		request.setAttribute("experience", experienceservice.findAll());
+		request.setAttribute("jobs", paginatedJobService.listAllByPage(pageable));
+		return "pageablejob";
 
 	}
 
