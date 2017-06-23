@@ -269,9 +269,7 @@
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
 }
 
-body {
-  padding: 20px;
-}
+
 
         @media (max-width: 750px) {
 
