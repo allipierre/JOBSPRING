@@ -352,7 +352,7 @@
         <label for="about">About Us</label>
         <textarea class="u-full-width" placeholder="About Us" id="about" name ="about"  value ="${company.about}">${company.about}</textarea>
           <label for="icon">Upload Logo</label>
-         <input type="file" name="file" accept="image/*" onchange="doUpload(event)">
+         <input type="file" name="file" accept="image/*" onchange="uploadFile">
         <div class="row">
             <div class="one columns">
                 <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry"
@@ -408,7 +408,7 @@
     $("#usernameInput").prop("disabled", true);
 
 
-    var doUpload = function(event){
+    var uploadFile = function(){
     	/**
     	 * Two variables should already be set.
     	 * dropboxToken = OAuth access token, specific to the user.
