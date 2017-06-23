@@ -41,8 +41,6 @@ public class MyJobController {
 	@GetMapping("/myjob")
 	public String postJob(HttpServletRequest request) {
 
-		
-
 		request.setAttribute("jobs", jobService.findJobByCompany());
 		request.setAttribute("contract", contractservice.findAll());
 		request.setAttribute("experience", experienceservice.findAll());

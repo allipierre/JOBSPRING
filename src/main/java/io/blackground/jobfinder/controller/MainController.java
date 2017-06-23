@@ -89,7 +89,7 @@ public class MainController {
 	public String list(HttpServletRequest request, Pageable pageable) {
 		request.setAttribute("contract", contractservice.findAll());
 		request.setAttribute("experience", experienceservice.findAll());
-		request.setAttribute("jobs", paginatedJobService.listAllByPage(pageable));
+		request.setAttribute("jobs", paginatedJobService.findJobByCompany(pageable));
 		return "pageablejob";
 
 	}

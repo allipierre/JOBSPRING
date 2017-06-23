@@ -36,8 +36,12 @@ import io.blackground.jobfinder.models.User;
 public class PaginatedJobService {
 
 	
-	
+	private  JobRepository jobRepository;
 	private  PaginatedJobRepository paginatedJobRepository;
+	@Autowired
+	private UserServiceImpl userService;
+	@Autowired
+	private CompanyService companyService;
 
 	/**
 	 * @param taskRepository
@@ -51,4 +55,20 @@ public class PaginatedJobService {
 	 public Page<Job> listAllByPage(Pageable pageable) {
 		 return paginatedJobRepository.findAll(pageable);
 	}
+	 
+	 public List<Job> findJobByCompany(Pageable pageable) {
+			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+			User user = userService.findByUsername(authentication.getName());
+			Company userCompany = companyService.findCompany(user);
+			List<Job> jobs = new ArrayList<>();
+			for (Job job : paginatedJobRepository.findAll(pageable)) {
+				if (job.getCompany().getId() == userCompany.getId()) {
+					jobs.add(job);
+				}
+
+			}
+			return jobs;
+
+		}
 }
