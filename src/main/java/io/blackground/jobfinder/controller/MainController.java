@@ -100,7 +100,7 @@ public class MainController {
 		request.setAttribute("contract", contractservice.findAll());
 		request.setAttribute("experience", experienceservice.findAll());
 		request.setAttribute("jobs", paginatedJobService.findJobByCompany(new PageRequest((page),recordsPerPage)));
-		request.setAttribute("noOfPages", noOfPages);
+		request.setAttribute("noOfPages", noOfPages-1);
         request.setAttribute("currentPage", page);
 		
 		return "pageablejob";
