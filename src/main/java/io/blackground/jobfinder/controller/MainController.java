@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
@@ -88,14 +89,19 @@ public class MainController {
 
 	@GetMapping("/pageablejob")
 	public String list(HttpServletRequest request, Pageable pageable) {
-
-		
+		int page = 1;
+        int recordsPerPage = 5;
+        if(request.getParameter("page") != null)
+            page = Integer.parseInt(request.getParameter("page"));
+        Long noOfRecords = paginatedJobService.getNoOfRecords();
+        int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 
 		request.setAttribute("contract", contractservice.findAll());
 		request.setAttribute("experience", experienceservice.findAll());
-		request.setAttribute("jobs", paginatedJobService.findJobByCompany(pageable));
-		request.setAttribute("noOfPages", pageable.getPageNumber());
-		request.setAttribute("pageSize", pageable.getPageSize());
+		request.setAttribute("jobs", paginatedJobService.findJobByCompany(new PageRequest(1,7)));
+		request.setAttribute("noOfPages", noOfPages);
+        request.setAttribute("currentPage", page);
+		
 		return "pageablejob";
 
 	}

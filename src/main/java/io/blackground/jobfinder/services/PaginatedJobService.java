@@ -71,4 +71,7 @@ public class PaginatedJobService {
 			return jobs;
 
 		}
+	 public  Long getNoOfRecords(){
+		 return paginatedJobRepository.count();
+	 }
 }
