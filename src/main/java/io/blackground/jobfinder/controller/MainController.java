@@ -93,7 +93,7 @@ public class MainController {
         int recordsPerPage = 7;
         if(request.getParameter("page") != null)
             page = Integer.parseInt(request.getParameter("page"));
-        int noOfRecords = paginatedJobService.getNoOfRecords(pageable);
+        int noOfRecords = paginatedJobService.getNoOfRecords();
         int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 
 		request.setAttribute("contract", contractservice.findAll());

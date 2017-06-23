@@ -71,13 +71,13 @@ public class PaginatedJobService {
 			return jobs;
 
 		}
-	 public  int getNoOfRecords(Pageable pageable){
+	 public  int getNoOfRecords(){
 		 Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
 			User user = userService.findByUsername(authentication.getName());
 			Company userCompany = companyService.findCompany(user);
 			List<Job> jobs = new ArrayList<>();
-			for (Job job : paginatedJobRepository.findAll(pageable)) {
+			for (Job job : paginatedJobRepository.findAll()) {
 				if (job.getCompany().getId() == userCompany.getId()) {
 					jobs.add(job);
 				}
