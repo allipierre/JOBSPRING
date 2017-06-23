@@ -368,7 +368,7 @@
         </div>
         <label for="about">About Us</label>
         <textarea class="u-full-width" placeholder="About Us" id="about" name ="about"  value ="${company.about}">${company.about}</textarea>
-          <div class="container fileUpload btn btn-primary">
+          <div class="fileUpload btn btn-primary">
           <label for="icon">Upload Logo</label>
          <input type="file" name="file" id="file" onchange="doUpload(event)" class="upload">
          </div>
