@@ -208,46 +208,40 @@ th, td {
 				</c:forEach>
 			</tbody>
 		</table>
-		
+
 	</div>
 	<div class="container">
-	<div class="row">
-	<%--For displaying Previous link except for the 1st page --%>
-	<div class="one column">
-    <c:if test="${currentPage != 1}">
-        <td><a href="pageablejob?page=${currentPage - 1}">Previous</a></td>
-    </c:if>
-    </div>
-  <div class="seven columns">
-    <%--For displaying Page numbers. 
+
+
+		<%--For displaying Page numbers. 
     The when condition does not display a link for the current page--%>
-    <table border="1" cellpadding="5" cellspacing="5">
-        <tr>
-            <c:forEach begin="1" end="${noOfPages}" var="i">
-                <c:choose>
-                    <c:when test="${currentPage eq i}">
-                        <td>${i}</td>
-                    </c:when>
-                    <c:otherwise>
-                        <td><a href="pageablejob?page=${i}">${i}</a></td>
-                    </c:otherwise>
-                </c:choose>
-            </c:forEach>
-        </tr>
-    </table>
-    </div>
-     <div class="one column">
-    <%--For displaying Next link --%>
-    <c:if test="${currentPage lt noOfPages}">
-        <td><a href="pageablejob?page=${currentPage + 1}">Next</a></td>
-    </c:if>
-    </div>
-    </div>
-    </div>
-     
+		<table border="1" cellpadding="5" cellspacing="5">
+			<tr>
+				<%--For displaying Previous link except for the 1st page --%>
+				<c:if test="${currentPage != 1}">
+					<td><a href="pageablejob?page=${currentPage - 1}">Previous</a></td>
+				</c:if>
+				<c:forEach begin="1" end="${noOfPages}" var="i">
+					<c:choose>
+						<c:when test="${currentPage eq i}">
+							<td>${i}</td>
+						</c:when>
+						<c:otherwise>
+							<td><a href="pageablejob?page=${i}">${i}</a></td>
+						</c:otherwise>
+					</c:choose>
+				</c:forEach>
+				<%--For displaying Next link --%>
+				<c:if test="${currentPage lt noOfPages}">
+					<td><a href="pageablejob?page=${currentPage + 1}">Next</a></td>
+				</c:if>
+			</tr>
+		</table>
+	</div>
 
 
-	
+
+
 
 
 
