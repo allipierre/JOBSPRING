@@ -215,7 +215,7 @@ th, td {
 
 		<%--For displaying Page numbers. 
     The when condition does not display a link for the current page--%>
-		<table border="1" cellpadding="5" cellspacing="5">
+		<table>
 			<tr>
 				<%--For displaying Previous link except for the 1st page --%>
 				<c:if test="${currentPage != 1}">
