@@ -268,7 +268,7 @@ th, td {
 		<c:forEach begin="1" end="${noOfPages}" var="i">
 			<c:choose>
 				<c:when test="${currentPage eq i}">
-					<a>${i}</a>
+					<a class="active">${i}</a>
 				</c:when>
 				<c:otherwise>
 					<a href="pageablejob?page=${i}">${i}</a>
