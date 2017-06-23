@@ -215,11 +215,9 @@ th, td {
     <table border="1" cellpadding="5" cellspacing="5">
         <tr>
             <c:forEach begin="1" end="${pageSize}" var="i">
-                <c:choose>
-                    <c:when >
+                
                         <td><a href="pageablejob?page=${i}">${i}</a></td>
-                    </c:when>
-                </c:choose>
+                    
             </c:forEach>
         </tr>
     </table>
