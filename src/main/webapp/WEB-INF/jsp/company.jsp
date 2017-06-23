@@ -409,57 +409,42 @@
 
 
     var doUpload = function(event){
-
-        var input = event.target;
-        var reader = new FileReader();
-
-
-        reader.onload = function(){
-          var arrayBuffer = reader.result;
-          var arrayBufferView = new Uint8Array( arrayBuffer );
-          var blob = new Blob( [ arrayBufferView ], { type: input.files[0].type } );
-          var urlCreator = window.URL || window.webkitURL;
-          var imageUrl = urlCreator.createObjectURL( blob );   
-
-          $.ajax({  
-            url: "https://www.dropbox.com/home/blackground/" + input.files[0].name,  
-            headers: {  
-              'Authorization':'Bearer ' +YourToken,  
-              'Content-Length':input.files[0].size  
-            },  
-            crossDomain: true,  
-            crossOrigin: true,  
-            type: 'PUT',  
-            contentType: input.files[0].type,  
-            data: arrayBuffer,  
-            dataType: 'json',  
-            processData: false,
-            xhr: function()
-            {
-              var xhr = new window.XMLHttpRequest();
-             //Upload progress, litsens to the upload progress 
-             //and get the upload status
-             xhr.upload.addEventListener("progress", function(evt){
-              if (evt.lengthComputable) {
-                var percentComplete = parseInt( parseFloat(evt.loaded / evt.total) * 100);
-                //Do something with upload progress
-                $('#uploadProgress').html(percentComplete);
-                $('#uploadProgressBar').css('width',percentComplete+'%');
-               }
-              }, false);
-             },
-           beforeSend: function(){
-             // Things you do before sending the file 
-             // like showing the loader GIF
-           },
-           success : function(result) {
-             // Display the results from dropbox after upload 
-             // Other stuff on complete
-            },
-
-          }); 
-         }
-       reader.readAsArrayBuffer(input.files[0]);
+    	/**
+    	 * Two variables should already be set.
+    	 * dropboxToken = OAuth access token, specific to the user.
+    	 * file = file object selected in the file widget.
+    	 */
+    	  
+    	var xhr = new XMLHttpRequest();
+    	var dropboxToken='b2ulUPeeUAAAAAAAAAAAPOTldMKkHdQlw-KoWJtKwD9XymPaV5V5iYr1UlApLE12';
+    	 
+    	xhr.upload.onprogress = function(evt) {
+    	  var percentComplete = parseInt(100.0 * evt.loaded / evt.total);
+    	  // Upload in progress. Do something here with the percent complete.
+    	};
+    	 
+    	xhr.onload = function() {
+    	  if (xhr.status === 200) {
+    	    var fileInfo = JSON.parse(xhr.response);
+    	    // Upload succeeded. Do something here with the file info.
+    	  }
+    	  else {
+    	    var errorMessage = xhr.response || 'Unable to upload file';
+    	    // Upload failed. Do something here with the error.
+    	  }
+    	};
+    	 
+    	xhr.open('POST', 'https://www.dropbox.com/home/blackground');
+    	xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
+    	xhr.setRequestHeader('Content-Type', 'application/octet-stream');
+    	xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
+    	  path: '/' +  file.name,
+    	  mode: 'add',
+    	  autorename: true,
+    	  mute: false
+    	}));
+    	 
+    	xhr.send(file);
       }
 
     
