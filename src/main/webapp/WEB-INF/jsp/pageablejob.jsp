@@ -78,6 +78,17 @@ th {
 	margin-bottom: 4em;
 }
 
+.dez{
+background: rgb(30, 174, 219) !important;
+    border: 1px solid rgb(30, 174, 219) !important;
+    border-radius: 2px !important;
+    text-align: center !important;
+    margin-left: 2px;
+    padding: 0.5em 1em;
+    min-width: 1.5em !important;
+}
+}
+
 .navbar-list {
 	float: right !important;
 }
@@ -224,10 +235,10 @@ th, td {
 				<c:forEach begin="1" end="${noOfPages}" var="i">
 					<c:choose>
 						<c:when test="${currentPage eq i}">
-							<td>${i}</td>
+							<td class="dez">${i}</td>
 						</c:when>
 						<c:otherwise>
-							<td><a href="pageablejob?page=${i}">${i}</a></td>
+							<td class="dez"><a href="pageablejob?page=${i}">${i}</a></td>
 						</c:otherwise>
 					</c:choose>
 				</c:forEach>
