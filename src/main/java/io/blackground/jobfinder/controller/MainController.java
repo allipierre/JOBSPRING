@@ -88,11 +88,11 @@ public class MainController {
 	}
 
 	@GetMapping("/pageablejob")
-	public String list(HttpServletRequest request) {
+	public String list(HttpServletRequest request, @PathVariable("pageno") int pageno) {
 		
 		request.setAttribute("contract", contractservice.findAll());
 		request.setAttribute("experience", experienceservice.findAll());
-		request.setAttribute("jobs", paginatedJobService.findJobByCompany(new PageRequest(0,7)));
+		request.setAttribute("jobs", paginatedJobService.findJobByCompany(new PageRequest(pageno,7)));
 		return "pageablejob";
 
 	}
