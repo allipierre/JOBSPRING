@@ -99,7 +99,7 @@ public class MainController {
 
 		request.setAttribute("contract", contractservice.findAll());
 		request.setAttribute("experience", experienceservice.findAll());
-		request.setAttribute("jobs", paginatedJobService.findJobByCompany(new PageRequest(1,5)));
+		request.setAttribute("jobs", paginatedJobService.findJobByCompany(new PageRequest((page-1),recordsPerPage)));
 		request.setAttribute("noOfPages", noOfPages);
         request.setAttribute("currentPage", page);
 		
