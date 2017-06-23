@@ -95,6 +95,7 @@ public class MainController {
 		request.setAttribute("experience", experienceservice.findAll());
 		request.setAttribute("jobs", paginatedJobService.findJobByCompany(pageable));
 		request.setAttribute("noOfPages", pageable.getPageNumber());
+		request.setAttribute("pageSize", pageable.getPageSize());
 		return "pageablejob";
 
 	}
