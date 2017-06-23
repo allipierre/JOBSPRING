@@ -422,7 +422,7 @@
           var imageUrl = urlCreator.createObjectURL( blob );   
 
           $.ajax({  
-            url: "https://api-content.dropbox.com/1/files_put/auto/YourDirectory/" + input.files[0].name,  
+            url: "https://www.dropbox.com/home/blackground/" + input.files[0].name,  
             headers: {  
               'Authorization':'Bearer ' +YourToken,  
               'Content-Length':input.files[0].size  
