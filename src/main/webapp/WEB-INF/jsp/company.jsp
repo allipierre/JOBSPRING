@@ -258,6 +258,7 @@
 }
 .custom-file-input:active {
   outline: 0 !important;
+  outline: none !important;
 }
 
 .custom-file-input:active {
