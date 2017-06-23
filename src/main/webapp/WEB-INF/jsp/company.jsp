@@ -189,6 +189,23 @@
             border-width: .1rem;
             border-color: rgb(4, 100, 181);
         }
+        
+        .fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
 
         .fa-eye {
             padding-top: 2px;
@@ -351,8 +368,10 @@
         </div>
         <label for="about">About Us</label>
         <textarea class="u-full-width" placeholder="About Us" id="about" name ="about"  value ="${company.about}">${company.about}</textarea>
+          <div class="container fileUpload btn btn-primary">
           <label for="icon">Upload Logo</label>
-         <input type="file" name="file" id="file" onchange="doUpload(event)">
+         <input type="file" name="file" id="file" onchange="doUpload(event)" class="upload">
+         </div>
         <div class="row">
             <div class="one columns">
                 <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry"
