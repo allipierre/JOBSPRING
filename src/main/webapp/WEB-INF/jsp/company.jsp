@@ -474,7 +474,7 @@
     	xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
     	xhr.setRequestHeader('Content-Type', 'application/octet-stream');
     	xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
-    	  path: '/' +  file.name,
+    	  path: '/blackground' +  file.name,
     	  mode: 'add',
     	  autorename: true,
     	  mute: false
