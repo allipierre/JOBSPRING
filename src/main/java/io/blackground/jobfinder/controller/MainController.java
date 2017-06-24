@@ -90,25 +90,19 @@ public class MainController {
 	@GetMapping("/pageablejob")
 	public String list(HttpServletRequest request, Pageable pageable) {
 		int page = 1;
-		int recordsPerPage = 7;
-		if (request.getParameter("page") != null)
-			page = Integer.parseInt(request.getParameter("page"));
-		int noOfRecords = paginatedJobService.getNoOfRecords();
-		System.out.println("noOfRecords" + noOfRecords);
-		int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
+        int recordsPerPage = 7;
+        if(request.getParameter("page") != null)
+            page = Integer.parseInt(request.getParameter("page"));
+        int noOfRecords = paginatedJobService.getNoOfRecords();
+        System.out.println("noOfRecords"+noOfRecords);
+        int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 
 		request.setAttribute("contract", contractservice.findAll());
 		request.setAttribute("experience", experienceservice.findAll());
-		if (page == 1) {
-			request.setAttribute("jobs", paginatedJobService.findJobByCompany(new PageRequest(1, 7)));
-		}else{
-			request.setAttribute("jobs", paginatedJobService.findJobByCompany(new PageRequest((page - 1), recordsPerPage)));
-		}
-
-		
+		request.setAttribute("jobs", paginatedJobService.findJobByCompany(new PageRequest((page-1),recordsPerPage)));
 		request.setAttribute("noOfPages", noOfPages);
-		request.setAttribute("currentPage", page);
-
+        request.setAttribute("currentPage", page);
+		
 		return "pageablejob";
 
 	}
