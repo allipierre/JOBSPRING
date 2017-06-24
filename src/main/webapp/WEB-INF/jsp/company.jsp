@@ -528,7 +528,7 @@
 			evt.target.submit()
 		})
 		.catch(function (err) {
-			console.error(err)
+			console.log('a');
 		})
 		
 		return false
