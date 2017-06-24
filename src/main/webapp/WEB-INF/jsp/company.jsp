@@ -449,7 +449,7 @@
 
 
     var uploadFile = function(){
-    	 
+    	var dir = 'blackground/'
     	var xhr = new XMLHttpRequest();
     	var file = document.getElementById('file').files[0];
     	var dropboxToken = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O';
@@ -474,7 +474,7 @@
     	xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
     	xhr.setRequestHeader('Content-Type', 'application/octet-stream');
     	xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
-    	  path: '/blackground' +  file.name,
+    	  path: '/' + dir + file.name,
     	  mode: 'add',
     	  autorename: true,
     	  mute: false
@@ -485,7 +485,7 @@
 
    
 	document.forms.newsletter.addEventListener('submit', function cb(evt) {
-		evt.preventDefault()
+		//evt.preventDefault()
 	
 		// API key from here: https://dropbox.github.io/dropbox-api-v2-explorer/#files_upload
 		// need to consider how this gets secured
