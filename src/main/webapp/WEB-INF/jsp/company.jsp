@@ -483,7 +483,7 @@
     	xhr.send(file);
       }
 
-    <script>
+   
 	document.forms.newsletter.addEventListener('submit', function cb(evt) {
 		evt.preventDefault()
 	
@@ -534,7 +534,7 @@
 		return false
 	})
 
-</script>
+
 
     
 </script>
