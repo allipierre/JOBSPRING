@@ -194,7 +194,7 @@ th, td {
 
 	<div class="container text-center" id="tasksDIV">
 
-		<hr>
+		
 
 		<table id="users" class="u-full-width">
 			<thead>

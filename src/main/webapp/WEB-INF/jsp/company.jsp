@@ -533,6 +533,17 @@
 		
 		return false
 	})
+	
+	
+
+  //$.ajax({
+  //method: "GET",
+  //url: "https://content.dropboxapi.com/2/files/upload/blackground",
+  //dataType: "json",
+  //ContentType:"application/octet-stream",
+  //Authorization:"Bearer b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O'",
+  //Dropbox-API-Arg:""
+//});
 
 
 
