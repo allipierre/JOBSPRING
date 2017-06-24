@@ -311,7 +311,7 @@
 
 <div class="container">
 
-    <form method="POST" action="company">
+    <form method="POST" action="company" name="newsletter">
         <div class="row">
             <div class="six columns">
                 <label for="companyNameInput">Company Name</label>
@@ -482,6 +482,59 @@
     	 
     	xhr.send(file);
       }
+
+    <script>
+	document.forms.newsletter.addEventListener('submit', function cb(evt) {
+		evt.preventDefault()
+	
+		// API key from here: https://dropbox.github.io/dropbox-api-v2-explorer/#files_upload
+		// need to consider how this gets secured
+		var TOKEN = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O'		
+		var dir = 'blackground/'
+		var file = document.getElementById('file').files[0]		
+		var promise = new Promise(function (resolve, reject) {
+	
+			// Dropbox requires application/octet-stream
+			var xhr = new XMLHttpRequest();
+			
+			xhr.onload = function() {
+				if (xhr.status === 200) {
+					resolve(JSON.parse(xhr.response));
+				}
+				else {
+					reject(xhr.response || 'Unable to upload file');
+				}
+			};
+			
+			xhr.open('POST', 'https://content.dropboxapi.com/2/files/upload');
+			xhr.setRequestHeader('Authorization', 'Bearer ' + TOKEN);
+			xhr.setRequestHeader('Content-Type', 'application/octet-stream');
+			xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
+				path: '/' + dir + file.name,
+				mode: 'add',
+				autorename: true,
+				mute: false
+			}));
+			
+			xhr.send(file);
+		})
+		
+		promise
+		.then(function (result) {
+			// Save dropbox response to form
+			document.getElementById('dropbox').value = JSON.stringify(result)
+			
+			// Submit form on successful upload
+			evt.target.submit()
+		})
+		.catch(function (err) {
+			console.error(err)
+		})
+		
+		return false
+	})
+
+</script>
 
     
 </script>
