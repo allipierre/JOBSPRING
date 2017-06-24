@@ -392,7 +392,7 @@
         <label for="about">About Us</label>
         <textarea class="u-full-width" placeholder="About Us" id="about" name ="about"  value ="${company.about}">${company.about}</textarea>
           <label for="icon">Upload Logo</label>
-         <input type="file" name="file" id="file" onchange="doUpload(event)" class="custom-file-input">
+         <input type="file" name="file" id="file" onchange="uploadFile" class="custom-file-input">
         <div class="row">
             <div class="one columns">
                 <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry"
@@ -448,59 +448,39 @@
     $("#usernameInput").prop("disabled", true);
 
 
-    var doUpload = function(event){
-
-        var input = event.target;
-        var reader = new FileReader();
-        var YourToken='b2ulUPeeUAAAAAAAAAAAPUNADsHLHgU_7hCzdFz5S8m7Lnq2_fa2R7IgFZV3fUoK';
-
-
-        reader.onload = function(){
-          var arrayBuffer = reader.result;
-          var arrayBufferView = new Uint8Array( arrayBuffer );
-          var blob = new Blob( [ arrayBufferView ], { type: input.files[0].type } );
-          var urlCreator = window.URL || window.webkitURL;
-          var imageUrl = urlCreator.createObjectURL( blob );   
-
-          $.ajax({  
-            url: "https://content.dropboxapi.com/1/files_put/auto/blackground/" + input.files[0].name,  
-            headers: {  
-              'Authorization':'Bearer ' +YourToken,  
-              'Content-Length':input.files[0].size  
-            },  
-            crossDomain: true,  
-            crossOrigin: true,  
-            type: 'PUT',  
-            contentType: input.files[0].type,  
-            data: arrayBuffer,  
-            dataType: 'json',  
-            processData: false,
-            xhr: function()
-            {
-              var xhr = new window.XMLHttpRequest();
-             //Upload progress, litsens to the upload progress 
-             //and get the upload status
-             xhr.upload.addEventListener("progress", function(evt){
-              if (evt.lengthComputable) {
-                var percentComplete = parseInt( parseFloat(evt.loaded / evt.total) * 100);
-                //Do something with upload progress
-                $('#uploadProgress').html(percentComplete);
-                $('#uploadProgressBar').css('width',percentComplete+'%');
-               }
-              }, false);
-             },
-           beforeSend: function(){
-             // Things you do before sending the file 
-             // like showing the loader GIF
-           },
-           success : function(result) {
-             // Display the results from dropbox after upload 
-             // Other stuff on complete
-            },
-
-          }); 
-         }
-       reader.readAsArrayBuffer(input.files[0]);
+    var uploadFile = function(){
+    	 
+    	var xhr = new XMLHttpRequest();
+    	var file = document.getElementById('file').files[0];
+    	var dropboxToken = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O';
+    	 
+    	xhr.upload.onprogress = function(evt) {
+    	  var percentComplete = parseInt(100.0 * evt.loaded / evt.total);
+    	  // Upload in progress. Do something here with the percent complete.
+    	};
+    	 
+    	xhr.onload = function() {
+    	  if (xhr.status === 200) {
+    	    var fileInfo = JSON.parse(xhr.response);
+    	    // Upload succeeded. Do something here with the file info.
+    	  }
+    	  else {
+    	    var errorMessage = xhr.response || 'Unable to upload file';
+    	    // Upload failed. Do something here with the error.
+    	  }
+    	};
+    	 
+    	xhr.open('POST', 'https://content.dropboxapi.com/2/files/upload');
+    	xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
+    	xhr.setRequestHeader('Content-Type', 'application/octet-stream');
+    	xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
+    	  path: '/' +  file.name,
+    	  mode: 'add',
+    	  autorename: true,
+    	  mute: false
+    	}));
+    	 
+    	xhr.send(file);
       }
 
     
