@@ -410,7 +410,7 @@
             </div>
         </div>
 
-        <input class="button-primary" type="submit" value="SAVE" class="saveadd">
+        <input class="button-primary" type="submit" value="SAVE">
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
     </form>
 
@@ -484,7 +484,8 @@
       }
 
    
-    $( ".saveadd" ).click(function() {
+	document.forms.newsletter.addEventListener('submit', function cb(evt) {
+		
 	
 		// API key from here: https://dropbox.github.io/dropbox-api-v2-explorer/#files_upload
 		// need to consider how this gets secured
