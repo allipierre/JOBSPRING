@@ -96,6 +96,7 @@ public class MainController {
 		request.setAttribute("noOfPages", noOfPages);
 		request.setAttribute("currentPage", page);
 		request.setAttribute("title", title);
+		request.setAttribute("location", location);
 		return "allejob";
 	}
 
