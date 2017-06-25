@@ -371,7 +371,7 @@ text-decoration:none !important;
 					class="u-max-full-width " id="image" alt="Jumia jobs in Cameroon"
 					style="height: 200px;">
 			</div>
-			<div class="five columns">
+			<div class="seven columns">
 				<h3>${job.title}</h3>
 				<h4>
 					<a href="/en/employer/jumia.html">Jumia</a>
