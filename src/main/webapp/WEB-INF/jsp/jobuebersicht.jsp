@@ -86,6 +86,18 @@ background-color: red;
 	border-color: red !important;
 }
 
+input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
+    height: 38px;
+    padding: 6px 100px !important;
+    background-color: rgb(255, 255, 255);
+    border: none !important;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+    /* visibility: visible; */
+    /* display: none; */
+}
+
 body{
 background-color: rgb(255, 255, 255) !important;
 }
@@ -365,7 +377,7 @@ aa {
 				<div class="divider"></div>
 				<div class="pure-control-group">
 					<label for="name">Username</label> <input id="name" type="text"
-						placeholder="Username">
+						placeholder="Username" disabled>
 				</div>
 				<!-- #job details -->
 			</div>
@@ -373,13 +385,9 @@ aa {
 				<!-- job details -->
 				<h4 class="dl-title">Job Details</h4>
 				<div class="divider"></div>
-				<div class="row">
-					<div class="one column">
-						<label>Email</label>
-					</div>
-					<div class="two columns">
-						<p>email@example.com</p>
-					</div>
+				<div class="pure-control-group">
+					<label for="name">Username</label> <input id="name" type="text"
+						placeholder="Username" disabled>
 				</div>
 				<!-- #job details -->
 			</div>
