@@ -30,7 +30,7 @@
 
 <script>
 	var token = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O';
-    var actu='blackground_logo.jpg';
+    var actu=$('userimage').val();
 	var xhr = new XMLHttpRequest();
 	xhr.responseType = 'blob';
 	xhr.onreadystatechange = function() {
@@ -427,7 +427,7 @@ text-decoration:none !important;
       <!-- #company details -->
    </div>
 </div>
-		
+	<input type="hidden" value="blackground_logo.jpg" id="userimage">	
 	</div>
 
 
