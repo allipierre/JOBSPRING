@@ -30,7 +30,7 @@
 
 <script>
 	var token = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O';
-
+    var actu='blackground_logo.jpg';
 	var xhr = new XMLHttpRequest();
 	xhr.responseType = 'blob';
 	xhr.onreadystatechange = function() {
@@ -46,7 +46,7 @@
 	xhr.open('GET', 'https://content.dropboxapi.com/2/files/download');
 	xhr.setRequestHeader('Authorization', 'Bearer ' + token);
 	xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
-		path : '/blackground/blackground_logo.jpg'
+		path : '/blackground/'+actu
 	}));
 	xhr.send();
 </script>
