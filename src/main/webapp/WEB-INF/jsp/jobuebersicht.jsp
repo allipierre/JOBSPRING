@@ -298,7 +298,7 @@ aa {
 		<div class="row">
 			<div class="four columns">
 				<img
-					src="https://media-jobs.jumia.cm/storage//company/21/21/image//jumia.png?1437472745"
+					src=""
 					class="u-max-full-width " id="image" alt="Jumia jobs in Cameroon"
 					style="height: 200px;">
 			</div>
