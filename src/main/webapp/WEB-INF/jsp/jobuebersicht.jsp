@@ -28,29 +28,6 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="/static/js/site.js"></script>
 
-<script>
-	var token = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O';
-    var actu=$('#userimage').val();
-	var xhr = new XMLHttpRequest();
-	xhr.responseType = 'blob';
-	xhr.onreadystatechange = function() {
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			var imageUrl = (window.URL || window.webkitURL)
-					.createObjectURL(xhr.response);
-
-			document.getElementById('image').src = imageUrl;
-
-			var a = document.createElement('a');
-		}
-	};
-	xhr.open('GET', 'https://content.dropboxapi.com/2/files/download');
-	xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-	xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
-		path : '/blackground/'+actu
-	}));
-	xhr.send();
-</script>
-
 
 <style>
 .pull-right {
@@ -355,6 +332,28 @@ text-decoration:none !important;
 	<%@ include file="header.jsp"%>
 	<div class="container ner">
 	<input type="hidden" value="blackground_logo.jpg" id="userimage">
+	<script>
+	var token = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O';
+    var actu=$('#userimage').val();
+	var xhr = new XMLHttpRequest();
+	xhr.responseType = 'blob';
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			var imageUrl = (window.URL || window.webkitURL)
+					.createObjectURL(xhr.response);
+
+			document.getElementById('image').src = imageUrl;
+
+			var a = document.createElement('a');
+		}
+	};
+	xhr.open('GET', 'https://content.dropboxapi.com/2/files/download');
+	xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+	xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
+		path : '/blackground/'+actu
+	}));
+	xhr.send();
+</script>
 		<section class="header">
 			<h3>
 				Get a <strong>website</strong> created <strong>for</strong> your
