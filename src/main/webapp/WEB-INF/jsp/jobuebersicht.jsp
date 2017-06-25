@@ -82,7 +82,7 @@
 	border-color: rgb(224, 225, 229);
 }
 #image{
-background-color: red !important;
+background-color: red;
 	border-color: red !important;
 }
 
@@ -329,7 +329,7 @@ aa {
 		<div class="row">
 			<div class="four columns">
 				<img
-					src="/static/images/imag.png"
+					src=""
 					class="u-max-full-width " id="image" alt="Jumia jobs in Cameroon"
 					style="height: 200px;">
 			</div>
