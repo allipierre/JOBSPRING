@@ -85,4 +85,52 @@ public class PaginatedJobService {
 			}
 			return jobs.size();
 	 }
+	 
+	 public List<Job> findJobByCompany() {
+			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+			User user = userService.findByUsername(authentication.getName());
+			Company userCompany = companyService.findCompany(user);
+			List<Job> jobs = new ArrayList<>();
+			for (Job job : jobRepository.findAll()) {
+				if (job.getCompany().getId() == userCompany.getId()) {
+					jobs.add(job);
+				}
+
+			}
+			return jobs;
+
+		}
+
+		public List<Job> findJobsByTitle(String title,Pageable pageable) {
+			return paginatedJobRepository.findJobsByTitle(title,pageable);
+		}
+
+		public List<Job> findByTitleContainingIgnoreCase(String title,Pageable pageable) {
+			return paginatedJobRepository.findByTitleContainingIgnoreCase(title,pageable);
+		}
+
+		public List<Job> findJobsByCompanyCityContainingIgnoreCase(String city,Pageable pageable) {
+			return paginatedJobRepository.findJobsByCompanyCityContainingIgnoreCase(city,pageable);
+		}
+		
+		public List<Job> findJobsByCompanyCityContainingIgnoreCaseAndTitleContainingIgnoreCase(String city, String title,Pageable pageable) {
+			return paginatedJobRepository.findJobsByCompanyCityContainingIgnoreCaseAndTitleContainingIgnoreCase(city,title,pageable);
+		}
+		
+		public List<Job> findAll(Pageable pageable) {
+			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+			User user = userService.findByUsername(authentication.getName());
+			Company userCompany = companyService.findCompany(user);
+			List<Job> jobs = new ArrayList<>();
+			for (Job job : paginatedJobRepository.findAll(pageable)) {
+				if (job.getCompany().getId() == userCompany.getId()) {
+					jobs.add(job);
+				}
+
+			}
+			return jobs;
+
+		}
 }

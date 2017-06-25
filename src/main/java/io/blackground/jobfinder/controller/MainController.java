@@ -60,18 +60,26 @@ public class MainController {
 
 	@GetMapping("/allejob")
 	public String alleJob(HttpServletRequest request, @RequestParam("title") String title,
-			@RequestParam("location") String location) {
+			@RequestParam("location") String location,Pageable pageable) {
+		
+		int page = 1;
+        int recordsPerPage = 7;
+        if(request.getParameter("page") != null)
+            page = Integer.parseInt(request.getParameter("page"));
+        int noOfRecords = paginatedJobService.getNoOfRecords();
+        System.out.println("noOfRecords"+noOfRecords);
+        int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 		List<Job> queryjob = new ArrayList<Job>();
 		if (!title.isEmpty() && location.isEmpty()) {
 
-			queryjob = jobservice.findByTitleContainingIgnoreCase(title);
+			queryjob = paginatedJobService.findByTitleContainingIgnoreCase(title,new PageRequest((page-1),recordsPerPage));
 		} else if (!location.isEmpty() && title.isEmpty()) {
-			queryjob = jobservice.findJobsByCompanyCityContainingIgnoreCase(location);
+			queryjob = paginatedJobService.findJobsByCompanyCityContainingIgnoreCase(location,new PageRequest((page-1),recordsPerPage));
 		} else if (!location.isEmpty() && !title.isEmpty()) {
-			queryjob = jobservice.findJobsByCompanyCityContainingIgnoreCaseAndTitleContainingIgnoreCase(location,
-					title);
+			queryjob = paginatedJobService.findJobsByCompanyCityContainingIgnoreCaseAndTitleContainingIgnoreCase(location,
+					title,new PageRequest((page-1),recordsPerPage));
 		} else {
-			queryjob = jobservice.findAll();
+			queryjob = paginatedJobService.findAll(new PageRequest((page-1),recordsPerPage));
 		}
 
 		request.setAttribute("taskse", queryjob);
