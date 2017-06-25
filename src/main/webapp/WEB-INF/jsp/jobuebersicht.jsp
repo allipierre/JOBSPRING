@@ -105,7 +105,7 @@ label, legend {
 }
 
 body{
-background-color: rgb(209, 209, 209) !important;
+background-color: rgba(182, 184, 187, 0.22) !important;
 }
 
 .panel-heading {
@@ -394,7 +394,7 @@ aa {
 	<!-- #job heading -->
 	<div class="container">
 	<div class="row">
-   <div class="col-md-6 col-xs-12">
+   <div class="five columns">
       <!-- job details -->
       <h4 class="dl-title">Job Details</h4>
       <div class="divider"></div>
@@ -410,7 +410,7 @@ aa {
       </dl>
       <!-- #job details -->
    </div>
-   <div class="col-md-6 col-xs-12">
+   <div class="five columns">
       <!-- company details -->
       <h4 class="dl-title">Company Details</h4>
       <div class="divider"></div>
