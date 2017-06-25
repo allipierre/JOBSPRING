@@ -66,7 +66,7 @@ public class MainController {
         int recordsPerPage = 7;
         if(request.getParameter("page") != null)
             page = Integer.parseInt(request.getParameter("page"));
-        int noOfRecords = paginatedJobService.getNoOfRecords();
+        int noOfRecords = paginatedJobService.getAllNoOfRecords();
         System.out.println("noOfRecords"+noOfRecords);
         int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 		List<Job> queryjob = new ArrayList<Job>();
