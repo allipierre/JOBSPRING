@@ -104,8 +104,9 @@ small, .small {
 .panel-light-content .panel-footer {
 	background-color: rgb(255, 255, 255);
 }
-.fa-dot-circle-o{
-color:red;
+
+.fa-dot-circle-o {
+	color: red;
 }
 
 .panel-footer {
@@ -225,22 +226,24 @@ aa {
 }
 
 .pagination {
-    display: inline-block;
+	display: inline-block;
 }
 
 .pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
 }
 
 .pagination a.active {
-    background-color: #4CAF50;
-    color: white;
+	background-color: #4CAF50;
+	color: white;
 }
 
-.pagination a:hover:not(.active) {background-color: #ddd;}
+.pagination a:hover:not (.active ) {
+	background-color: #ddd;
+}
 
 .one.column {
 	padding-top: 23px;
@@ -289,70 +292,71 @@ aa {
 			</h3>
 		</section>
 	</div>
-	
-	<!-- job heading -->
-<div class="container">
-   <div class="row">
-      <div class="four columns">
-         <img src="https://media-jobs.jumia.cm/storage//company/21/21/image//jumia.png?1437472745" class="u-max-full-width" alt="Jumia jobs in Cameroon" style="
-            height: 200px;
-            ">
-      </div>
-      <div class="four columns">
-         <h3>Customer Service Intern</h3>
-         <h4>
-            <a href="/en/employer/jumia.html">Jumia</a>
-         </h4>
-         <p>
-            <a class="hidden-print" href="/en/employer/jumia.html">
-            <i class="icon icon-home"></i> View company profile                                        </a>
-         </p>
-      </div>
-   </div>
-   <div class="row">
-      <div class="col-xs-12">
-         <p>
-            Reference: <strong>JBLB793566</strong><br>
-            Start date: <strong>03 July 2017</strong>
-         </p>
-         <p>
-         </p>
-         <p></p>
-      </div>
-   </div>
-</div>
-<!-- #job heading -->
-<div class="container">
-   <div class="row">
-      <div class="six columns">
-         <!-- job details -->
-         <h4 class="dl-title">Job Details</h4>
-         <div class="divider"></div>
-         <div class="pure-control-group">
-            <label for="name">Username</label>
-            <input id="name" type="text" placeholder="Username">
-        </div>
-         <!-- #job details -->
-      </div>
-      <div class="six columns">
-         <!-- job details -->
-         <h4 class="dl-title">Job Details</h4>
-         <div class="divider"></div>
-         <div class="row">
-            <div class="one column">
-               <label>Email</label>
-            </div>
-            <div class="two columns">
-               <p>email@example.com</p>
-            </div>
-         </div>
-         <!-- #job details -->
-      </div>
-   </div>
-</div>
-	
 
-	
+	<!-- job heading -->
+	<div class="container">
+		<div class="row">
+			<div class="four columns">
+				<img
+					src="https://media-jobs.jumia.cm/storage//company/21/21/image//jumia.png?1437472745"
+					class="u-max-full-width " id="image" alt="Jumia jobs in Cameroon"
+					style="height: 200px;">
+			</div>
+			<div class="four columns">
+				<h3>Customer Service Intern</h3>
+				<h4>
+					<a href="/en/employer/jumia.html">Jumia</a>
+				</h4>
+				<p>
+					<a class="hidden-print" href="/en/employer/jumia.html"> <i
+						class="icon icon-home"></i> View company profile
+					</a>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<p>
+					Reference: <strong>JBLB793566</strong><br> Start date: <strong>03
+						July 2017</strong>
+				</p>
+				<p></p>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<!-- #job heading -->
+	<div class="container">
+		<div class="row">
+			<div class="six columns">
+				<!-- job details -->
+				<h4 class="dl-title">Job Details</h4>
+				<div class="divider"></div>
+				<div class="pure-control-group">
+					<label for="name">Username</label> <input id="name" type="text"
+						placeholder="Username">
+				</div>
+				<!-- #job details -->
+			</div>
+			<div class="six columns">
+				<!-- job details -->
+				<h4 class="dl-title">Job Details</h4>
+				<div class="divider"></div>
+				<div class="row">
+					<div class="one column">
+						<label>Email</label>
+					</div>
+					<div class="two columns">
+						<p>email@example.com</p>
+					</div>
+				</div>
+				<!-- #job details -->
+			</div>
+		</div>
+	</div>
+
+
+
 
 
 
@@ -366,17 +370,26 @@ aa {
 
 
 <script>
-$(function(){
-$("#header").load("header.html");
-});
-document.addEventListener("DOMContentLoaded", function(){
-	Typed.new(".price", {
-		strings: ["GHC 500", "<strong>GHC 299</strong>"],
-		typeSpeed: 1,
-		loop: true
-	});
-});
+	var token = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O';
 
+	var xhr = new XMLHttpRequest();
+	xhr.responseType = 'blob';
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			var imageUrl = (window.URL || window.webkitURL)
+					.createObjectURL(xhr.response);
+
+			document.getElementById('image').src = imageUrl;
+
+			var a = document.createElement('a');
+		}
+	};
+	xhr.open('POST', 'https://content.dropboxapi.com/2/files/download');
+	xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+	xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
+		path : '/blackground/blackground_logo.jpg'
+	}));
+	xhr.send();
 </script>
 <script type="text/javascript" src="/static/js/file.js"></script>
 <script type="text/javascript" src="/static/js/typed.js"></script>
