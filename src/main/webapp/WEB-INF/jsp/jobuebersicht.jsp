@@ -289,6 +289,68 @@ aa {
 			</h3>
 		</section>
 	</div>
+	
+	<!-- job heading -->
+<div class="container">
+   <div class="row">
+      <div class="four columns">
+         <img src="https://media-jobs.jumia.cm/storage//company/21/21/image//jumia.png?1437472745" class="u-max-full-width" alt="Jumia jobs in Cameroon" style="
+            height: 200px;
+            ">
+      </div>
+      <div class="four columns">
+         <h3>Customer Service Intern</h3>
+         <h4>
+            <a href="/en/employer/jumia.html">Jumia</a>
+         </h4>
+         <p>
+            <a class="hidden-print" href="/en/employer/jumia.html">
+            <i class="icon icon-home"></i> View company profile                                        </a>
+         </p>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-xs-12">
+         <p>
+            Reference: <strong>JBLB793566</strong><br>
+            Start date: <strong>03 July 2017</strong>
+         </p>
+         <p>
+         </p>
+         <p></p>
+      </div>
+   </div>
+</div>
+<!-- #job heading -->
+<div class="container">
+   <div class="row">
+      <div class="six columns">
+         <!-- job details -->
+         <h4 class="dl-title">Job Details</h4>
+         <div class="divider"></div>
+         <div class="pure-control-group">
+            <label for="name">Username</label>
+            <input id="name" type="text" placeholder="Username">
+        </div>
+         <!-- #job details -->
+      </div>
+      <div class="six columns">
+         <!-- job details -->
+         <h4 class="dl-title">Job Details</h4>
+         <div class="divider"></div>
+         <div class="row">
+            <div class="one column">
+               <label>Email</label>
+            </div>
+            <div class="two columns">
+               <p>email@example.com</p>
+            </div>
+         </div>
+         <!-- #job details -->
+      </div>
+   </div>
+</div>
+	
 
 	
 
