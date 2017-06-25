@@ -224,6 +224,24 @@ aa {
 	padding-right: 25px !important;
 }
 
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
 .one.column {
 	padding-top: 23px;
 }
@@ -352,6 +370,27 @@ aa {
 				</div>
 			</div>
 		</c:forEach>
+	</div>
+	
+	<div class="container">
+	<div class="pagination">
+		<c:if test="${currentPage != 1}">
+			<a href="pageablejob?page=${currentPage - 1}">Previous</a>
+		</c:if>
+		<c:forEach begin="1" end="${noOfPages}" var="i">
+			<c:choose>
+				<c:when test="${currentPage eq i}">
+					<a class="active">${i}</a>
+				</c:when>
+				<c:otherwise>
+					<a href="pageablejob?page=${i}">${i}</a>
+				</c:otherwise>
+			</c:choose>
+		</c:forEach>
+		<c:if test="${currentPage lt noOfPages}">
+			<a href="pageablejob?page=${currentPage + 1}">Next</a>
+		</c:if>
+	</div>
 	</div>
 
 
