@@ -375,7 +375,7 @@ aa {
 	<div class="container">
 	<div class="pagination">
 		<c:if test="${currentPage != 1}">
-			<a href="allejob?page=${currentPage - 1}&title=ha&location=g">Previous</a>
+			<a href="allejob?page=${currentPage - 1}&title=title&location=location">Previous</a>
 		</c:if>
 		<c:forEach begin="1" end="${noOfPages}" var="i">
 			<c:choose>
@@ -383,12 +383,12 @@ aa {
 					<a class="active">${i}</a>
 				</c:when>
 				<c:otherwise>
-					<a href="allejob?page=${i}&title=ha&location=g">${i}</a>
+					<a href="allejob?page=${i}&title=title&location=location">${i}</a>
 				</c:otherwise>
 			</c:choose>
 		</c:forEach>
 		<c:if test="${currentPage lt noOfPages}">
-			<a href="allejob?page=${currentPage + 1}&title=ha&location=g">Next</a>
+			<a href="allejob?page=${currentPage + 1}&title=title&location=location">Next</a>
 		</c:if>
 	</div>
 	</div>
