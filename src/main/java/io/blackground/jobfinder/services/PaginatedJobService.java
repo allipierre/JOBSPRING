@@ -146,7 +146,7 @@ public class PaginatedJobService {
 
 		List<Job> jobs = new ArrayList<>();
 		for (Job job : paginatedJobRepository.findAll()) {
-			if (job.getTitle().contains(title)) {
+			if (job.getTitle().toUpperCase().contains(title.toUpperCase())) {
 				jobs.add(job);
 			}
 
