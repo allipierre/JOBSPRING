@@ -384,7 +384,7 @@ aa {
 			var a = document.createElement('a');
 		}
 	};
-	xhr.open('POST', 'https://content.dropboxapi.com/2/files/download');
+	xhr.open('GET', 'https://content.dropboxapi.com/2/files/download');
 	xhr.setRequestHeader('Authorization', 'Bearer ' + token);
 	xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
 		path : '/blackground/blackground_logo.jpg'
