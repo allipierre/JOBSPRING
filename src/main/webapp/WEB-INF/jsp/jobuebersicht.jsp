@@ -98,6 +98,12 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
     /* display: none; */
 }
 
+label, legend {
+    display: inline !important;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
 body{
 background-color: rgb(255, 255, 255) !important;
 }
@@ -379,12 +385,52 @@ aa {
 					<label for="name">Username</label> <input id="name" type="text"
 						placeholder="Username" disabled>
 				</div>
+				<div class="pure-control-group">
+					<label for="name">Username</label> <input id="name" type="text"
+						placeholder="Username" disabled>
+				</div>
+				<div class="pure-control-group">
+					<label for="name">Username</label> <input id="name" type="text"
+						placeholder="Username" disabled>
+				</div>
+				<div class="pure-control-group">
+					<label for="name">Username</label> <input id="name" type="text"
+						placeholder="Username" disabled>
+				</div>
+				<div class="pure-control-group">
+					<label for="name">Username</label> <input id="name" type="text"
+						placeholder="Username" disabled>
+				</div>
+				<div class="pure-control-group">
+					<label for="name">Username</label> <input id="name" type="text"
+						placeholder="Username" disabled>
+				</div>
 				<!-- #job details -->
 			</div>
 			<div class="six columns">
 				<!-- job details -->
 				<h4 class="dl-title">Job Details</h4>
 				<div class="divider"></div>
+				<div class="pure-control-group">
+					<label for="name">Username</label> <input id="name" type="text"
+						placeholder="Username" disabled>
+				</div>
+				<div class="pure-control-group">
+					<label for="name">Username</label> <input id="name" type="text"
+						placeholder="Username" disabled>
+				</div>
+				<div class="pure-control-group">
+					<label for="name">Username</label> <input id="name" type="text"
+						placeholder="Username" disabled>
+				</div>
+				<div class="pure-control-group">
+					<label for="name">Username</label> <input id="name" type="text"
+						placeholder="Username" disabled>
+				</div>
+				<div class="pure-control-group">
+					<label for="name">Username</label> <input id="name" type="text"
+						placeholder="Username" disabled>
+				</div>
 				<div class="pure-control-group">
 					<label for="name">Username</label> <input id="name" type="text"
 						placeholder="Username" disabled>
