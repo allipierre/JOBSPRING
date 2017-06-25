@@ -81,6 +81,14 @@
 	background-color: rgb(255, 255, 255);
 	border-color: rgb(224, 225, 229);
 }
+#image{
+background-color: red !important;
+	border-color: red !important;
+}
+
+body{
+background-color: rgb(255, 255, 255) !important;
+}
 
 .panel-heading {
 	padding: 10px 15px;
