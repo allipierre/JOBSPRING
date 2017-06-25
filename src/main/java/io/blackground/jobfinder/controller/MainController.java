@@ -76,9 +76,13 @@ public class MainController {
 			queryjob = paginatedJobService.findByTitleContainingIgnoreCase(title,
 					new PageRequest((page - 1), recordsPerPage));
 		} else if (!location.isEmpty() && title.isEmpty()) {
+			noOfRecords = paginatedJobService.getAllNoOfRecordsLocation(location);
+			noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 			queryjob = paginatedJobService.findJobsByCompanyCityContainingIgnoreCase(location,
 					new PageRequest((page - 1), recordsPerPage));
 		} else if (!location.isEmpty() && !title.isEmpty()) {
+			noOfRecords = paginatedJobService.getAllNoOfRecordsLocationTitle(location,title);
+			noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 			queryjob = paginatedJobService.findJobsByCompanyCityContainingIgnoreCaseAndTitleContainingIgnoreCase(
 					location, title, new PageRequest((page - 1), recordsPerPage));
 		} else {

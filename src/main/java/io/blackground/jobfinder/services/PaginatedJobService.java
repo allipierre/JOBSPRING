@@ -153,4 +153,30 @@ public class PaginatedJobService {
 		}
 		return jobs.size();
 	}
+	
+	
+	public int getAllNoOfRecordsLocation(String location) {
+
+		List<Job> jobs = new ArrayList<>();
+		for (Job job : paginatedJobRepository.findAll()) {
+			if (job.getCompany().getCity().toUpperCase().contains(location.toUpperCase())) {
+				jobs.add(job);
+			}
+
+		}
+		return jobs.size();
+	}
+	
+	public int getAllNoOfRecordsLocationTitle(String city, String title) {
+		List<Job> jobs = new ArrayList<>();
+		for (Job job : jobRepository.findAll()) {
+			if (job.getCompany().getCity().toUpperCase().contains(city.toUpperCase())
+					&& job.getTitle().toUpperCase().contains(title.toUpperCase())) {
+				jobs.add(job);
+			}
+
+		}
+		return jobs.size();
+
+	}
 }
