@@ -352,7 +352,7 @@ text-decoration:none !important;
 			</div>
 			<script>
 	var token = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O';
-    var actu=$('#userimage').val();
+    var actu=${job.title};
 	var xhr = new XMLHttpRequest();
 	xhr.responseType = 'blob';
 	xhr.onreadystatechange = function() {
