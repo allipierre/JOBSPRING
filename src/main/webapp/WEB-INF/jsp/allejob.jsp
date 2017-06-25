@@ -359,7 +359,7 @@ aa {
 									</c:if>
 								</c:forEach>
 								<li class="pull-right"><a
-									href="jobuebersicht"
+									href="jobuebersicht?id=3"
 									class="btn btn-info pull-right icon-eye"><span
 										class=" fa fa fa-eye"></span> View Job</a></li>
 
