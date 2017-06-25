@@ -44,6 +44,7 @@ public class Company {
 	private String website;
 	private String about;
 	private String city;
+	private String file;
 	private int location;
 	@Column(name = "industry_id")
 	private long industryId;
