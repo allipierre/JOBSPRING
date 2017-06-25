@@ -315,6 +315,9 @@ aa {
 #lb1, #lb2 {
 	color: rgb(255, 255, 255) !important;
 }
+a{
+text-decoration:none !important;
+}
 
 #sub1 {
 	color: rgb(255, 255, 255) !important;
@@ -368,7 +371,7 @@ aa {
 					class="u-max-full-width " id="image" alt="Jumia jobs in Cameroon"
 					style="height: 200px;">
 			</div>
-			<div class="four columns">
+			<div class="five columns">
 				<h3>Customer Service Intern</h3>
 				<h4>
 					<a href="/en/employer/jumia.html">Jumia</a>
