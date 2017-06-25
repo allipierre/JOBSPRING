@@ -89,7 +89,7 @@ background-color: red;
 input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
     height: 38px;
     padding: 6px 100px !important;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(209, 209, 209) !important;
     border: none !important;
     border-radius: 4px;
     box-shadow: none;
@@ -105,7 +105,7 @@ label, legend {
 }
 
 body{
-background-color: rgb(255, 255, 255) !important;
+background-color: rgb(209, 209, 209) !important;
 }
 
 .panel-heading {
@@ -325,6 +325,23 @@ aa {
 .headline3 a {
 	text-decoration: none !important;
 }
+
+ .dl-horizontal dt {
+    float: left;
+    overflow: show;
+    text-overflow: clip;
+    white-space: pre-wrap;
+    width: 160px;
+    clear: left;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+.dl-horizontal dd {
+    margin-left: 160px;
+}
 </style>
 
 
@@ -376,68 +393,37 @@ aa {
 	</div>
 	<!-- #job heading -->
 	<div class="container">
-		<div class="row">
-			<div class="six columns">
-				<!-- job details -->
-				<h4 class="dl-title">Job Details</h4>
-				<div class="divider"></div>
-				<div class="pure-control-group">
-					<label for="name">Username</label> <input id="name" type="text"
-						placeholder="Username" disabled>
-				</div>
-				<div class="pure-control-group">
-					<label for="name">Username</label> <input id="name" type="text"
-						placeholder="Username" disabled>
-				</div>
-				<div class="pure-control-group">
-					<label for="name">Username</label> <input id="name" type="text"
-						placeholder="Username" disabled>
-				</div>
-				<div class="pure-control-group">
-					<label for="name">Username</label> <input id="name" type="text"
-						placeholder="Username" disabled>
-				</div>
-				<div class="pure-control-group">
-					<label for="name">Username</label> <input id="name" type="text"
-						placeholder="Username" disabled>
-				</div>
-				<div class="pure-control-group">
-					<label for="name">Username</label> <input id="name" type="text"
-						placeholder="Username" disabled>
-				</div>
-				<!-- #job details -->
-			</div>
-			<div class="six columns">
-				<!-- job details -->
-				<h4 class="dl-title">Job Details</h4>
-				<div class="divider"></div>
-				<div class="pure-control-group">
-					<label for="name">Username</label> <input id="name" type="text"
-						placeholder="Username" disabled>
-				</div>
-				<div class="pure-control-group">
-					<label for="name">Username</label> <input id="name" type="text"
-						placeholder="Username" disabled>
-				</div>
-				<div class="pure-control-group">
-					<label for="name">Username</label> <input id="name" type="text"
-						placeholder="Username" disabled>
-				</div>
-				<div class="pure-control-group">
-					<label for="name">Username</label> <input id="name" type="text"
-						placeholder="Username" disabled>
-				</div>
-				<div class="pure-control-group">
-					<label for="name">Username</label> <input id="name" type="text"
-						placeholder="Username" disabled>
-				</div>
-				<div class="pure-control-group">
-					<label for="name">Username</label> <input id="name" type="text"
-						placeholder="Username" disabled>
-				</div>
-				<!-- #job details -->
-			</div>
-		</div>
+	<div class="row">
+   <div class="col-md-6 col-xs-12">
+      <!-- job details -->
+      <h4 class="dl-title">Job Details</h4>
+      <div class="divider"></div>
+      <dl class="dl-horizontal">
+         <dt>City:</dt>
+         <dd>Douala</dd>
+         <dt>Job Location:</dt>
+         <dd>Cameroon</dd>
+         <dt>Contract Type:</dt>
+         <dd>Internship</dd>
+         <dt>Job category:</dt>
+         <dd>Customer Support</dd>
+      </dl>
+      <!-- #job details -->
+   </div>
+   <div class="col-md-6 col-xs-12">
+      <!-- company details -->
+      <h4 class="dl-title">Company Details</h4>
+      <div class="divider"></div>
+      <dl class="dl-horizontal">
+         <dt>Company industry:</dt>
+         <dd>Retail</dd>
+         <dt>No. of Employees:</dt>
+         <dd>21-50</dd>
+      </dl>
+      <!-- #company details -->
+   </div>
+</div>
+		
 	</div>
 
 
