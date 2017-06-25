@@ -361,7 +361,7 @@ text-decoration:none !important;
 			</h3>
 		</section>
 	</div>
-
+<c:forEach var="job" items="${job}">
 	<!-- job heading -->
 	<div class="container">
 		<div class="row">
@@ -372,7 +372,7 @@ text-decoration:none !important;
 					style="height: 200px;">
 			</div>
 			<div class="five columns">
-				<h3>Customer Service Intern</h3>
+				<h3>${job.title}</h3>
 				<h4>
 					<a href="/en/employer/jumia.html">Jumia</a>
 				</h4>
@@ -394,6 +394,7 @@ text-decoration:none !important;
 			</div>
 		</div>
 	</div>
+	</c:forEach>
 	<!-- #job heading -->
 	<div class="container">
 	<div class="row">

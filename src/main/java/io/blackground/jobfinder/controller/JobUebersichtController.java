@@ -35,10 +35,12 @@ import io.blackground.jobfinder.services.UserServiceImpl;
  */
 @Controller
 public class JobUebersichtController {
-
+	@Autowired
+	private JobService jobService;
 
 	@GetMapping("/jobuebersicht")
 	public String postJob(@RequestParam int id,HttpServletRequest request) {
+		request.setAttribute("job", jobService.findJobById(id));
 		return "jobuebersicht";
 	}
 
