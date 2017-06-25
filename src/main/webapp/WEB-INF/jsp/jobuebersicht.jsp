@@ -332,7 +332,25 @@ text-decoration:none !important;
 	<%@ include file="header.jsp"%>
 	<div class="container ner">
 	<input type="hidden" value="blackground_logo.jpg" id="userimage">
-	<script>
+	
+		<section class="header">
+			<h3>
+				Get a <strong>website</strong> created <strong>for</strong> your
+				business for as low
+			</h3>
+		</section>
+	</div>
+
+	<!-- job heading -->
+	<div class="container">
+		<div class="row">
+			<div class="four columns">
+				<img
+					src=""
+					class="u-max-full-width " id="image" alt="Jumia jobs in Cameroon"
+					style="height: 200px;">
+			</div>
+			<script>
 	var token = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O';
     var actu=$('#userimage').val();
 	var xhr = new XMLHttpRequest();
@@ -354,23 +372,6 @@ text-decoration:none !important;
 	}));
 	xhr.send();
 </script>
-		<section class="header">
-			<h3>
-				Get a <strong>website</strong> created <strong>for</strong> your
-				business for as low
-			</h3>
-		</section>
-	</div>
-
-	<!-- job heading -->
-	<div class="container">
-		<div class="row">
-			<div class="four columns">
-				<img
-					src=""
-					class="u-max-full-width " id="image" alt="Jumia jobs in Cameroon"
-					style="height: 200px;">
-			</div>
 			<div class="seven columns">
 				<h3>${job.title}</h3>
 				<h4>
