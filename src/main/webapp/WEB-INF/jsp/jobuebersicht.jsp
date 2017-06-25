@@ -329,7 +329,7 @@ aa {
 		<div class="row">
 			<div class="four columns">
 				<img
-					src=""
+					src="/static/images/imag.png"
 					class="u-max-full-width " id="image" alt="Jumia jobs in Cameroon"
 					style="height: 200px;">
 			</div>
