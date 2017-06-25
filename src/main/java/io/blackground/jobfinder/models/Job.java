@@ -38,6 +38,7 @@ public class Job {
 	private String minimumDegree;
 	private int slots;
 	private String title;
+	private String image;
 	private long contrat;
 	private Date published;
 
