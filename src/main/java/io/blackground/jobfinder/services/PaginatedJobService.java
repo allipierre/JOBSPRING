@@ -169,7 +169,7 @@ public class PaginatedJobService {
 	
 	public int getAllNoOfRecordsLocationTitle(String city, String title) {
 		List<Job> jobs = new ArrayList<>();
-		for (Job job : jobRepository.findAll()) {
+		for (Job job : paginatedJobRepository.findAll()) {
 			if (job.getCompany().getCity().toUpperCase().contains(city.toUpperCase())
 					&& job.getTitle().toUpperCase().contains(title.toUpperCase())) {
 				jobs.add(job);
