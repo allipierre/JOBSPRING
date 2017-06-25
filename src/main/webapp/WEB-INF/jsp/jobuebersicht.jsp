@@ -28,6 +28,29 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="/static/js/site.js"></script>
 
+<script>
+	var token = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O';
+
+	var xhr = new XMLHttpRequest();
+	xhr.responseType = 'blob';
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			var imageUrl = (window.URL || window.webkitURL)
+					.createObjectURL(xhr.response);
+
+			document.getElementById('image').src = imageUrl;
+
+			var a = document.createElement('a');
+		}
+	};
+	xhr.open('GET', 'https://content.dropboxapi.com/2/files/download');
+	xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+	xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
+		path : '/blackground/blackground_logo.jpg'
+	}));
+	xhr.send();
+</script>
+
 
 <style>
 .pull-right {
@@ -369,28 +392,7 @@ aa {
 
 
 
-<script>
-	var token = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O';
 
-	var xhr = new XMLHttpRequest();
-	xhr.responseType = 'blob';
-	xhr.onreadystatechange = function() {
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			var imageUrl = (window.URL || window.webkitURL)
-					.createObjectURL(xhr.response);
-
-			document.getElementById('image').src = imageUrl;
-
-			var a = document.createElement('a');
-		}
-	};
-	xhr.open('GET', 'https://content.dropboxapi.com/2/files/download');
-	xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-	xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
-		path : '/blackground/blackground_logo.jpg'
-	}));
-	xhr.send();
-</script>
 <script type="text/javascript" src="/static/js/file.js"></script>
 <script type="text/javascript" src="/static/js/typed.js"></script>
 </html>
