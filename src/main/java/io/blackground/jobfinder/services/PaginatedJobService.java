@@ -141,4 +141,16 @@ public class PaginatedJobService {
 		}
 		return jobs.size();
 	}
+
+	public int getAllNoOfRecords(String title) {
+
+		List<Job> jobs = new ArrayList<>();
+		for (Job job : paginatedJobRepository.findAll()) {
+			if (job.getTitle().contains(title)) {
+				jobs.add(job);
+			}
+
+		}
+		return jobs.size();
+	}
 }

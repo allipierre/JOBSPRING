@@ -71,7 +71,8 @@ public class MainController {
 		int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 		List<Job> queryjob = new ArrayList<Job>();
 		if (!title.isEmpty() && location.isEmpty()) {
-
+			noOfRecords = paginatedJobService.getAllNoOfRecords(title);
+			noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 			queryjob = paginatedJobService.findByTitleContainingIgnoreCase(title,
 					new PageRequest((page - 1), recordsPerPage));
 		} else if (!location.isEmpty() && title.isEmpty()) {
