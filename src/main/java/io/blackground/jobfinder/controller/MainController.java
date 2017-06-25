@@ -95,6 +95,7 @@ public class MainController {
 		request.setAttribute("company", companyservice.findAll());
 		request.setAttribute("noOfPages", noOfPages);
 		request.setAttribute("currentPage", page);
+		request.setAttribute("title", title);
 		return "allejob";
 	}
 
