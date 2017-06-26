@@ -65,6 +65,14 @@ background: rgb(49, 163, 221) !important;
 padding-top: 23px;
 }
 
+@media (min-width: 550px){
+.one-half.column {
+    width: 46% !important;
+    float: left;
+    margin-left: 9px;
+}
+}
+
 @media (max-width: 750px){
 
 .two.columns {
