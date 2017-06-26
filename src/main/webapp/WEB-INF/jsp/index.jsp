@@ -135,27 +135,10 @@ color: rgb(255, 255, 255) !important;
           <!-- Premium job 1 -->
           <li class="one-half column premium-job" id="premium-job-1">
              
-              <div class="job-container">
-                
-                  <div class="row">
-                      <!-- Description -->
-                      <div class="two-thirds column">
-                          <h5 class="ad-title">Lead Software Developer</h5>
-                          <em>${jobhome.company.companyName}, Koforidua</em>
-                          <p>$1,200</p>
-                          <a href="" class="button">Details</a>
-                      </div>
-                      
-                      <!-- Company logo -->
-                      <div class="one-third column">
+              
                           
                           <img src="/static/images/blackground_logo.jpg" class="u-max-full-width">
-                          
-                      </div>
-                  </div>
-                   
-              
-              </div>
+                      
               
               
           </li>
