@@ -139,7 +139,7 @@ color: rgb(255, 255, 255) !important;
                       <!-- Description -->
                       <div class="two-thirds column">
                           <h5 class="ad-title">Lead Software Developer</h5>
-                          <em>Blackground Labs, Koforidua</em>
+                          <em>${jobhome.company.companyName}, Koforidua</em>
                           <p>$1,200</p>
                           <a href="" class="button">Details</a>
                       </div>
