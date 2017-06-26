@@ -125,6 +125,7 @@ color: rgb(255, 255, 255) !important;
 </div>
 
  <!-- Sponsored ads -->
+  <c:forEach var="jobhome" items="${jobhome}">
     <div class="container" style="margin-top: 2em; margin-bottom: 2em;">
        
       
@@ -133,7 +134,7 @@ color: rgb(255, 255, 255) !important;
           <div class="one-half column premium-job" id="premium-job-1">
              
               <div class="container job-container">
-                 <c:forEach var="jobhome" items="${jobhome}">
+                
                   <div class="row">
                       <!-- Description -->
                       <div class="two-thirds column">
@@ -150,11 +151,13 @@ color: rgb(255, 255, 255) !important;
                           
                       </div>
                   </div>
-                   </c:forEach>
+                   
               
               </div>
               
+              
           </div>
+         
           
           <!-- Premium job 2 -->
          <!-- <div class="one-half column premium-job" id="premium-job-2">
@@ -183,7 +186,7 @@ color: rgb(255, 255, 255) !important;
       
         </div>
 
-  
+   </c:forEach>
 
 </body>
 
