@@ -133,7 +133,7 @@ color: rgb(255, 255, 255) !important;
       
           
           <!-- Premium job 1 -->
-          <div class="one-half column premium-job" id="premium-job-1">
+          <li class="one-half column premium-job" id="premium-job-1">
              
               <div class="container job-container">
                 
@@ -158,7 +158,7 @@ color: rgb(255, 255, 255) !important;
               </div>
               
               
-          </div>
+          </li>
           
           </c:forEach>
            <br class="clearBoth" />
