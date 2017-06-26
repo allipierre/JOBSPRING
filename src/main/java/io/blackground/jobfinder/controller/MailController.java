@@ -18,7 +18,7 @@ import io.blackground.jobfinder.services.MailService;
  */
 @Controller
 @EnableAutoConfiguration
-public class MailController {
+public class MailController 
 	@Autowired
 	private MailService mailService;
 
