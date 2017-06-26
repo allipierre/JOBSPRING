@@ -24,5 +24,6 @@ public interface JobRepository extends CrudRepository<Job, Long> {
 	List<Job> findJobsByCompanyCityContainingIgnoreCase(String city);
 	List<Job> findJobsByCompanyCityContainingIgnoreCaseAndTitleContainingIgnoreCase(String city,String title);
 	List<Job> findTop10ByOrderByIdDesc();
+	List<Job> findTop20ByOrderByIdDesc();
 	//Job findByLocation(String location);
 }

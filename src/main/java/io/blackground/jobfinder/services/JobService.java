@@ -142,6 +142,9 @@ public class JobService {
 	public List<Job> findTop10ByOrderByIdDesc(){
 		return jobRepository.findTop10ByOrderByIdDesc();
 	}
+	public List<Job> findTop20ByOrderByIdDesc(){
+		return jobRepository.findTop20ByOrderByIdDesc();
+	}
 	
 
 }
