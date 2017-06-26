@@ -21,7 +21,7 @@ public class MailService {
 	public void sendMail(String covere) throws MailException{
 
 	    SimpleMailMessage mail = new SimpleMailMessage();
-	    mail.setTo("yottiallipierre@gmail.com")
+	    mail.setTo("yottiallipierre@gmail.com");
 	    mail.setFrom("yottiallipierre@gmail.com");
 	    mail.setSubject("Test");
 	    mail.setText(covere);
