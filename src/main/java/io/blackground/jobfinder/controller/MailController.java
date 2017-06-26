@@ -27,9 +27,10 @@ public class MailController {
 
 	@PostMapping("/sendmail")
 	@ResponseBody
-	private String sendMail() {
+	private String sendMail(@RequestParam String covere) {
+		
 		try {
-			mailService.sendMail("covere");
+			mailService.sendMail(covere);
 			return "mail sent";
 		} catch (MailException e) {
 			e.printStackTrace();

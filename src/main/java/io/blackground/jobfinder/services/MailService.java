@@ -24,7 +24,7 @@ public class MailService {
 	    mail.setTo("yottiallipierre@gmail.com");
 	    mail.setFrom("yottiallipierre@gmail.com");
 	    mail.setSubject("Test");
-	    mail.setText("covere");
+	    mail.setText(covere);
 	    javaMailSender.send(mail);
 	}
 
