@@ -131,7 +131,7 @@ color: rgb(255, 255, 255) !important;
     <div class="container" style="margin-top: 2em; margin-bottom: 2em;">
        <c:forEach var="jobhome" items="${jobhome}">
       
-          
+          <div class="row">
           <!-- Premium job 1 -->
           <div class="one-half column premium-job" id="premium-job-1">
              
@@ -158,6 +158,7 @@ color: rgb(255, 255, 255) !important;
               </div>
               
               
+          </div>
           </div>
           
           </c:forEach>
