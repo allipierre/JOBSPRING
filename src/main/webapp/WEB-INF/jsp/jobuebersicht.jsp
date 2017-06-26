@@ -401,7 +401,7 @@ a {
 						class="icon icon-home"></i> View company profile
 					</a>
 				</p>
-				<a class="button button-primary" href="#">Apply now</a>
+				<a class="button button-primary" href="apply?id=${task.id}">Apply now</a>
 			</div>
 			
 		</div>

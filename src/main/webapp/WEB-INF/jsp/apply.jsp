@@ -368,29 +368,6 @@ a {
 				<img src="" class="u-max-full-width " id="image"
 					alt="Jumia jobs in Cameroon" style="height: 200px;">
 			</div>
-			<script>
-				var token = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O';
-				var actu = '${job.company.file}';
-				var xhr = new XMLHttpRequest();
-				xhr.responseType = 'blob';
-				xhr.onreadystatechange = function() {
-					if (xhr.readyState === 4 && xhr.status === 200) {
-						var imageUrl = (window.URL || window.webkitURL)
-								.createObjectURL(xhr.response);
-
-						document.getElementById('image').src = imageUrl;
-
-						var a = document.createElement('a');
-					}
-				};
-				xhr.open('GET',
-						'https://content.dropboxapi.com/2/files/download');
-				xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-				xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
-					path : '/blackground/' + actu
-				}));
-				xhr.send();
-			</script>
 			<div class="seven columns">
 				<h3>${job.title}</h3>
 				<h4>
