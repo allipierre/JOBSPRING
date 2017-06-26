@@ -3,6 +3,8 @@
  */
 package io.blackground.jobfinder.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @author yotti
  *
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import io.blackground.jobfinder.Repository.UserService;
 import io.blackground.jobfinder.models.User;
+import io.blackground.jobfinder.services.JobService;
 import io.blackground.jobfinder.services.SecurityService;
 import io.blackground.jobfinder.services.UserValidator;
 
@@ -34,6 +37,8 @@ public class UserController {
 
     @Autowired
     private UserValidator userValidator;
+    @Autowired
+	private JobService jobservice;
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registration(Model model) {
@@ -70,7 +75,8 @@ public class UserController {
     }
 
     @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
-    public String home(Model model) {
+    public String home(Model model,HttpServletRequest request) {
+    	request.setAttribute("jobhome", jobservice.findAll());
         return "index";
     }
 }

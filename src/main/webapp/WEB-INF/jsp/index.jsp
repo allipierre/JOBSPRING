@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -157,12 +158,12 @@ color: rgb(255, 255, 255) !important;
           <!-- Premium job 2 -->
           <div class="one-half column premium-job" id="premium-job-2">
               <div class="container job-container">
-                 
+                 <c:forEach var="jobhome" items="${jobhome}">
                   <div class="row">
                       <!-- Description -->
                       <div class="two-thirds column">
                           <h5 class="ad-title">Human Resource Manager</h5>
-                          <em>Microsoft, New York</em>
+                          <em>${jobhome.title}, New York</em>
                           <p>$8,200</p>
                           <a href="" class="button">Details</a>
                       </div>
@@ -174,7 +175,7 @@ color: rgb(255, 255, 255) !important;
                           
                       </div>
                   </div>
-              
+              </c:forEach>
               </div>
           </div>
            
