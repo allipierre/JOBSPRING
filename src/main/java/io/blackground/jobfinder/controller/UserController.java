@@ -76,7 +76,7 @@ public class UserController {
 
     @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
     public String home(Model model,HttpServletRequest request) {
-    	request.setAttribute("jobhome", jobservice.findAll());
+    	request.setAttribute("jobhome", jobservice.findTop2ByOrderByIdDesc());
         return "index";
     }
 }
