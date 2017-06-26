@@ -392,7 +392,7 @@
         <label for="about">About Us</label>
         <textarea class="u-full-width" placeholder="About Us" id="about" name ="about"  value ="${company.about}">${company.about}</textarea>
           <label for="icon">Upload Logo</label>
-         <input type="file" name="file" id="file" onchange="uploadFile" class="custom-file-input" value="${company.file}">
+         <input type="file" name="file" id="file" onchange="uploadFile" class="custom-file-input">
         <div class="row">
             <div class="one columns">
                 <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry"
