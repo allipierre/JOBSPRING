@@ -39,6 +39,6 @@ public class MailController {
 		} catch (MailException e) {
 			e.printStackTrace();
 		}
-		return "thanks";
+		return "apply";
 	}
 }
