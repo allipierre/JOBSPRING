@@ -401,7 +401,7 @@ a {
 						class="icon icon-home"></i> View company profile
 					</a>
 				</p>
-				<a class="button button-primary" href="#">Apply now</a>
+				<input class="button-primary" type="button" value=" Apply now">
 			</div>
 			
 		</div>
@@ -496,7 +496,7 @@ a {
 		</div>
 	</div>
 	<div class="container">
-		<a class="button button-primary" href="apply?id=${task.id}">Apply now</a>
+		<input class="button-primary" type="button" value=" Apply now">
 	</div>
 
 
