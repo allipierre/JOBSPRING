@@ -356,7 +356,7 @@ text-decoration:none !important;
 	var xhr = new XMLHttpRequest();
 	xhr.responseType = 'blob';
 	xhr.onreadystatechange = function() {
-		if (xhr.status === 200) {
+		if (xhr.readyState === 4 && xhr.status === 200) {
 			var imageUrl = (window.URL || window.webkitURL)
 					.createObjectURL(xhr.response);
 
