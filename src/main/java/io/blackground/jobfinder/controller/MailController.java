@@ -7,7 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.mail.MailException;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import io.blackground.jobfinder.services.MailService;
@@ -22,11 +25,11 @@ public class MailController {
 	@Autowired
 	private MailService mailService;
 
-	@RequestMapping("/sendmail")
+	@PostMapping("/sendmail")
 	@ResponseBody
-	private String sendMail() {
+	private String sendMail(@RequestParam String covere) {
 		try {
-			mailService.sendMail();
+			mailService.sendMail(covere);
 			return "mail sent";
 		} catch (MailException e) {
 			e.printStackTrace();
