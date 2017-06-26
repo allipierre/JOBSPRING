@@ -364,7 +364,7 @@ a {
 	<!-- job heading -->
 	<div class="container">
 		<div class="row">
-			<div class="four columns">
+			<div class="three columns">
 				<img src="" class="u-max-full-width " id="image"
 					alt="Jumia jobs in Cameroon" style="height: 200px;">
 			</div>
@@ -402,6 +402,9 @@ a {
 					</a>
 				</p>
 			</div>
+			<div class="one column">
+           <input class="button-primary" type="button" value=" Apply now">
+             </div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
