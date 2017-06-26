@@ -163,7 +163,7 @@ color: rgb(255, 255, 255) !important;
                       <!-- Description -->
                       <div class="two-thirds column">
                           <h5 class="ad-title">Human Resource Manager</h5>
-                          <em>${jobhome.title}, New York</em>
+                          <em>${jobhome.company.companyName}, New York</em>
                           <p>$8,200</p>
                           <a href="" class="button">Details</a>
                       </div>
