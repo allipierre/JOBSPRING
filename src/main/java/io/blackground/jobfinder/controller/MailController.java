@@ -29,7 +29,7 @@ public class MailController {
 	@ResponseBody
 	private String sendMail() {
 		try {
-			mailService.sendMail();
+			mailService.sendMail("covere");
 			return "mail sent";
 		} catch (MailException e) {
 			e.printStackTrace();
