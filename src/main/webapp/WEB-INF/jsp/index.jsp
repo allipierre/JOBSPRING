@@ -159,9 +159,9 @@ color: rgb(255, 255, 255) !important;
               
               
           </div>
-          <br class="clearBoth" />
+          
           </c:forEach>
-           
+           <br class="clearBoth" />
       
         </div>
 
