@@ -128,12 +128,12 @@ color: rgb(255, 255, 255) !important;
 
  <!-- Sponsored ads -->
   
-    <ul class="container" style="margin-top: 2em; margin-bottom: 2em;">
+    <div class="container" style="margin-top: 2em; margin-bottom: 2em;">
        <c:forEach var="jobhome" items="${jobhome}">
       
           
           <!-- Premium job 1 -->
-          <li class="one-half column premium-job" id="premium-job-1">
+          <div class="one-half column premium-job" id="premium-job-1">
              
               <div class="container job-container">
                 
@@ -158,12 +158,12 @@ color: rgb(255, 255, 255) !important;
               </div>
               
               
-          </li>
+          </div>
           
           </c:forEach>
-          
+           <br class="clearBoth" />
       
-        </ul>
+        </div>
 
    
 
