@@ -325,6 +325,7 @@ a {
 	text-decoration: none !important;
 }
 
+
 .dl-horizontal dt {
 	float: left;
 	overflow: show;
@@ -372,9 +373,9 @@ a {
 				<div class="divider"></div>
 				<dl class="dl-horizontal">
 					<dt>Job title:</dt>
-					<dd>${job.title}</dd>
+					<dd style="color:rgb(49, 163, 221);">${job.title}</dd>
 					<dt>Company name:</dt>
-					<dd>job.company.companyName</dd>
+					<dd style="color:rgb(49, 163, 221);">${job.company.companyName}</dd>
 				</dl>
 				<!-- #job details -->
 			</div>
@@ -392,7 +393,10 @@ a {
 			</div>
 		</div>
 	</div>
-
+	<div class="container">
+	<label for="about">Enter a cover letter</label>
+        <textarea class="u-full-width" placeholder="Enter Message here..." id="about" name ="cover" rows="6"></textarea>
+    </div>
 	
 
 
