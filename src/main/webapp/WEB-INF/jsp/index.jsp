@@ -85,6 +85,8 @@ color: rgb(255, 255, 255) !important;
     background-color: red !important;
     border-color: red !important;
 }
+
+.clearBoth { clear:both; }
 </style>
 
  
@@ -157,7 +159,7 @@ color: rgb(255, 255, 255) !important;
               
               
           </div>
-          <p></p>
+          <br class="clearBoth" />
           </c:forEach>
            
       
