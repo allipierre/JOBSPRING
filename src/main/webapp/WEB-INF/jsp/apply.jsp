@@ -395,7 +395,7 @@ a {
 	</div>
 	<div class="container">
 	<label for="about">Enter a cover letter</label>
-        <textarea style="background:white;min-height: 200px;" class="u-full-width" placeholder="Enter Message here..." id="covere" name ="covere"></textarea>
+        <textarea style="background:white !important;min-height: 200px;" class="u-full-width" placeholder="Enter Message here..." id="covere" name ="covere"></textarea>
         <a class="button button-primary" href="">Send</a>
     </div>
 	
