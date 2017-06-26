@@ -3,6 +3,8 @@
  */
 package io.blackground.jobfinder.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.mail.MailException;
@@ -27,7 +29,8 @@ public class MailController {
 
 	@PostMapping("/sendmail")
 	@ResponseBody
-	private String sendMail(@RequestParam String covere) {
+	private String sendMail(HttpServletRequest request) {
+		 String covere = request.getParameter("covere");
 		
 		try {
 			mailService.sendMail(covere);
