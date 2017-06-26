@@ -430,7 +430,7 @@ text-decoration:none !important;
 </div>	
 	</div>
 	
-	<!-- #job heading -->
+	<!-- #job Description -->
 	<div class="container">
 	<div class="row">
    <div class="eleven columns">
@@ -440,6 +440,29 @@ text-decoration:none !important;
       <dl class="dl-horizontal">
          <dt>Description:</dt>
          <dd>${job.description}</dd>
+         <dt>Job Location:</dt>
+         <dd>Cameroon</dd>
+         <dt>Contract Type:</dt>
+         <dd>Internship</dd>
+         <dt>Job category:</dt>
+         <dd>Customer Support</dd>
+      </dl>
+      <!-- #job details -->
+   </div>
+</div>	
+	</div>
+	
+	
+	<!-- #job Description -->
+	<div class="container">
+	<div class="row">
+   <div class="eleven columns">
+      <!-- job details -->
+      <h4 class="dl-title">Position Requirements</h4>
+      <div class="divider"></div>
+      <dl class="dl-horizontal">
+         <dt>Requirements:</dt>
+         <dd>${job.position}</dd>
          <dt>Job Location:</dt>
          <dd>Cameroon</dd>
          <dt>Contract Type:</dt>
