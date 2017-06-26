@@ -157,11 +157,11 @@ color: rgb(255, 255, 255) !important;
           </div>
           
           <!-- Premium job 2 -->
-          <div class="one-half column premium-job" id="premium-job-2">
+         <!-- <div class="one-half column premium-job" id="premium-job-2">
               <div class="container job-container">
                  <c:forEach var="jobhome" items="${jobhome}">
                   <div class="row">
-                      <!-- Description -->
+                      
                       <div class="two-thirds column">
                           <h5 class="ad-title">Human Resource Manager</h5>
                           <em>${jobhome.company.companyName}, New York</em>
@@ -169,7 +169,7 @@ color: rgb(255, 255, 255) !important;
                           <a href="" class="button">Details</a>
                       </div>
                       
-                      <!-- Company logo -->
+                     
                       <div class="one-third column">
                           
                           <img src="/static/images/campaigners_icon.png" class="u-max-full-width">
@@ -178,7 +178,7 @@ color: rgb(255, 255, 255) !important;
                   </div>
               </c:forEach>
               </div>
-          </div>
+          </div>-->
            
        </div>
         </div>
