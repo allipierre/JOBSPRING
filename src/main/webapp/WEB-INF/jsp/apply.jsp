@@ -361,120 +361,39 @@ a {
 		</section>
 	</div>
 
-	<!-- job heading -->
-	<div class="container">
-		<div class="row">
-			<div class="four columns">
-				<img src="" class="u-max-full-width " id="image"
-					alt="Jumia jobs in Cameroon" style="height: 200px;">
-			</div>
-			<div class="seven columns">
-				<h3>${job.title}</h3>
-				<h4>
-					<a href="/en/employer/jumia.html">Jumia</a>
-				</h4>
-				<p>
-					<a class="hidden-print" href="/en/employer/jumia.html"> <i
-						class="icon icon-home"></i> View company profile
-					</a>
-				</p>
-				<input class="button-primary" type="button" value=" Apply now">
-			</div>
-			
-		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<p>
-					Reference: <strong>JBLB793566</strong><br> Start date: <strong>03
-						July 2017</strong>
-				</p>
-				<p></p>
-				<p></p>
-			</div>
-		</div>
-	</div>
+	
 
-	<!-- #job heading -->
+	<!-- #job Apply -->
 	<div class="container">
 		<div class="row">
 			<div class="five columns">
 				<!-- job details -->
-				<h4 class="dl-title">Job Details</h4>
+				<h4 class="dl-title">Apply for this job</h4>
 				<div class="divider"></div>
 				<dl class="dl-horizontal">
-					<dt>City:</dt>
-					<dd>${job.company.city}</dd>
-					<dt>Job Location:</dt>
-					<dd>Cameroon</dd>
-					<dt>Contract Type:</dt>
-					<dd>Internship</dd>
-					<dt>Job category:</dt>
-					<dd>Customer Support</dd>
+					<dt>Job title:</dt>
+					<dd>${job.title}</dd>
+					<dt>Company name:</dt>
+					<dd>job.company.companyName</dd>
 				</dl>
 				<!-- #job details -->
 			</div>
 			<div class="five columns">
 				<!-- company details -->
-				<h4 class="dl-title">Company Details</h4>
+				<h4 class="dl-title">Your contact information</h4>
 				<div class="divider"></div>
 				<dl class="dl-horizontal">
-					<dt>Company industry:</dt>
-					<dd>Retail</dd>
-					<dt>No. of Employees:</dt>
-					<dd>21-50</dd>
+					<dt>Email address:</dt>
+					<dd>${pageContext.request.userPrincipal.name}</dd>
+					<dt>Email address:</dt>
+					<dd>${pageContext.request.userPrincipal.name}</dd>
 				</dl>
 				<!-- #company details -->
 			</div>
 		</div>
 	</div>
 
-	<!-- #job Description -->
-	<div class="container">
-		<div class="row">
-			<div class="eleven columns">
-				<!-- job details -->
-				<h4 class="dl-title">Job Description</h4>
-				<div class="divider"></div>
-				<dl class="dl-horizontal">
-					<dt>Description:</dt>
-					<dd>${job.description}</dd>
-					<dt>Job Location:</dt>
-					<dd>Cameroon</dd>
-					<dt>Contract Type:</dt>
-					<dd>Internship</dd>
-					<dt>Job category:</dt>
-					<dd>Customer Support</dd>
-				</dl>
-				<!-- #job details -->
-			</div>
-		</div>
-	</div>
-
-
-	<!-- #job Description -->
-	<div class="container">
-		<div class="row">
-			<div class="eleven columns">
-				<!-- job details -->
-				<h4 class="dl-title">Position Requirements</h4>
-				<div class="divider"></div>
-				<dl class="dl-horizontal">
-					<dt>Requirements:</dt>
-					<dd>${job.position}</dd>
-					<dt>Job Location:</dt>
-					<dd>Cameroon</dd>
-					<dt>Contract Type:</dt>
-					<dd>Internship</dd>
-					<dt>Job category:</dt>
-					<dd>Customer Support</dd>
-				</dl>
-				<!-- #job details -->
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<input class="button-primary" type="button" value=" Apply now">
-	</div>
+	
 
 
 
