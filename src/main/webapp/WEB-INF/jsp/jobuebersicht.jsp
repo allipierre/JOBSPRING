@@ -405,7 +405,7 @@ text-decoration:none !important;
       <div class="divider"></div>
       <dl class="dl-horizontal">
          <dt>City:</dt>
-         <dd>Douala</dd>
+         <dd>${job.company.city}</dd>
          <dt>Job Location:</dt>
          <dd>Cameroon</dd>
          <dt>Contract Type:</dt>
