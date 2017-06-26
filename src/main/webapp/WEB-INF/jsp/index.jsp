@@ -128,7 +128,7 @@ color: rgb(255, 255, 255) !important;
 
  <!-- Sponsored ads -->
   
-    <div class="container" style="margin-top: 2em; margin-bottom: 2em;">
+    <ul class="container" style="margin-top: 2em; margin-bottom: 2em;">
        <c:forEach var="jobhome" items="${jobhome}">
       
           
@@ -161,9 +161,9 @@ color: rgb(255, 255, 255) !important;
           </li>
           
           </c:forEach>
-           <br class="clearBoth" />
+          
       
-        </div>
+        </ul>
 
    
 
