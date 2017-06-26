@@ -58,31 +58,34 @@
 	background-color: rgb(255, 255, 255);
 	border-color: rgb(224, 225, 229);
 }
-#image{
-background-color: red;
+
+#image {
+	background-color: red;
 	border-color: red !important;
 }
 
-input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
-    height: 38px;
-    padding: 6px 100px !important;
-    background-color: rgb(209, 209, 209) !important;
-    border: none !important;
-    border-radius: 4px;
-    box-shadow: none;
-    box-sizing: border-box;
-    /* visibility: visible; */
-    /* display: none; */
+input[type="email"], input[type="number"], input[type="search"], input[type="text"],
+	input[type="tel"], input[type="url"], input[type="password"], textarea,
+	select {
+	height: 38px;
+	padding: 6px 100px !important;
+	background-color: rgb(209, 209, 209) !important;
+	border: none !important;
+	border-radius: 4px;
+	box-shadow: none;
+	box-sizing: border-box;
+	/* visibility: visible; */
+	/* display: none; */
 }
 
 label, legend {
-    display: inline !important;
-    margin-bottom: .5rem;
-    font-weight: 600;
+	display: inline !important;
+	margin-bottom: .5rem;
+	font-weight: 600;
 }
 
-body{
-background-color: rgba(182, 184, 187, 0.22) !important;
+body {
+	background-color: rgba(182, 184, 187, 0.22) !important;
 }
 
 .panel-heading {
@@ -267,10 +270,25 @@ aa {
 	color: white;
 }
 
-.pagination a:hover:not (.active ) {
-	background-color: #ddd;
-}
+.pagination
+ 
+a
+:hover
+:not
+ 
+(
+.active
+ 
+)
+{
+background-color
+:
+ 
+#ddd
+;
 
+
+}
 .one.column {
 	padding-top: 23px;
 }
@@ -292,8 +310,9 @@ aa {
 #lb1, #lb2 {
 	color: rgb(255, 255, 255) !important;
 }
-a{
-text-decoration:none !important;
+
+a {
+	text-decoration: none !important;
 }
 
 #sub1 {
@@ -306,21 +325,22 @@ text-decoration:none !important;
 	text-decoration: none !important;
 }
 
- .dl-horizontal dt {
-    float: left;
-    overflow: show;
-    text-overflow: clip;
-    white-space: pre-wrap;
-    width: 160px;
-    clear: left;
-    text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    text-transform: capitalize;
+.dl-horizontal dt {
+	float: left;
+	overflow: show;
+	text-overflow: clip;
+	white-space: pre-wrap;
+	width: 160px;
+	clear: left;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-transform: capitalize;
 }
+
 .dl-horizontal dd {
-    margin-left: 160px;
+	margin-left: 160px;
 }
 </style>
 
@@ -331,8 +351,8 @@ text-decoration:none !important;
 <body>
 	<%@ include file="header.jsp"%>
 	<div class="container ner">
-	<input type="hidden" value="blackground_logo.jpg" id="userimage">
-	
+		<input type="hidden" value="blackground_logo.jpg" id="userimage">
+
 		<section class="header">
 			<h3>
 				Get a <strong>website</strong> created <strong>for</strong> your
@@ -345,33 +365,32 @@ text-decoration:none !important;
 	<div class="container">
 		<div class="row">
 			<div class="four columns">
-				<img
-					src=""
-					class="u-max-full-width " id="image" alt="Jumia jobs in Cameroon"
-					style="height: 200px;">
+				<img src="" class="u-max-full-width " id="image"
+					alt="Jumia jobs in Cameroon" style="height: 200px;">
 			</div>
 			<script>
-	var token = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O';
-    var actu='${job.company.file}';
-	var xhr = new XMLHttpRequest();
-	xhr.responseType = 'blob';
-	xhr.onreadystatechange = function() {
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			var imageUrl = (window.URL || window.webkitURL)
-					.createObjectURL(xhr.response);
+				var token = 'b2ulUPeeUAAAAAAAAAAAQrusldDcAXOq5w4WNSDGsDMERuJ8lDm5z-chDTODRg4O';
+				var actu = '${job.company.file}';
+				var xhr = new XMLHttpRequest();
+				xhr.responseType = 'blob';
+				xhr.onreadystatechange = function() {
+					if (xhr.readyState === 4 && xhr.status === 200) {
+						var imageUrl = (window.URL || window.webkitURL)
+								.createObjectURL(xhr.response);
 
-			document.getElementById('image').src = imageUrl;
+						document.getElementById('image').src = imageUrl;
 
-			var a = document.createElement('a');
-		}
-	};
-	xhr.open('GET', 'https://content.dropboxapi.com/2/files/download');
-	xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-	xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
-		path : '/blackground/'+actu
-	}));
-	xhr.send();
-</script>
+						var a = document.createElement('a');
+					}
+				};
+				xhr.open('GET',
+						'https://content.dropboxapi.com/2/files/download');
+				xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+				xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
+					path : '/blackground/' + actu
+				}));
+				xhr.send();
+			</script>
 			<div class="seven columns">
 				<h3>${job.title}</h3>
 				<h4>
@@ -395,86 +414,88 @@ text-decoration:none !important;
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- #job heading -->
 	<div class="container">
-	<div class="row">
-   <div class="five columns">
-      <!-- job details -->
-      <h4 class="dl-title">Job Details</h4>
-      <div class="divider"></div>
-      <dl class="dl-horizontal">
-         <dt>City:</dt>
-         <dd>${job.company.city}</dd>
-         <dt>Job Location:</dt>
-         <dd>Cameroon</dd>
-         <dt>Contract Type:</dt>
-         <dd>Internship</dd>
-         <dt>Job category:</dt>
-         <dd>Customer Support</dd>
-      </dl>
-      <!-- #job details -->
-   </div>
-   <div class="five columns">
-      <!-- company details -->
-      <h4 class="dl-title">Company Details</h4>
-      <div class="divider"></div>
-      <dl class="dl-horizontal">
-         <dt>Company industry:</dt>
-         <dd>Retail</dd>
-         <dt>No. of Employees:</dt>
-         <dd>21-50</dd>
-      </dl>
-      <!-- #company details -->
-   </div>
-</div>	
+		<div class="row">
+			<div class="five columns">
+				<!-- job details -->
+				<h4 class="dl-title">Job Details</h4>
+				<div class="divider"></div>
+				<dl class="dl-horizontal">
+					<dt>City:</dt>
+					<dd>${job.company.city}</dd>
+					<dt>Job Location:</dt>
+					<dd>Cameroon</dd>
+					<dt>Contract Type:</dt>
+					<dd>Internship</dd>
+					<dt>Job category:</dt>
+					<dd>Customer Support</dd>
+				</dl>
+				<!-- #job details -->
+			</div>
+			<div class="five columns">
+				<!-- company details -->
+				<h4 class="dl-title">Company Details</h4>
+				<div class="divider"></div>
+				<dl class="dl-horizontal">
+					<dt>Company industry:</dt>
+					<dd>Retail</dd>
+					<dt>No. of Employees:</dt>
+					<dd>21-50</dd>
+				</dl>
+				<!-- #company details -->
+			</div>
+		</div>
 	</div>
-	
+
 	<!-- #job Description -->
 	<div class="container">
-	<div class="row">
-   <div class="eleven columns">
-      <!-- job details -->
-      <h4 class="dl-title">Job Description</h4>
-      <div class="divider"></div>
-      <dl class="dl-horizontal">
-         <dt>Description:</dt>
-         <dd>${job.description}</dd>
-         <dt>Job Location:</dt>
-         <dd>Cameroon</dd>
-         <dt>Contract Type:</dt>
-         <dd>Internship</dd>
-         <dt>Job category:</dt>
-         <dd>Customer Support</dd>
-      </dl>
-      <!-- #job details -->
-   </div>
-</div>	
+		<div class="row">
+			<div class="eleven columns">
+				<!-- job details -->
+				<h4 class="dl-title">Job Description</h4>
+				<div class="divider"></div>
+				<dl class="dl-horizontal">
+					<dt>Description:</dt>
+					<dd>${job.description}</dd>
+					<dt>Job Location:</dt>
+					<dd>Cameroon</dd>
+					<dt>Contract Type:</dt>
+					<dd>Internship</dd>
+					<dt>Job category:</dt>
+					<dd>Customer Support</dd>
+				</dl>
+				<!-- #job details -->
+			</div>
+		</div>
 	</div>
-	
-	
+
+
 	<!-- #job Description -->
 	<div class="container">
-	<div class="row">
-   <div class="eleven columns">
-      <!-- job details -->
-      <h4 class="dl-title">Position Requirements</h4>
-      <div class="divider"></div>
-      <dl class="dl-horizontal">
-         <dt>Requirements:</dt>
-         <dd>${job.position}</dd>
-         <dt>Job Location:</dt>
-         <dd>Cameroon</dd>
-         <dt>Contract Type:</dt>
-         <dd>Internship</dd>
-         <dt>Job category:</dt>
-         <dd>Customer Support</dd>
-      </dl>
-      <!-- #job details -->
-   </div>
-</div>	
+		<div class="row">
+			<div class="eleven columns">
+				<!-- job details -->
+				<h4 class="dl-title">Position Requirements</h4>
+				<div class="divider"></div>
+				<dl class="dl-horizontal">
+					<dt>Requirements:</dt>
+					<dd>${job.position}</dd>
+					<dt>Job Location:</dt>
+					<dd>Cameroon</dd>
+					<dt>Contract Type:</dt>
+					<dd>Internship</dd>
+					<dt>Job category:</dt>
+					<dd>Customer Support</dd>
+				</dl>
+				<!-- #job details -->
+			</div>
+		</div>
 	</div>
-<input class="button-primary" type="button" value=" Apply now">
+	<div class="container">
+		<input class="button-primary" type="button" value=" Apply now">
+	</div>
 
 
 
