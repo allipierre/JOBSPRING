@@ -35,7 +35,7 @@ public class MailController {
 		
 		try {
 			mailService.sendMail(covere);
-			return "mail sent";
+			return "apply";
 		} catch (MailException e) {
 			e.printStackTrace();
 		}
