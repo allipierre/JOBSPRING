@@ -68,8 +68,9 @@ padding-top: 23px;
 @media (min-width: 550px){
 .one-half.column {
     width: 46% !important;
-    float: left;
-    margin-left: 9px;
+    margin-bottom: 9px !important;
+    margin-left: 19px !important;
+    margin-right: 19px !important;
 }
 }
 
