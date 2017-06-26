@@ -433,7 +433,7 @@ text-decoration:none !important;
 	<!-- #job heading -->
 	<div class="container">
 	<div class="row">
-   <div class="eight columns">
+   <div class="eleven columns">
       <!-- job details -->
       <h4 class="dl-title">Job Description</h4>
       <div class="divider"></div>
