@@ -427,8 +427,29 @@ text-decoration:none !important;
       </dl>
       <!-- #company details -->
    </div>
-</div>
-	<input type="hidden" value="blackground_logo.jpg" id="userimage">	
+</div>	
+	</div>
+	
+	<!-- #job heading -->
+	<div class="container">
+	<div class="row">
+   <div class="eight columns">
+      <!-- job details -->
+      <h4 class="dl-title">Job Description</h4>
+      <div class="divider"></div>
+      <dl class="dl-horizontal">
+         <dt>Description:</dt>
+         <dd>${job.description}</dd>
+         <dt>Job Location:</dt>
+         <dd>Cameroon</dd>
+         <dt>Contract Type:</dt>
+         <dd>Internship</dd>
+         <dt>Job category:</dt>
+         <dd>Customer Support</dd>
+      </dl>
+      <!-- #job details -->
+   </div>
+</div>	
 	</div>
 
 
