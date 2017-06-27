@@ -43,7 +43,7 @@ public class MailController {
 		String title = request.getParameter("title");
 
 		try {
-			mailService.sendMail(covere, user.getUsername(), user.getUsername(), title);
+			mailService.sendMail(covere, title);
 			return "sendmail";
 		} catch (MailException e) {
 			e.printStackTrace();
