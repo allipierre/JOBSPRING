@@ -387,7 +387,7 @@ a {
 					<dt>Email address:</dt>
 					<dd>${pageContext.request.userPrincipal.name}</dd>
 					<dt>Email address:</dt>
-					<dd>${pageContext.request.userPrincipal.name}</dd>
+					<dd>${job.company.user.username}</dd>
 				</dl>
 				<!-- #company details -->
 			</div>
