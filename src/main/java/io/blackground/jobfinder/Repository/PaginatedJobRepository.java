@@ -28,7 +28,6 @@ public interface PaginatedJobRepository extends PagingAndSortingRepository<Job, 
 	List<Job> findJobsByCompanyCityContainingIgnoreCaseAndTitleContainingIgnoreCase(String city, String title,
 			Pageable pageable);
 
-	@Query(value = "SELECT c.companyName,c.website,c.about,c.city,j.position,j.id,j.description,j.minimumExperienceYears,j.category,j.minimumDegree,j.title,j.contrat,j.published"
-			+ "FROM Job j join Company c WHERE c.id= ?1", nativeQuery = false)
-	Page<Job> findByCompanyId(Long companyId, Pageable pageable);
+	
+	Page<Job> findJobsByCompanyId(Long id, Pageable pageable);
 }

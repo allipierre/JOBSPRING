@@ -59,7 +59,7 @@ public class PaginatedJobService {
 		User user = userService.findByUsername(authentication.getName());
 		Company userCompany = companyService.findCompany(user);
 		List<Job> jobs = new ArrayList<>();
-		for (Job job : paginatedJobRepository.findByCompanyId(userCompany.getCountryId(),pageable)) {
+		for (Job job : paginatedJobRepository.findJobsByCompanyId(userCompany.getCountryId(),pageable)) {
 			//if (job.getCompany().getId() == userCompany.getId()) {
 				jobs.add(job);
 
