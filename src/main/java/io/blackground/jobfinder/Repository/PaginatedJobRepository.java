@@ -30,4 +30,5 @@ public interface PaginatedJobRepository extends PagingAndSortingRepository<Job, 
 
 	
 	Page<Job> findJobsByCompanyId(Long id, Pageable pageable);
+	Page<Job> findJobsByCompanyId(Long id);
 }
