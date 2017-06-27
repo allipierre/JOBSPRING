@@ -390,8 +390,8 @@ a {
 	<!-- #job Apply -->
 	<div class="container">
 		
-       
-        <input class="button-primary" type="submit" value="Back"> <input
+       <a class="button button-primary" href="allejob">Back to Jobs Page</a>
+         <input
 	    type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 	     
     </div>
