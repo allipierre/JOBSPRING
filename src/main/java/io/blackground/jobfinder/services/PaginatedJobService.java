@@ -69,12 +69,7 @@ public class PaginatedJobService {
 		return jobs;
 
 	}
-//	public int getAnzahl(){
-//		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-//		User user = userService.findByUsername(authentication.getName());
-//		Company userCompany = companyService.findCompany(user);
-//		return findJobsByCompanyId(userCompany.getc)
-//	}
+
 
 	public int getNoOfRecords() {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
