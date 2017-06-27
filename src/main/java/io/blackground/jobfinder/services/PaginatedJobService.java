@@ -56,17 +56,18 @@ public class PaginatedJobService {
 
 	public Page<Job> findJobByCompany(Pageable pageable) {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-
+		Page<Job> page = null;
 		User user = userService.findByUsername(authentication.getName());
 		Company userCompany = companyService.findCompany(user);
 		List<Job> jobs = new ArrayList<>();
 		for (Job job : paginatedJobRepository.findAll(pageable)) {
 			if (job.getCompany().getId() == userCompany.getId()) {
 				jobs.add(job);
+				 page=paginatedJobRepository.findAll(pageable);
 			}
 
 		}
-		return paginatedJobRepository.findAll(pageable);
+		return page;
 
 	}
 
