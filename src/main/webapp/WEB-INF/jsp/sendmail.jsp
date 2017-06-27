@@ -15,7 +15,7 @@
 
 <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
 	rel="stylesheet" type="text/css">
-
+<link rel="icon" type="image/png" href="images/favicon.png">
 
 <link rel="stylesheet" href="/static/css/normalize.css">
 <link rel="stylesheet" href="/static/css/skeleton.css">
@@ -373,28 +373,24 @@ a {
 </style>
 
 
-<link rel="icon" type="image/png" href="images/favicon.png">
+
 
 </head>
 <body>
 	<%@ include file="header.jsp"%>
-	<div class="container ner">
+	<div style="padding-top: 150px !important;"class="container">
 		<div class="alert success">
   <span class="closebtn">&times;</span>  
   <strong>Success!</strong> Indicates a successful or positive action.
 </div>
+<a style="margin-top: 50px;"class="button button-primary" href="index">Back to Jobs Page</a>
+         <input
+	    type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 	</div>
 
 	
 
-	<!-- #job Apply -->
-	<div class="container">
-		
-       <a class="button button-primary" href="allejob">Back to Jobs Page</a>
-         <input
-	    type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-	     
-    </div>
+	
    
 	
 
