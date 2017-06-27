@@ -42,9 +42,10 @@ public class MailController {
 		String covere = request.getParameter("covere");
 		String title = request.getParameter("title");
 		String username = request.getParameter("username");
+		String usernameto = request.getParameter("usernameto");
 		
 		try {
-			mailService.sendMail(covere, title,username);
+			mailService.sendMail(covere, title,username,usernameto);
 			return "sendmail";
 		} catch (MailException e) {
 			e.printStackTrace();

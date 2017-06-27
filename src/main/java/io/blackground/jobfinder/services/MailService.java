@@ -18,10 +18,10 @@ public class MailService {
 	@Autowired
 	private JavaMailSender javaMailSender;
 
-	public void sendMail(String covere, String subject,String username) throws MailException {
+	public void sendMail(String covere, String subject,String username,String usernameto) throws MailException {
 
 		SimpleMailMessage mail = new SimpleMailMessage();
-		mail.setTo("yottiallipierre@gmail.com");
+		mail.setTo(usernameto);
 		mail.setFrom(username);
 		mail.setSubject(subject);
 		mail.setText(covere);
