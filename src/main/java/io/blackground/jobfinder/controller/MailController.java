@@ -40,7 +40,7 @@ public class MailController {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		User user = userService.findByUsername(authentication.getName());
 		String covere = request.getParameter("covere");
-		String title = request.getParameter("title");
+		String title = request.getParameter("title")
 
 		try {
 			mailService.sendMail(covere, user.getUsername(), user.getUsername(), title);
