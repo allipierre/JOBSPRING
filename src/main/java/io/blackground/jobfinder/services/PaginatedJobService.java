@@ -60,10 +60,10 @@ public class PaginatedJobService {
 		Company userCompany = companyService.findCompany(user);
 		List<Job> jobs = new ArrayList<>();
 		for (Job job : paginatedJobRepository.findByCompanyId(userCompany.getCountryId(),pageable)) {
-			if (job.getCompany().getId() == userCompany.getId()) {
+			//if (job.getCompany().getId() == userCompany.getId()) {
 				jobs.add(job);
 
-			}
+			//}
 
 		}
 		return jobs;
