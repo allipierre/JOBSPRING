@@ -59,7 +59,7 @@ public class PaginatedJobService {
 		User user = userService.findByUsername(authentication.getName());
 		Company userCompany = companyService.findCompany(user);
 		List<Job> jobs = new ArrayList<>();
-		for (Job job : paginatedJobRepository.findJobsByCompanyId(userCompany.getCountryId(),pageable)) {
+		for (Job job : paginatedJobRepository.findJobsByCompanyId(userCompany.getId(),pageable)) {
 			//if (job.getCompany().getId() == userCompany.getId()) {
 				jobs.add(job);
 
@@ -69,6 +69,12 @@ public class PaginatedJobService {
 		return jobs;
 
 	}
+//	public int getAnzahl(){
+//		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//		User user = userService.findByUsername(authentication.getName());
+//		Company userCompany = companyService.findCompany(user);
+//		return findJobsByCompanyId(userCompany.getc)
+//	}
 
 	public int getNoOfRecords() {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
