@@ -116,6 +116,7 @@ public class MainController {
 		System.out.println("noOfRecords" + noOfRecords);
 		int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 
+		System.out.println("anzahl "+paginatedJobService.findJobByCompany(new PageRequest((page - 1), recordsPerPage)).size());
 		request.setAttribute("contract", contractservice.findAll());
 		request.setAttribute("experience", experienceservice.findAll());
 		request.setAttribute("jobs", paginatedJobService.findJobByCompany(new PageRequest((page - 1), recordsPerPage)));
