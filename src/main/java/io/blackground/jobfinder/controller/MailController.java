@@ -41,9 +41,10 @@ public class MailController {
 		User user = userService.findByUsername(authentication.getName());
 		String covere = request.getParameter("covere");
 		String title = request.getParameter("title");
-
+		String username = request.getParameter("username");
+		
 		try {
-			mailService.sendMail(covere, title);
+			mailService.sendMail(covere, title,username);
 			return "sendmail";
 		} catch (MailException e) {
 			e.printStackTrace();
