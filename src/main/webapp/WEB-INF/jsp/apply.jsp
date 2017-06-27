@@ -367,7 +367,7 @@ a {
 	<!-- #job Apply -->
 	<div class="container">
 		<div class="row">
-			<div class="five columns">
+			<div class="six columns">
 				<!-- job details -->
 				<h4 class="dl-title">Apply for this job</h4>
 				<div class="divider"></div>
