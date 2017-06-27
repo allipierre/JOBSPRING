@@ -56,14 +56,13 @@ public class PaginatedJobService {
 
 	public List<Job> findJobByCompany(Pageable pageable) {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-
 		User user = userService.findByUsername(authentication.getName());
 		Company userCompany = companyService.findCompany(user);
 		List<Job> jobs = new ArrayList<>();
-		for (Job job : paginatedJobRepository.findAll(pageable)) {
+		for (Job job : paginatedJobRepository.findByCompanyId(userCompany.getCountryId(),pageable)) {
 			if (job.getCompany().getId() == userCompany.getId()) {
 				jobs.add(job);
-				
+
 			}
 
 		}
@@ -154,8 +153,7 @@ public class PaginatedJobService {
 		}
 		return jobs.size();
 	}
-	
-	
+
 	public int getAllNoOfRecordsLocation(String location) {
 
 		List<Job> jobs = new ArrayList<>();
@@ -167,7 +165,7 @@ public class PaginatedJobService {
 		}
 		return jobs.size();
 	}
-	
+
 	public int getAllNoOfRecordsLocationTitle(String city, String title) {
 		List<Job> jobs = new ArrayList<>();
 		for (Job job : paginatedJobRepository.findAll()) {
