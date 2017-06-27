@@ -63,7 +63,7 @@ public class MainController {
 			@RequestParam("location") String location, Pageable pageable) {
 
 		int page = 1;
-		int recordsPerPage = 5;
+		int recordsPerPage = 7;
 		if (request.getParameter("page") != null)
 			page = Integer.parseInt(request.getParameter("page"));
 		int noOfRecords = paginatedJobService.getAllNoOfRecords();
@@ -109,7 +109,7 @@ public class MainController {
 	@GetMapping("/pageablejob")
 	public String list(HttpServletRequest request, Pageable pageable) {
 		int page = 1;
-		int recordsPerPage = 5;
+		int recordsPerPage = 7;
 		if (request.getParameter("page") != null)
 			page = Integer.parseInt(request.getParameter("page"));
 		int noOfRecords = paginatedJobService.getNoOfRecords();
