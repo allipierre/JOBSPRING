@@ -20,8 +20,7 @@ import lombok.Setter;
 
 public class MessageChat {
 
-	@Id
-	@GeneratedValue
+	
 	private long id;
 
 	private String message;
