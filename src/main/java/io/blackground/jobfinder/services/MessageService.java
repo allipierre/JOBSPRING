@@ -6,21 +6,15 @@ package io.blackground.jobfinder.services;
 import java.util.List;
 import java.util.ArrayList;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+
 import javax.transaction.Transactional;
-import org.hibernate.Criteria;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Restrictions;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import io.blackground.jobfinder.Repository.MessageRepository;
 import io.blackground.jobfinder.models.MessageChat;
-import io.blackground.jobfinder.models.Industry;
-import io.blackground.jobfinder.models.User;
-import io.blackground.jobfinder.utils.HibernateUtil;
+
 
 /**
  * @author yotti
