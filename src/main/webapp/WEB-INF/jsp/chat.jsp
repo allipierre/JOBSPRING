@@ -437,7 +437,7 @@ function sendMessage() {
     var $messageInput = $('#messageInput');
     var message = {message: $messageInput.val(), response: 1};
     $messageInput.val('');
-    post('/chat', message);
+    post('/messagechat', message);
 }
 
 </script>
