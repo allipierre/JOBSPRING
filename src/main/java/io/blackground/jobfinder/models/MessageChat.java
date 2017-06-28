@@ -8,7 +8,6 @@ package io.blackground.jobfinder.models;
  *
  */
 
-
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -18,7 +17,6 @@ import org.springframework.data.annotation.Id;
 
 import lombok.Getter;
 import lombok.Setter;
-
 
 @Getter
 @Setter
