@@ -431,7 +431,7 @@ $.ajax({
     type: "POST",
     url: "/emailsend?" + $.param(EmailData),
     contentType: 'application/json'
-})
+
 })
 .done(function(msg) {
 
