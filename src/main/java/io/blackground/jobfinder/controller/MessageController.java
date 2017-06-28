@@ -36,7 +36,7 @@ public class MessageController {
 		return messageService.findAll();
 	}
 
-	@RequestMapping(method = RequestMethod.POST,consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+	@RequestMapping(method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE)
 	public void create(@RequestBody MessageChat chatmessage) {
 		messageService.save(chatmessage);
 
