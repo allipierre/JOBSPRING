@@ -423,10 +423,10 @@ a {
 
 <script>
 
-var userName = 'pierre';
+var userName = '${pageContext.request.userPrincipal.name}';
 
 function appendMessage(message) {
-    $('#messages').append($('<div />').text(message.from + ": " + message.message))
+    $('#messages').append($('<div />').text(userName + ": " + message.message))
 }
 
 function getPreviousMessages() {
