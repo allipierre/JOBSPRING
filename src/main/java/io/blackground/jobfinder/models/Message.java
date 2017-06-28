@@ -9,18 +9,12 @@ package io.blackground.jobfinder.models;
  */
 
 import org.springframework.data.annotation.Id;
-
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 
-/**
- * @author pierre
- */
 @Getter
 @Setter
 @Entity
@@ -32,7 +26,7 @@ public class Message {
 
 	private String text;
 	private Date time;
-	//private boolean response;
+	private boolean response;
 
 	private transient Company company;
 }
