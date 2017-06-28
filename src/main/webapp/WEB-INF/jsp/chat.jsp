@@ -422,11 +422,20 @@ a {
 
 
 <script>
-var inputvariable=$('#messageInput').val();
 
+var userName = 'pierre';
+
+function appendMessage(message) {
+    $('#messages').append($('<div />').text(message.from + ": " + message.message))
+}
+
+function getPreviousMessages() {
+    $.get('/messagechat').done(messages => messages.forEach(appendMessage));
+}
 var sendMessage=function(){
 
 $( "#vut" ).on( "click", function(e){
+	var inputvariable=$('#messageInput').val();
     e.preventDefault();
     e.stopPropagation();
     $.ajax({
@@ -439,6 +448,7 @@ $( "#vut" ).on( "click", function(e){
 }
 
 sendMessage();
+getPreviousMessages();
 
 </script>
 
