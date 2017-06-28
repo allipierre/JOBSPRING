@@ -422,8 +422,25 @@ a {
 <%@ include file="footer.jsp"%>
 
 
+<script>
+var userName = '{user}';
 
+function appendMessage(message) {
+    $('#messages').append($('<div />').text(message.from + ": " + message.message))
+}
 
+function getPreviousMessages() {
+    $.get('/chat').done(messages => messages.forEach(appendMessage));
+}
+
+function sendMessage() {
+    var $messageInput = $('#messageInput');
+    var message = {message: $messageInput.val(), from: userName};
+    $messageInput.val('');
+    post('/chat', message);
+}
+
+</script>
 
 
 <script type="text/javascript" src="/static/js/file.js"></script>

@@ -4,6 +4,11 @@
 package io.blackground.jobfinder.controller;
 
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,9 +38,12 @@ public class MessageController {
 		return messageService.findAll();
 	}
 
+	
 	@RequestMapping(method = RequestMethod.POST)
-	public void create(@RequestBody MessageChat message) {
-		 messageService.save(message);
+	public void create(@RequestBody MessageChat chatmessage) {
+		 messageService.save(chatmessage);
+		 
+		 
 	}
 
 	@RequestMapping(method = RequestMethod.DELETE, value = "{id}")

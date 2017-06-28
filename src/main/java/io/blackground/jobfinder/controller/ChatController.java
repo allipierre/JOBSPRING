@@ -20,7 +20,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import io.blackground.jobfinder.models.Company;
 import io.blackground.jobfinder.models.User;
+import io.blackground.jobfinder.services.CompanyService;
 import io.blackground.jobfinder.services.MailService;
+import io.blackground.jobfinder.services.MessageService;
 import io.blackground.jobfinder.services.UserServiceImpl;
 
 /**
@@ -29,10 +31,18 @@ import io.blackground.jobfinder.services.UserServiceImpl;
  */
 @Controller
 public class ChatController {
-
+	@Autowired
+	private MessageService messageService;
+	@Autowired
+    private UserServiceImpl userService;
 	@GetMapping("/chat")
 	public String createChat(HttpServletRequest request) {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
+		// get the old company instance and set the new company id with the old
+		// one's id
+		User user = userService.findByUsername(authentication.getName());
+		request.setAttribute("user", user+"");
 		return "chat";
 	}
 }
