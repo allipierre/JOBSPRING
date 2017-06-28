@@ -30,8 +30,5 @@ public class MessageChat {
 	private long id;
 
 	private String message;
-	private Date time;
-	private boolean response;
-
-	private transient Company company;
+	
 }
