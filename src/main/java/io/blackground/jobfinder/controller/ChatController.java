@@ -31,7 +31,7 @@ import io.blackground.jobfinder.services.UserServiceImpl;
 public class ChatController {
 
 	@GetMapping("/chat")
-	public String createCompany(HttpServletRequest request) {
+	public String createChat(HttpServletRequest request) {
 
 		return "chat";
 	}
