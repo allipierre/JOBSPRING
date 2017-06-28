@@ -423,6 +423,22 @@ a {
 
 <script>
 
+$( "#vut" ).on( "click", function(e){
+	 e.preventDefault();
+	    e.stopPropagation();
+	    $.ajax({
+	           url: 'https://jobfind-master.herokuapp.com/messagechat/',
+	           method: 'POST',
+	           data: {
+	                  message: $('#messageInput')
+	              }
+	            })
+	   .done(function( msg ) {
+	   console.log("a");
+	  }).fail(function( msg ) {
+		  console.log("b");
+	           });
+	});
 
 
 </script>
