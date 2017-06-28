@@ -8,12 +8,17 @@ package io.blackground.jobfinder.models;
  *
  */
 
-import org.springframework.data.annotation.Id;
-import lombok.Getter;
-import lombok.Setter;
+
 import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+
+import org.springframework.data.annotation.Id;
+
+import lombok.Getter;
+import lombok.Setter;
+
 
 @Getter
 @Setter
@@ -25,9 +30,9 @@ public class MessageChat {
 	@GeneratedValue
 	private long id;
 
-	private String text;
+	private String message;
 	private Date time;
 	private boolean response;
 
-	private transient Company company;
+	
 }
