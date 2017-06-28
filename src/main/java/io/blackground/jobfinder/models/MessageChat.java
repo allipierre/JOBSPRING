@@ -10,7 +10,7 @@ package io.blackground.jobfinder.models;
 
 import java.util.Date;
 
-import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 
@@ -26,8 +26,7 @@ public class MessageChat {
 
 	@Id 
 	@GeneratedValue
-	@Column(name = "id")
-	private Long id;
+	private long id;
 
 	private String message;
 	private Date time;
