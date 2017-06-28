@@ -26,7 +26,7 @@ public class MessageChat {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
+	private long id;
 
 	private String message;
 	private Date time;
