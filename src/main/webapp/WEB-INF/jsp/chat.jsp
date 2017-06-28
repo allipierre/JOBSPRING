@@ -209,8 +209,8 @@ small, .small {
 	font-weight: 400;
 }
 
-#chat{
-background: rgb(224, 225, 229) !important;
+#chat {
+	background: rgb(224, 225, 229) !important;
 }
 
 job-search-content .panel-footer li:last-child {
@@ -302,8 +302,6 @@ aa {
 	color: white;
 }
 
-
-
 @media ( max-width : 750px) {
 	.two.columns {
 		padding-top: 14px !important;
@@ -366,10 +364,11 @@ a {
 		<div id="chat">
 
 			<div id="messages"></div>
-			
-				<label> Message: <input class="u-full-width" type="text" placeholder="message" id="messageInput">
-				</label>
-			<a  onclick="void(0);" type="submit" class="bts button button-primary" id="vut">Send</a>
+
+			<label> Message: <input class="u-full-width" type="text"
+				placeholder="message" id="messageInput">
+			</label> <a onclick="void(0);" type="submit"
+				class="bts button button-primary" id="vut">Send</a>
 		</div>
 
 	</div>
@@ -412,7 +411,11 @@ $( "#vut" ).on( "click", function(e){
            method: 'POST',
            dataType: 'json',contentType:'application/json',
            data: JSON.stringify({message: inputvariable})
-    });
+           .done(function( msg ) {
+        	   
+        	   console.log('a');
+        	     
+           }); });
 });
 }
 
