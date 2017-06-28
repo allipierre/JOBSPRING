@@ -397,11 +397,11 @@ a {
 		<div id="chat">
 
 			<div id="messages"></div>
-			<form onsubmit="sendMessage(); return false;">
+			
 				<label> Message: <input class="u-full-width" type="text" placeholder="message" id="messageInput">
 				</label>
-				<button class="button-primary" type="submit">Send</button>
-			</form>
+				<button class="button-primary" type="submit" id="vut">Send</button>
+			
 		</div>
 
 	</div>
@@ -430,15 +430,26 @@ function appendMessage(message) {
 }
 
 function getPreviousMessages() {
-    $.get('/chat').done(messages => messages.forEach(appendMessage));
+    $.get('/messagechat').done(messages => messages.forEach(appendMessage));
 }
 
-function sendMessage() {
-    var $messageInput = $('#messageInput');
-    var message = {message: $messageInput.val(), response: 1};
-    $messageInput.val('');
-    post('/messagechat', message);
-}
+$( "#vut" ).click(function() {
+	  var $messageInput = $('#messageInput');
+	    var message = {message: $messageInput.val(), response: 1};
+	    $messageInput.val('');
+	    $.ajax({
+	           url: 'https://jobfind-master.herokuapp.com/messagechat/',
+	           method: 'POST',
+	           data: {
+	                  message: $('#messageInput')
+	              }
+	            })
+	   .done(function( msg ) {
+	   
+	  }).fail(function( msg ) {
+	      
+	           });
+	});
 
 </script>
 
