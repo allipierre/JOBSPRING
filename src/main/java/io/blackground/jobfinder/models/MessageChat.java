@@ -10,9 +10,9 @@ package io.blackground.jobfinder.models;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 
 import org.springframework.data.annotation.Id;
 
@@ -24,8 +24,9 @@ import lombok.Setter;
 @Entity
 public class MessageChat {
 
-	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id 
+	@GeneratedValue
+	@Column(name = "id")
 	private long id;
 
 	private String message;
