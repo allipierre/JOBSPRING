@@ -435,7 +435,7 @@ function getPreviousMessages() {
 
 function sendMessage() {
     var $messageInput = $('#messageInput');
-    var message = {message: $messageInput.val(), from: userName};
+    var message = {message: $messageInput.val(), response: 1};
     $messageInput.val('');
     post('/chat', message);
 }
