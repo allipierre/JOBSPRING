@@ -26,8 +26,8 @@ public class EmailRestController {
 	private MailService mailService;
 
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody String create(@RequestParam("covere") String covere, @RequestParam("title") String title,
-			@RequestParam("username") String username, @RequestParam("usernameto") String usernameto) {
+	public @ResponseBody String create(@JsonArg("covere") String covere, @JsonArg("title") String title,
+			@JsonArg("username") String username, @JsonArg("usernameto") String usernameto) {
 		try {
 			mailService.sendMail(covere, title, username, usernameto);
 			return "sendmail";

@@ -420,11 +420,19 @@ a {
 <%@ include file="footer.jsp"%>
 <script>
 $("#vuta").on("click", function(e) {
+	var EmailData = {
+		      "covere" : "John",
+		      "title" :"Boston",
+		      "username" :"yottiallipierre",
+		      "usernameto" :"yottiallipierre"
+		   }
+
 $.ajax({
     type: "POST",
     url: "/emailsend",
+    dataType : 'json',
     contentType: 'application/json',
-    data: { covere: "John", title: "Boston",username: "yottiallipierre@gmail.com",usernameto: "yottiallipierre@gmail.com"} // parameters
+    data: JSON.stringify(EmailData)
 });
 });
 </script>
