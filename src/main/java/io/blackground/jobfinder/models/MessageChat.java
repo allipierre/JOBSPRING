@@ -1,6 +1,3 @@
-/**
- * 
- */
 package io.blackground.jobfinder.models;
 
 /**
