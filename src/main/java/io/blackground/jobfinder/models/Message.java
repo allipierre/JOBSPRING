@@ -18,6 +18,7 @@ import javax.persistence.GeneratedValue;
 @Getter
 @Setter
 @Entity
+
 public class Message {
 
 	@Id
