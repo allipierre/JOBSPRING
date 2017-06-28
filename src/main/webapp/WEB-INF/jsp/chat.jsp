@@ -423,7 +423,7 @@ a {
 
 
 <script>
-var userName = '{user.user}';
+var userName = 'pierreyotti';
 
 function appendMessage(message) {
     $('#messages').append($('<div />').text(message.from + ": " + message.message))
