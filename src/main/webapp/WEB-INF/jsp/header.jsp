@@ -108,7 +108,7 @@ aa {
 								href="chart">Charts</a></li>
 						</ul>
 					</div></li>
-				<li class="navbar-item"><a class="navbar-link" href="#examples">Examples</a></li>
+				<li class="navbar-item"><a class="navbar-link" href="chat">chat</a></li>
 				<li class="navbar-item"><a class="navbar-link" href="#"
 					data-popover="#moreNavPopover">Employees</a>
 					<div id="moreNavPopover" class="popover">
