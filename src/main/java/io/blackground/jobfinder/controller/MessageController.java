@@ -23,7 +23,7 @@ import io.blackground.jobfinder.services.MessageService;
  */
 
 @org.springframework.web.bind.annotation.RestController
-@RequestMapping("/chate")
+@RequestMapping("/message")
 public class MessageController {
 	@Autowired
 	private MessageService messageService;
