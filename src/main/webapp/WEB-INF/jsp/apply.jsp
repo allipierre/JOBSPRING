@@ -421,7 +421,7 @@ a {
 <script>
 $("#vuta").on("click", function(e) {
 	var EmailData = {
-		      "covere" : "John",
+		      "covere" : $('#covere').val(),
 		      "title" :"Boston",
 		      "username" :"yottiallipierre@gmail.com",
 		      "usernameto" :"yottiallipierre@gmail.com"
