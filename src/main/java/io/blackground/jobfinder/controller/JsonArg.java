@@ -3,7 +3,7 @@
  */
 package io.blackground.jobfinder.controller;
 
-import com.jayway.jsonpath.Configuration;
+
 
 /**
  * @author yotti
