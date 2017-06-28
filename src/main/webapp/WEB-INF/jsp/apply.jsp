@@ -405,7 +405,7 @@ a {
 	    type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 	     </form>
 	     <a onclick="void(0);" type="submit"
-				class="bts button button-primary" id="vut">Send</a>
+				class="bts button button-primary" id="vuta">Send</a>
     </div>
    
 	
@@ -419,12 +419,13 @@ a {
 
 <%@ include file="footer.jsp"%>
 <script>
+$("#vuta").on("click", function(e) {
 $.ajax({
     type: "POST",
     url: "/emailsend",
     data: { covere: "John", title: "Boston",username: "yottiallipierre@gmail.com",usernameto: "yottiallipierre@gmail.com"} // parameters
-})
-
+});
+});
 </script>
 
 
