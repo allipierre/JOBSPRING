@@ -400,8 +400,7 @@ a {
 			
 				<label> Message: <input class="u-full-width" type="text" placeholder="message" id="messageInput">
 				</label>
-				<button class="button-primary" type="submit" id="vut">Send</button>
-			
+			<a  onclick="void(0);" type="submit" class="bts button button-primary" id="vut">Send</a>
 		</div>
 
 	</div>
