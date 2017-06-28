@@ -23,7 +23,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-
 public class MessageChat {
 
 	@Id
@@ -34,5 +33,5 @@ public class MessageChat {
 	private Date time;
 	private boolean response;
 
-	
+	private transient Company company;
 }
