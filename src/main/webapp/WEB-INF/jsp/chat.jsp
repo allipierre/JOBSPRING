@@ -400,23 +400,23 @@ function appendMessage(message) {
 function getPreviousMessages() {
     $.get('/messagechat').done(messages => messages.forEach(appendMessage));
 }
-var sendMessage=function(){
+var sendMessage = function() {
 
-$( "#vut" ).on( "click", function(e){
-	var inputvariable=$('#messageInput').val();
-    e.preventDefault();
-    e.stopPropagation();
-    $.ajax({
-           url: '/messagechat',
-           method: 'POST',
-           dataType: 'json',contentType:'application/json',
-           data: JSON.stringify({message: inputvariable})
-           .done(function( msg ) {
-        	   
-        	   console.log('a');
-        	     
-           }); });
-});
+	$( "#vut" ).on( "click", function(e){
+		var inputvariable=$('#messageInput').val();
+	    e.preventDefault();
+	    e.stopPropagation();
+	    $.ajax({
+	           url: '/messagechat',
+	           method: 'POST',
+	           dataType: 'json',contentType:'application/json',
+	           data: JSON.stringify({message: inputvariable})})
+	           .done(function( msg ) {
+	        	   
+	        	   console.log('a');
+	        	     
+	           }); 
+	});
 }
 
 sendMessage();
