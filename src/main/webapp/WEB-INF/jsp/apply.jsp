@@ -429,10 +429,9 @@ $("#vuta").on("click", function(e) {
 
 $.ajax({
     type: "POST",
-    url: "/emailsend",
+    url: "/emailsend?" + $.param(EmailData),
     dataType : 'json',
-    contentType: 'application/json',
-    data: JSON.stringify(EmailData)
+    contentType: 'application/json'
 });
 });
 </script>
