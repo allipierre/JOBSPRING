@@ -423,8 +423,8 @@ $("#vuta").on("click", function(e) {
 	var EmailData = {
 		      "covere" : "John",
 		      "title" :"Boston",
-		      "username" :"yottiallipierre",
-		      "usernameto" :"yottiallipierre"
+		      "username" :"yottiallipierre@gmail.com",
+		      "usernameto" :"yottiallipierre@gmail.com"
 		   }
 
 $.ajax({
