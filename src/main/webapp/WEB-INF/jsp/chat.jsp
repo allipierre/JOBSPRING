@@ -422,9 +422,22 @@ a {
 
 
 <script>
+var sendMessage=function(){
+var inputvariable=$('#messageInput').val();
 
+$( "#vut" ).on( "click", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    $.ajax({
+           url: '/messagechat',
+           method: 'POST',
+           dataType: 'json',contentType:'application/json',
+           data: JSON.stringify({message: inputvariable})
+    });
+});
+}
 
-
+sendMessage();
 
 </script>
 
