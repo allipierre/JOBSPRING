@@ -43,7 +43,7 @@ public class ChatController {
     public List<ChatMessage> getMessages() {
 
         List<ChatMessage> messages = r.db("chat").table("messages")
-                .orderBy().optArg("index", r.desc("time"))
+                .orderBy().optArg("chat", r.desc("time"))
                 .limit(20)
                 .orderBy("time")
                 .run(connectionFactory.createConnection(), ChatMessage.class);
