@@ -422,31 +422,8 @@ a {
 
 
 <script>
-var userName = 'pierreyotti';
 
-function appendMessage(message) {
-    $('#messages').append($('<div />').text(message.from + ": " + message.message))
-}
 
-function getPreviousMessages() {
-    $.get('/messagechat').done(messages => messages.forEach(appendMessage));
-}
-
-$( "#vut" ).click(function() {
-	  var $messageInput = $('#messageInput');
-	    $.ajax({
-	           url: 'https://jobfind-master.herokuapp.com/messagechat/',
-	           method: 'POST',
-	           data: {
-	                  message: $('#messageInput')
-	              }
-	            })
-	   .done(function( msg ) {
-	   console.log("a");
-	  }).fail(function( msg ) {
-		  console.log("b");
-	           });
-	});
 
 </script>
 
