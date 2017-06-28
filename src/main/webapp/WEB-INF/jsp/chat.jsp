@@ -85,7 +85,7 @@ label, legend {
 }
 
 body {
-	background-color: rgba(182, 184, 187, 0.22) !important;
+	background-color: white !important;
 }
 
 .panel-heading {
@@ -209,6 +209,10 @@ small, .small {
 	font-weight: 400;
 }
 
+#chat{
+background: rgb(224, 225, 229) !important;
+}
+
 job-search-content .panel-footer li:last-child {
 	padding-top: 0;
 	padding-right: 0;
@@ -298,42 +302,7 @@ aa {
 	color: white;
 }
 
-.pagination
 
- 
-
-a
-
-
-:hover
-
-
-:not
-
- 
-
-(
-.active
-
- 
-
-)
-{
-background-color
-
-
-:
-
- 
-
-#ddd
-
-
-;
-}
-.one.column {
-	padding-top: 23px;
-}
 
 @media ( max-width : 750px) {
 	.two.columns {
