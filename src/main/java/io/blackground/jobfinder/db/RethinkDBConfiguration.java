@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RethinkDBConfiguration {
     // connect to docker
-    public static final String DBHOST = "192.168.99.100";
+    public static final String DBHOST = "192.168.0.227";
 
     @Bean
     public RethinkDBConnectionFactory connectionFactory() {
