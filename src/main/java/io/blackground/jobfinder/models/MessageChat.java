@@ -14,7 +14,7 @@ public class MessageChat {
 
 	@Id
 	@GeneratedValue
-	private long id;
+	private long chatID;
 
 	private String message;
 	private Date time;
