@@ -27,13 +27,12 @@ import javax.persistence.GeneratedValue;
 public class Message {
 
 	@Id
-    @GeneratedValue
+	@GeneratedValue
 	private long id;
 
 	private String text;
-	private Company company;
 	private Date time;
 	private boolean response;
 
-	
+	private transient Company company;
 }

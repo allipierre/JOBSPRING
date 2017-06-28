@@ -5,7 +5,6 @@ package io.blackground.jobfinder.Repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import io.blackground.jobfinder.models.Company;
 import io.blackground.jobfinder.models.Message;
 
 /**
