@@ -32,7 +32,7 @@ public class Message {
 
 	private String text;
 	private Date time;
-	private boolean response;
+	//private boolean response;
 
 	private transient Company company;
 }
