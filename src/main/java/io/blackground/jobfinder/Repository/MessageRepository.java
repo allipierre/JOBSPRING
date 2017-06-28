@@ -5,13 +5,13 @@ package io.blackground.jobfinder.Repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import io.blackground.jobfinder.models.Message;
+import io.blackground.jobfinder.models.MessageChat;
 
 /**
  * @author yotti
  *
  */
 
-public interface MessageRepository extends CrudRepository<Message, Long> {
-	Message findById(long id);
+public interface MessageRepository extends CrudRepository<MessageChat, Long> {
+	MessageChat findById(long id);
 }

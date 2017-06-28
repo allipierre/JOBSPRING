@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 
-import io.blackground.jobfinder.models.Message;
+import io.blackground.jobfinder.models.MessageChat;
 import io.blackground.jobfinder.services.MessageService;
 
 
@@ -29,12 +29,12 @@ public class MessageController {
 	private MessageService messageService;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public List<Message> getAll() {
+	public List<MessageChat> getAll() {
 		return messageService.findAll();
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public void create(@RequestBody Message message) {
+	public void create(@RequestBody MessageChat message) {
 		 messageService.save(message);
 	}
 
@@ -44,7 +44,7 @@ public class MessageController {
 	}
 
 	@RequestMapping(method = RequestMethod.PUT, value = "{id}")
-	public void update(@PathVariable String id, @RequestBody Message message) {
+	public void update(@PathVariable String id, @RequestBody MessageChat message) {
 		messageService.save(message);
 	}
 

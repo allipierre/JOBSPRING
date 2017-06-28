@@ -19,7 +19,7 @@ import javax.persistence.GeneratedValue;
 @Setter
 @Entity
 
-public class Message {
+public class MessageChat {
 
 	@Id
 	@GeneratedValue

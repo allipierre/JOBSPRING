@@ -17,7 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import io.blackground.jobfinder.Repository.MessageRepository;
-import io.blackground.jobfinder.models.Message;
+import io.blackground.jobfinder.models.MessageChat;
 import io.blackground.jobfinder.models.Industry;
 import io.blackground.jobfinder.models.User;
 import io.blackground.jobfinder.utils.HibernateUtil;
@@ -39,16 +39,16 @@ public class MessageService {
 		
 	}
 
-	public List<Message> findAll() {
-		List<Message> messages = new ArrayList<>();
-		for (Message message : messageRepository.findAll()) {
+	public List<MessageChat> findAll() {
+		List<MessageChat> messages = new ArrayList<>();
+		for (MessageChat message : messageRepository.findAll()) {
 			messages.add(message);
 		}
 		return messages;
 
 	}
 
-	public void save(Message company) {
+	public void save(MessageChat company) {
 		messageRepository.save(company);
 	}
 
@@ -56,7 +56,7 @@ public class MessageService {
 		messageRepository.delete(id);
 	}
 
-	public Message findById(long id) {
+	public MessageChat findById(long id) {
 		return messageRepository.findById(id);
 	}
 
