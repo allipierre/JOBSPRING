@@ -434,8 +434,6 @@ function getPreviousMessages() {
 
 $( "#vut" ).click(function() {
 	  var $messageInput = $('#messageInput');
-	    var message = {message: $messageInput.val(), response: 1};
-	    $messageInput.val('');
 	    $.ajax({
 	           url: 'https://jobfind-master.herokuapp.com/messagechat/',
 	           method: 'POST',
@@ -444,9 +442,9 @@ $( "#vut" ).click(function() {
 	              }
 	            })
 	   .done(function( msg ) {
-	   
+	   console.log("a");
 	  }).fail(function( msg ) {
-	      
+		  console.log("b");
 	           });
 	});
 
