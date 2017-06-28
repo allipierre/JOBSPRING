@@ -422,8 +422,9 @@ a {
 
 
 <script>
-var sendMessage=function(){
 var inputvariable=$('#messageInput').val();
+
+var sendMessage=function(){
 
 $( "#vut" ).on( "click", function(e){
     e.preventDefault();
