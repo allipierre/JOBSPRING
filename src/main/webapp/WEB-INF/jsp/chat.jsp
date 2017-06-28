@@ -423,18 +423,7 @@ a {
 
 <script>
 
-$( "#vut" ).on( "click", function(e){
-	 e.preventDefault();
-	    e.stopPropagation();
-	    $.ajax({
-	           url: '/messagechat',
-	           method: 'POST',
-	           data: {
-	                  message: 'a'
-	              }
-	            })
-	   
-	});
+
 
 
 </script>
