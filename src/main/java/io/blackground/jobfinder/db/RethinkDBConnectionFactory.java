@@ -19,7 +19,7 @@ public class RethinkDBConnectionFactory {
     private String host;
 
     public RethinkDBConnectionFactory(String host) {
-        this.host = host;
+        this.host = "localhost";
     }
 
     public Connection<ConnectionInstance> createConnection() {
