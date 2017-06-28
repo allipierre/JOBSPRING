@@ -409,7 +409,6 @@ var sendMessage = function() {
         $.ajax({
                 url: '/messagechat',
                 method: 'POST',
-                dataType: 'json',
                 contentType: 'application/json',
                 data: JSON.stringify({
                     message: inputvariable
