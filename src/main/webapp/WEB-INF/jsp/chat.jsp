@@ -398,7 +398,7 @@ a {
 
 			<div id="messages"></div>
 			<form onsubmit="sendMessage(); return false;">
-				<label> Message: <input type="text" id="messageInput" />
+				<label> Message: <input class="u-full-width" type="text" placeholder="message" id="messageInput">
 				</label>
 				<button class="button-primary" type="submit">Send</button>
 			</form>
