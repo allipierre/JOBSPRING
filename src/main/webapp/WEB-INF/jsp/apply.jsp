@@ -423,6 +423,7 @@ $("#vuta").on("click", function(e) {
 $.ajax({
     type: "POST",
     url: "/emailsend",
+    contentType: 'application/json',
     data: { covere: "John", title: "Boston",username: "yottiallipierre@gmail.com",usernameto: "yottiallipierre@gmail.com"} // parameters
 });
 });
