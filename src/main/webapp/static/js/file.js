@@ -50,7 +50,7 @@ var sendMessage = function() {
                     "username": userTrom,
                     "usernameto": userTo
                 }
-                $('#title').html("<progress id='bar' value='0' max='100'></progress").show();
+                showProgressBar();
                 $.ajax({
                     type: "POST",
                     url: "/emailsend?" + $.param(emailData),
@@ -87,4 +87,23 @@ var alertErrorMessage = function() {
 
 var alertErrorMessageLange = function() {
     swal('Oops...', 'you must enter a minimal of 20 charaters !', 'error');
+}
+
+var showProgressBar= function{
+		var bar = new ProgressBar.Circle(covere, {
+			  color: '#FFEA82',
+			  trailColor: '#eee',
+			  trailWidth: 1,
+			  duration: 1400,
+			  easing: 'bounce',
+			  strokeWidth: 6,
+			  from: {color: '#FFEA82', a:0},
+			  to: {color: '#ED6A5A', a:1},
+			  // Set default step function for all animate calls
+			  step: function(state, circle) {
+			    circle.path.setAttribute('stroke', state.color);
+			  }
+			});
+
+			bar.animate(1.0);  // Number from 0.0 to 1.0
 }
