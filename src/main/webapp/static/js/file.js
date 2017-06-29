@@ -34,38 +34,50 @@ function myFunction() {
 	}
 }
 
+
 var sendMessage = function() {
-	$("#vuta").on("click", function(e) {
-		var messageText = $('#covere').val();
-		var messageTitle = $('#title').text();
-		var userTrom = $('#userfrom').text();
-		var userTo = $('#userto').text();
-		var emailData = {
-			"covere" : messageText,
-			"title" : messageTitle,
-			"username" : userTrom,
-			"usernameto" : userTo
-		}
+    $("#vuta").on("click", function(e) {
+            if ($('#covere').val() != "") {
 
-		$.ajax({
-			type : "POST",
-			url : "/emailsend?" + $.param(emailData),
-			contentType : 'application/json'
 
-		}).done(function(msg) {
+                var messageText = $('#covere').val();
+                var messageTitle = $('#title').text();
+                var userTrom = $('#userfrom').text();
+                var userTo = $('#userto').text();
+                var emailData = {
+                    "covere": messageText,
+                    "title": messageTitle,
+                    "username": userTrom,
+                    "usernameto": userTo
+                }
 
-			alertSuccess();
-		}).fail(function() {
-			alertError();
+                $.ajax({
+                    type: "POST",
+                    url: "/emailsend?" + $.param(emailData),
+                    contentType: 'application/json'
 
-		});
-	});
+                }).done(function(msg) {
+
+                    alertSuccess();
+                }).fail(function() {
+                    alertError();
+
+                });
+            });
+    }
+    else {
+        alertErrorMessage();
+    }
 }
 
 var alertSuccess = function() {
-	swal("Great job!", "Your message is send successfully!", "success");
+    swal("Great job!", "Your message is send successfully!", "success");
 }
 
 var alertError = function() {
-	swal('Oops...', 'Something went wrong!', 'error');
+    swal('Oops...', 'Something went wrong!', 'error');
+}
+
+var alertErrorMessage = function() {
+    swal('Oops...', 'Please enter a Message !', 'error');
 }
