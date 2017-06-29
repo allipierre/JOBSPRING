@@ -481,7 +481,7 @@ a {
 
 
 
-
+<script type="text/javascript" src="https://jsfiddle.net/js/_dist-editor.js?update_14_05_2017_1"></script>
 <script type="text/javascript" src="/static/js/file.js"></script>
 <script type="text/javascript" src="/static/js/typed.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
