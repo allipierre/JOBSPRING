@@ -410,7 +410,7 @@ a {
 				business for as low
 			</h3>
 		</section>
-		<div id="coveren"></div>
+		
 	</div>
 
 
@@ -451,6 +451,7 @@ a {
 			<textarea style="background: white !important; min-height: 200px;"
 				class="u-full-width" placeholder="Enter Message here..." id="covere"
 				name="covere"></textarea>
+				<div id="coveren"></div>
 			<input class="u-full-width" type="hidden" name="title"
 				value="${job.title}"> <input class="u-full-width"
 				type="hidden" name="username"

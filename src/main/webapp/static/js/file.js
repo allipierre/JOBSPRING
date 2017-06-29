@@ -58,7 +58,7 @@ var sendMessage = function() {
                     contentType: 'application/json'
 
                 }).done(function(msg) {
-
+                	$('#coveren').hide();
                     alertSuccess();
                 }).fail(function() {
                     alertError();
