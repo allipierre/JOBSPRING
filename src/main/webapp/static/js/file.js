@@ -51,6 +51,7 @@ var sendMessage = function() {
                     "usernameto": userTo
                 }
                 showProgressBar();
+                
                 $.ajax({
                     type: "POST",
                     url: "/emailsend?" + $.param(emailData),
@@ -90,7 +91,7 @@ var alertErrorMessageLange = function() {
 }
 
 var showProgressBar= function(){
-		var bar = new ProgressBar.Circle(covere, {
+		var bar = new ProgressBar.Circle(coveren, {
 			  color: '#FFEA82',
 			  trailColor: '#eee',
 			  trailWidth: 1,
