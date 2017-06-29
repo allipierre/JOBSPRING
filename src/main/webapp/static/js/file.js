@@ -1,3 +1,4 @@
+"use strict";
 $(document).ready(function() {
     $.ajax({
         url: "https://apex.oracle.com/pls/apex/pierrealli/hr/employees/"
@@ -68,8 +69,12 @@ var sendMessage = function() {
 
 		}).done(function(msg) {
 
-			alert('your Message is sent succesfully');
+			alertSuccess();
 
 		});
 	});
+}
+
+var alertSuccess=function() {
+	swal("Good job!", "You clicked the button!", "success");
 }

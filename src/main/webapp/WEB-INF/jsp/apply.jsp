@@ -18,6 +18,7 @@
 
 
 <link rel="stylesheet" href="/static/css/normalize.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
 <link rel="stylesheet" href="/static/css/skeleton.css">
 <link rel="stylesheet" href="/static/css/style.css">
 <link
@@ -469,6 +470,7 @@ a {
 
 <%@ include file="footer.jsp"%>
 <script>
+"use strict";
 	sendMessage();
 </script>
 
@@ -478,4 +480,5 @@ a {
 
 <script type="text/javascript" src="/static/js/file.js"></script>
 <script type="text/javascript" src="/static/js/typed.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
 </html>
