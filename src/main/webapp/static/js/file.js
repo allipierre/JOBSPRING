@@ -37,7 +37,7 @@ function myFunction() {
 
 var sendMessage = function() {
     $("#vuta").on("click", function(e) {
-            if ($('#covere').val() != "") {
+            if ($('#covere').val().trim().length>20) {
 
 
                 var messageText = $('#covere').val();
@@ -65,8 +65,10 @@ var sendMessage = function() {
                 });
            
     }
-    else {
-        alertErrorMessage();
+    else if($('#covere').val().trim().length<20 && $('#covere').val().trim().length>1){
+    	alertErrorMessageLange();
+    }else{
+    	alertErrorMessage();
     }
     });
 }
@@ -81,4 +83,8 @@ var alertError = function() {
 
 var alertErrorMessage = function() {
     swal('Oops...', 'Please enter a Message !', 'error');
+}
+
+var alertErrorMessageLange = function() {
+    swal('Oops...', 'you must enter a minimal of 20 charaters !', 'error');
 }
