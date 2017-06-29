@@ -74,7 +74,7 @@ var sendMessage = function() {
 }
 
 var alertSuccess = function() {
-	$('#coveren').hide();
+	//$('#coveren').hide();
     swal("Great job!", "Your message is send successfully!", "success");
 }
 
