@@ -271,23 +271,69 @@ aa {
 }
 
 .pagination
+
+
+
  
+
+
+
 a
+
+
+
+
+
+
 :hover
+
+
+
+
+
+
 :not
+
+
+
  
+
+
+
 (
 .active
+
+
+
  
+
+
+
 )
 {
 background-color
+
+
+
+
+
+
 :
+
+
+
  
+
+
+
 #ddd
+
+
+
+
+
+
 ;
-
-
 }
 .one.column {
 	padding-top: 23px;
@@ -325,7 +371,6 @@ a {
 	text-decoration: none !important;
 }
 
-
 .dl-horizontal dt {
 	float: left;
 	overflow: show;
@@ -362,7 +407,7 @@ a {
 		</section>
 	</div>
 
-	
+
 
 	<!-- #job Apply -->
 	<div class="container">
@@ -373,9 +418,9 @@ a {
 				<div class="divider"></div>
 				<dl class="dl-horizontal">
 					<dt>Job title:</dt>
-					<dd style="color:rgb(49, 163, 221);">${job.title}</dd>
+					<dd id="title" style="color: rgb(49, 163, 221);">${job.title}</dd>
 					<dt>Company name:</dt>
-					<dd style="color:rgb(49, 163, 221);">${job.company.companyName}</dd>
+					<dd id="compname" style="color: rgb(49, 163, 221);">${job.company.companyName}</dd>
 				</dl>
 				<!-- #job details -->
 			</div>
@@ -385,30 +430,35 @@ a {
 				<div class="divider"></div>
 				<dl class="dl-horizontal">
 					<dt>Email address:</dt>
-					<dd>${pageContext.request.userPrincipal.name}</dd>
+					<dd id="userfrom">${pageContext.request.userPrincipal.name}</dd>
 					<dt>Email address:</dt>
-					<dd>${job.company.user.username}</dd>
+					<dd id="userto">${job.company.user.username}</dd>
 				</dl>
 				<!-- #company details -->
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="container">
-	<label for="about">Enter a cover letter</label>
-	<form method="POST" action="sendmail">
-        <textarea style="background:white !important;min-height: 200px;" class="u-full-width" placeholder="Enter Message here..." id="covere" name ="covere"></textarea>
-        <input class="u-full-width" type="hidden"  name="title" value="${job.title}">
-        <input class="u-full-width" type="hidden"  name="username" value="${pageContext.request.userPrincipal.name}">
-        <input class="u-full-width" type="hidden"  name="usernameto" value="${job.company.user.username}">
-        <input class="button-primary" type="submit" value="Send"> <input
-	    type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-	     </form>
-	     <a onclick="void(0);" type="submit"
-				class="bts button button-primary" id="vuta">Send</a>
-    </div>
-   
-	
+		<label for="about">Enter a cover letter</label>
+		<form method="POST" action="sendmail">
+			<textarea style="background: white !important; min-height: 200px;"
+				class="u-full-width" placeholder="Enter Message here..." id="covere"
+				name="covere"></textarea>
+			<input class="u-full-width" type="hidden" name="title"
+				value="${job.title}"> <input class="u-full-width"
+				type="hidden" name="username"
+				value="${pageContext.request.userPrincipal.name}"> <input
+				class="u-full-width" type="hidden" name="usernameto"
+				value="${job.company.user.username}"> <input
+				class="button-primary" type="submit" value="Send"> <input
+				type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+		</form>
+		<a onclick="void(0);" type="submit" class="bts button button-primary"
+			id="vuta">Send</a>
+	</div>
+
+
 
 
 
@@ -419,26 +469,32 @@ a {
 
 <%@ include file="footer.jsp"%>
 <script>
-$("#vuta").on("click", function(e) {
-	var EmailData = {
-		      "covere" : $('#covere').val(),
-		      "title" :"Boston",
-		      "username" :"yottiallipierre@gmail.com",
-		      "usernameto" :"yottiallipierre@gmail.com"
-		   }
+	var sendMessage = function() {
+		$("#vuta").on("click", function(e) {
+			var messageText = $('#covere').val();
+			var messageTitle = $('#title').val();
+			var userTrom = $('#userfrom').val();
+			var userTo = $('#userto').val();
+			var emailData = {
+				"covere" : messageText,
+				"title"  : messageTitle,
+				"username" : userTrom,
+				"usernameto" : userTo
+			}
 
-$.ajax({
-    type: "POST",
-    url: "/emailsend?" + $.param(EmailData),
-    contentType: 'application/json'
+			$.ajax({
+				type : "POST",
+				url : "/emailsend?" + $.param(emailData),
+				contentType : 'application/json'
 
-})
-.done(function(msg) {
+			}).done(function(msg) {
 
-	alert('your Message is sent succesfully');
+				alert('your Message is sent succesfully');
 
-});
-});
+			});
+		});
+	}
+	sendMessage();
 </script>
 
 
