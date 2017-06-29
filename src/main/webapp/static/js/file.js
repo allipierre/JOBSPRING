@@ -50,7 +50,7 @@ var sendMessage = function() {
                     "username": userTrom,
                     "usernameto": userTo
                 }
-                showProgressBar();
+                //showProgressBar();
                 
                 $.ajax({
                     type: "POST",
@@ -74,7 +74,7 @@ var sendMessage = function() {
 }
 
 var alertSuccess = function() {
-	//$('#coveren').hide();
+	
     swal("Great job!", "Your message is send successfully!", "success");
 }
 
@@ -90,7 +90,7 @@ var alertErrorMessageLange = function() {
     swal('Oops...', 'you must enter a minimal of 20 charaters !', 'error');
 }
 
-var showProgressBar= function(){
+/*var showProgressBar= function(){
 		var bar = new ProgressBar.Circle(coveren, {
 			  color: '#FFEA82',
 			  trailColor: '#eee',
@@ -108,4 +108,4 @@ var showProgressBar= function(){
 
 			bar.animate(1.0);  // Number from 0.0 to 1.0
 
-}
+}*/
