@@ -50,7 +50,7 @@ var sendMessage = function() {
                     "username": userTrom,
                     "usernameto": userTo
                 }
-
+                $('#title').html("<progress id='bar' value='0' max='100'></progress").show();
                 $.ajax({
                     type: "POST",
                     url: "/emailsend?" + $.param(emailData),
