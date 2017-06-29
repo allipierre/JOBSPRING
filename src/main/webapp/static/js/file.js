@@ -63,11 +63,12 @@ var sendMessage = function() {
                     alertError();
 
                 });
-            });
+           
     }
     else {
         alertErrorMessage();
     }
+    });
 }
 
 var alertSuccess = function() {
