@@ -1,53 +1,38 @@
 "use strict";
 $(document).ready(function() {
-    $.ajax({
-        url: "https://apex.oracle.com/pls/apex/pierrealli/hr/employees/"
-    }).then(function(data) {
-       for(var i=0; i<data.items.length;i++) {
-       $('.ename').append(data.items[i].ename);
-       $('.empno').append(data.items[i].empno);
-       }
-    });
+	$.ajax({
+		url : "https://apex.oracle.com/pls/apex/pierrealli/hr/employees/"
+	}).then(function(data) {
+		for (var i = 0; i < data.items.length; i++) {
+			$('.ename').append(data.items[i].ename);
+			$('.empno').append(data.items[i].empno);
+		}
+	});
 });
 
-
 function AjaxSucceeded(result) {
-  swal("Deleted!",
-  "Your imaginary file has been deleted.",
-  "success");
+	swal("Deleted!", "Your imaginary file has been deleted.", "success");
 }
-
 
 function AjaxSucceedede(result) {
-  swal("Updated!",
-  "Your changes are succefully saved",
-  "success");
+	swal("Updated!", "Your changes are succefully saved", "success");
 }
 function AjaxFailed(result) {
-  swal("Deleted!",
-  "Your imaginary file has been deleted.",
-  "success");
+	swal("Deleted!", "Your imaginary file has been deleted.", "success");
 }
 
 function AjaxError(result) {
-  swal(
-  'Oops...',
-  'Something went wrong!',
-  'error'
-)
+	swal('Oops...', 'Something went wrong!', 'error')
 }
-
 
 function myFunction() {
-    var x = document.getElementById("pana");
-    if (x.className === "navbar-list") {
-        x.className += " responsive";
-    } else {
-        x.className = "navbar-list";
-    }
+	var x = document.getElementById("pana");
+	if (x.className === "navbar-list") {
+		x.className += " responsive";
+	} else {
+		x.className = "navbar-list";
+	}
 }
-
-
 
 var sendMessage = function() {
 	$("#vuta").on("click", function(e) {
@@ -57,7 +42,7 @@ var sendMessage = function() {
 		var userTo = $('#userto').text();
 		var emailData = {
 			"covere" : messageText,
-			"title"  : messageTitle,
+			"title" : messageTitle,
 			"username" : userTrom,
 			"usernameto" : userTo
 		}
@@ -70,11 +55,17 @@ var sendMessage = function() {
 		}).done(function(msg) {
 
 			alertSuccess();
+		}).fail(function() {
+			alertError();
 
 		});
 	});
 }
 
-var alertSuccess=function() {
+var alertSuccess = function() {
 	swal("Great job!", "Your message is send successfully!", "success");
+}
+
+var alertError = function() {
+	swal('Oops...', 'Something went wrong!', 'error');
 }
