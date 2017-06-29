@@ -45,3 +45,31 @@ function myFunction() {
         x.className = "navbar-list";
     }
 }
+
+
+
+var sendMessage = function() {
+	$("#vuta").on("click", function(e) {
+		var messageText = $('#covere').val();
+		var messageTitle = $('#title').text();
+		var userTrom = $('#userfrom').text();
+		var userTo = $('#userto').text();
+		var emailData = {
+			"covere" : messageText,
+			"title"  : messageTitle,
+			"username" : userTrom,
+			"usernameto" : userTo
+		}
+
+		$.ajax({
+			type : "POST",
+			url : "/emailsend?" + $.param(emailData),
+			contentType : 'application/json'
+
+		}).done(function(msg) {
+
+			alert('your Message is sent succesfully');
+
+		});
+	});
+}

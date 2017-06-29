@@ -469,31 +469,6 @@ a {
 
 <%@ include file="footer.jsp"%>
 <script>
-	var sendMessage = function() {
-		$("#vuta").on("click", function(e) {
-			var messageText = $('#covere').val();
-			var messageTitle = $('#title').val();
-			var userTrom = $('#userfrom').val();
-			var userTo = $('#userto').val();
-			var emailData = {
-				"covere" : messageText,
-				"title"  : messageTitle,
-				"username" : userTrom,
-				"usernameto" : userTo
-			}
-
-			$.ajax({
-				type : "POST",
-				url : "/emailsend?" + $.param(emailData),
-				contentType : 'application/json'
-
-			}).done(function(msg) {
-
-				alert('your Message is sent succesfully');
-
-			});
-		});
-	}
 	sendMessage();
 </script>
 
