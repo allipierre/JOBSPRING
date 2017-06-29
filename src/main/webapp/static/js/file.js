@@ -3,7 +3,7 @@ $(document).ready(function() {
     $.ajax({
         url: "https://apex.oracle.com/pls/apex/pierrealli/hr/employees/"
     }).then(function(data) {
-       for(i=0; i<data.items.length;i++) {
+       for(var i=0; i<data.items.length;i++) {
        $('.ename').append(data.items[i].ename);
        $('.empno').append(data.items[i].empno);
        }
@@ -76,5 +76,5 @@ var sendMessage = function() {
 }
 
 var alertSuccess=function() {
-	swal("Good job!", "You clicked the button!", "success");
+	swal("Great job!", "Your message is send successfully!", "success");
 }
