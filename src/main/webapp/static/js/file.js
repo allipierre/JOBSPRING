@@ -107,3 +107,4 @@ var showProgressBar= function{
 
 			bar.animate(1.0);  // Number from 0.0 to 1.0
 }
+}
