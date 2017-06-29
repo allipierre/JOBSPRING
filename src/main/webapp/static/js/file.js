@@ -58,7 +58,6 @@ var sendMessage = function() {
                     contentType: 'application/json'
 
                 }).done(function(msg) {
-                	$('#coveren').hide();
                     alertSuccess();
                 }).fail(function() {
                     alertError();
@@ -75,6 +74,7 @@ var sendMessage = function() {
 }
 
 var alertSuccess = function() {
+	$('#coveren').hide();
     swal("Great job!", "Your message is send successfully!", "success");
 }
 
