@@ -412,8 +412,7 @@ var sendMessage = function() {
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({
-                    message: inputvariable,
-                    company: companyId
+                    message: inputvariable
                 })
             })
             .done(function(msg) {
