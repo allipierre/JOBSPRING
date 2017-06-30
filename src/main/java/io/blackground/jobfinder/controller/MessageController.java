@@ -59,7 +59,8 @@ public class MessageController {
 		User user = userService.findByUsername(authentication.getName());
 		Company userCompany = companyService.findCompany(user);
 		chatmessage.setCompany(userCompany);
-		chatmessage.setId(userCompany.getId());
+		chatmessage.setTime(new Date());
+		chatmessage.setResponse(true);
 		messageService.save(chatmessage);
 
 	}

@@ -413,8 +413,7 @@ var sendMessage = function() {
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({
-                    message: inputvariable,
-                    time:letDate
+                    message: inputvariable
                 })
             })
             .done(function(msg) {

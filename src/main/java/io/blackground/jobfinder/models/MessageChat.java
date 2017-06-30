@@ -1,6 +1,6 @@
 package io.blackground.jobfinder.models;
 
-
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,7 +19,7 @@ public class MessageChat {
 	private long id;
 
 	private String message;
-	private String time;
+	private Date time;
 	private boolean response;
 	
 	@ManyToOne
