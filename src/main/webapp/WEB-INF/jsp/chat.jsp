@@ -404,6 +404,7 @@ var sendMessage = function() {
 
     $("#vut").on("click", function(e) {
         var inputvariable = $('#messageInput').val();
+        var companyId = '${userCompany.id}';
         e.preventDefault();
         e.stopPropagation();
         $.ajax({
@@ -411,7 +412,8 @@ var sendMessage = function() {
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({
-                    message: inputvariable
+                    message: inputvariable,
+                    company_id: companyId
                 })
             })
             .done(function(msg) {
