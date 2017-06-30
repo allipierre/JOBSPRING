@@ -393,6 +393,7 @@ a {
 
 var userName = '${userCompany.user.username}';
 var letDate=new Date()+"";
+var letDate1=letDate.getDate()+" "+letDate.getHours()+" "+letDate.getMinutes()+" "+letDate.getSeconds();
 
 function appendMessage(message) {
     $('#messages').append($('<div />').text(userName + ": " + message.message))
