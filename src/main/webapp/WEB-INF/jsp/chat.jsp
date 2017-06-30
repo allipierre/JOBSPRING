@@ -391,7 +391,7 @@ a {
 
 <script>
 
-var userName = '${pageContext.request.userPrincipal.name}';
+var userName = '${userCompany.user.username}';
 
 function appendMessage(message) {
     $('#messages').append($('<div />').text(userName + ": " + message.message))

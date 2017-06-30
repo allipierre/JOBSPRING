@@ -35,6 +35,8 @@ public class ChatController {
 	private MessageService messageService;
 	@Autowired
     private UserServiceImpl userService;
+	@Autowired
+    private CompanyService companyService;
 	@GetMapping("/chat")
 	public String createChat(HttpServletRequest request) {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -42,7 +44,8 @@ public class ChatController {
 		// get the old company instance and set the new company id with the old
 		// one's id
 		User user = userService.findByUsername(authentication.getName());
-		request.setAttribute("user", user+"");
+		Company userCompany = companyService.findCompany(user);
+		request.setAttribute("userCompany", userCompany);
 		return "chat";
 	}
 }
