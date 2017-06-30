@@ -33,45 +33,22 @@ import io.blackground.jobfinder.services.MessageService;
  *
  */
 
-@CrossOrigin(origins="https://apex.oracle.com", maxAge=3600)
+@CrossOrigin(origins = "https://apex.oracle.com", maxAge = 3600)
 @org.springframework.web.bind.annotation.RestController
-@RequestMapping("/messagechat")
-public class MessageController {
+@RequestMapping("/messagechate")
+public class MessageteController {
 	@Autowired
 	private MessageService messageService;
-	
+
 	@Autowired
 	private CompanyService companyService;
-	
+
 	@Autowired
 	private UserService userService;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public List<MessageChat> getAll() {
-		return messageService.findAll();
-	}
-	
-	
-
-	@RequestMapping(method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE)
-	public void create(@RequestBody MessageChat chatmessage) {
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		User user = userService.findByUsername(authentication.getName());
-		Company userCompany = companyService.findCompany(user);
-		chatmessage.setCompany(userCompany);
-		chatmessage.setId(userCompany.getId());
-		messageService.save(chatmessage);
-
-	}
-
-	@RequestMapping(method = RequestMethod.DELETE, value = "{id}")
-	public void delete(@PathVariable Long id) {
-		messageService.delete(id);
-	}
-
-	@RequestMapping(method = RequestMethod.PUT, value = "{id}")
-	public void update(@PathVariable String id, @RequestBody MessageChat message) {
-		messageService.save(message);
+	public List<MessageChat> getMessageByCompany() {
+		return messageService.findMessageByCompany();
 	}
 
 }
