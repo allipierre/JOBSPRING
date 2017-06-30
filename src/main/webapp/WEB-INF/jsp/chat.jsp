@@ -413,7 +413,7 @@ var sendMessage = function() {
                 contentType: 'application/json',
                 data: JSON.stringify({
                     message: inputvariable,
-                    company_id: companyId
+                    company: companyId
                 })
             })
             .done(function(msg) {
