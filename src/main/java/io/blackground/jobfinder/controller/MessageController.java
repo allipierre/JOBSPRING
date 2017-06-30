@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import io.blackground.jobfinder.Repository.UserService;
 import io.blackground.jobfinder.models.Company;
@@ -48,6 +49,11 @@ public class MessageController {
 	@RequestMapping(method = RequestMethod.GET)
 	public List<MessageChat> getAll() {
 		return messageService.findAll();
+	}
+	
+	@RequestMapping(value = "/messagechate",method = RequestMethod.GET)
+	public List<MessageChat> getMessageByCompany() {
+		return messageService.findMessageByCompany();
 	}
 
 	@RequestMapping(method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE)

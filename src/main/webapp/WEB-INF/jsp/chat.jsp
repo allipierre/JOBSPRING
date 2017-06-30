@@ -393,20 +393,19 @@ a {
 
 var userName = '${userCompany.user.username}';
 var letDate=new Date()+"";
-
+var companyId = '${userCompany.id}';
 
 function appendMessage(message) {
     $('#messages').append($('<div />').text(userName + ": " + message.message))
 }
 
 function getPreviousMessages() {
-    $.get('/messagechat').done(messages => messages.forEach(appendMessage));
+    $.get('/messagechate').done(messages => messages.forEach(appendMessage));
 }
 var sendMessage = function() {
 
     $("#vut").on("click", function(e) {
         var inputvariable = $('#messageInput').val();
-        var companyId = '${userCompany.id}';
         e.preventDefault();
         e.stopPropagation();
         $.ajax({
