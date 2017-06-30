@@ -28,7 +28,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().authorizeRequests().antMatchers("/static/css/**", "/static/js/**","/","/allejob","/meinejobs","/restpageablejobs","/jobuebersicht").permitAll()
+		http.csrf().disable().authorizeRequests().antMatchers("/static/css/**", "/static/js/**","/","/allejob","/meinejobs","/restpageablejobs","/jobuebersicht","/messagechat").permitAll()
 		.antMatchers("/static/images/**").permitAll()
 				.antMatchers("/resources/**", "/registration").permitAll().anyRequest().authenticated().and()
 				.formLogin().loginPage("/login").permitAll().and().logout().permitAll();
