@@ -19,7 +19,7 @@ public class MessageChat {
 	private long id;
 
 	private String message;
-	private Date time;
+	private String time;
 	private boolean response;
 	
 	@ManyToOne

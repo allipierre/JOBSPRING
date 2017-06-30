@@ -392,6 +392,7 @@ a {
 <script>
 
 var userName = '${userCompany.user.username}';
+var letDate=new Date()+"";
 
 function appendMessage(message) {
     $('#messages').append($('<div />').text(userName + ": " + message.message))
@@ -412,7 +413,8 @@ var sendMessage = function() {
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({
-                    message: inputvariable
+                    message: inputvariable,
+                    time:letDate
                 })
             })
             .done(function(msg) {
