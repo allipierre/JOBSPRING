@@ -26,7 +26,7 @@ import io.blackground.jobfinder.services.MessageService;
  *
  */
 
-@CrossOrigin(origins="https://apex.oracle.com. maxAge=3600")
+@CrossOrigin(origins="https://apex.oracle.com", maxAge=3600)
 @org.springframework.web.bind.annotation.RestController
 @RequestMapping("/messagechat")
 public class MessageController {
