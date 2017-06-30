@@ -4,6 +4,8 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,7 +21,8 @@ public class MessageChat {
 	private String message;
 	private Date time;
 	private boolean response;
-
-	private transient Company company;
+	
+	@ManyToOne
+	private Company company;
 
 }
